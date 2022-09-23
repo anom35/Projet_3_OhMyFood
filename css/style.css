@@ -125,8 +125,21 @@ header h1 {
   box-shadow: 0 3px 5px #ff79da;
 }
 
-.restaurants {
-  margin: 3rem 0 0 2rem;
+.restaurants .cards {
+  margin: 1rem 1rem 0 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+.restaurants .cards .card1 div, .restaurants .cards .card2 div, .restaurants .cards .card3 div, .restaurants .cards .card4 div {
+  width: 25%;
+}
+.restaurants .cards .card1 img, .restaurants .cards .card2 img, .restaurants .cards .card3 img, .restaurants .cards .card4 img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+.restaurants h2 {
+  margin: 4rem 0 0 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

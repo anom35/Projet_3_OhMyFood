@@ -5,7 +5,23 @@
 
 
 .restaurants {
-    margin: 3rem 0 0 2rem;
-    
+    .cards {
+        margin: 1rem 1rem 0 2rem;
+        display: flex;
+        justify-content: space-around;
+        .card1, .card2, .card3, .card4 {
+            & div {
+                width: 25%;
+            }
+            & img {
+                width: 100%;
+                object-fit: cover;
+                height: 200px;
+            }
+        }
+    }
+    & h2 {
+        margin: 4rem 0 0 2rem;
+        
+    }
 }
-
