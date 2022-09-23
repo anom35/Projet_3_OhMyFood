@@ -1,0 +1,47 @@
+.nav-bar {
+    text-align: center;
+    background-color: $--graywhite;
+    .search-bar {
+        margin-top: 5px;
+        font-size: 1.3rem;
+        padding: 1rem 0;
+        background-color: $--ultralightgray;
+        input {
+            border: none;
+            font-size: 1.3rem;
+            width: 200px;
+            margin-left: 1rem;
+            background-color: $--ultralightgray;
+        }
+    }
+    .btn-explore {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media (max-width : 768px) {
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+        label {
+            padding: 1.3rem;
+            color: white;
+            border-radius: 2rem;
+            font-size: 1.3rem;
+            background: linear-gradient($--secondary, $--primary);
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+            box-shadow: 0 3px 10px $--darkgray;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        p {
+            font-size: 1.8rem;
+            margin: 0;
+            margin-top: 1.5rem;
+            padding: 0 1rem;
+            flex-basis: 100%;
+        }
+    }
+}

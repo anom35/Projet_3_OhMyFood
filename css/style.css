@@ -52,6 +52,11 @@ header h1 {
   flex-wrap: wrap;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .nav-bar .btn-explore .subtitle {
+    font-size: 1.2rem;
+  }
+}
 .nav-bar .btn-explore label {
   padding: 1.3rem;
   color: white;
@@ -73,10 +78,36 @@ header h1 {
   flex-basis: 100%;
 }
 
-@media (max-width: 768px) {
-  .btn-explore .subtitle {
-    font-size: 1.2rem;
+.menu ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .menu ol {
+    flex-direction: column;
   }
+}
+.menu ol li {
+  width: 255px;
+  background-color: #F6F6F6;
+  border-radius: 1rem;
+  padding: 1.5rem 0;
+  box-shadow: 0 3px 5px darkgray;
+}
+.menu ol li i {
+  margin-right: 0.5rem;
+}
+.menu ol li label {
+  position: relative;
+  left: -1rem;
+  border: 1px solid #9356dc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50%;
+  font-weight: bold;
+  background-color: #9356dc;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
