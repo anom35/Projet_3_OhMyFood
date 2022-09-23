@@ -1,0 +1,79 @@
+//  import font "Shrikhand"
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+//  font-family: 'Roboto', sans-serif;
+//  font-family: 'Shrikhand', cursive;
+//
+//  variables colors
+// :root {
+    $--primary: #9356dc;
+    $--secondary: #ff79da;
+    $--tertiary: #99e2d0;
+    $--darkgray: darkgray;
+    $--dimgray: dimgray;
+    $--lightgray: lightgray;
+    $--ultralightgray: #EAEAEA;
+    $--graywhite: #F6F6F6;
+// }
+
+//  hidden <label> position for accessibility       
+.accessibility-label {
+	position:absolute;
+	left:-999px;
+}
+
+.bold {
+    font-weight: bold;
+}
+.gray {
+    color: $--dimgray;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    box-shadow: 0 5px 10px lightgrey;
+}
+header h1 {
+    font-family : 'Shrikhand', cursive;
+    font-size: 3rem;
+    margin: 0%;
+    text-align: center;
+ 
+}
+
+
+.nav-bar {
+    text-align: center;
+    background-color: $--graywhite;
+}
+.search-bar {
+    margin-top: 5px;
+    // color: inherit;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    // text-align: center;
+    background-color: $--ultralightgray;
+}
+.search-bar input {
+    border: none;
+    font-size: 1.3rem;
+    // font-weight: bold;
+    width: 200px;
+    margin-left: 1rem;
+    background-color: $--ultralightgray;
+}
+
+.btn-explore label {
+    padding: 1.3rem;
+    color: white;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    background: linear-gradient($--secondary, $--primary);
+}
+.btn-explore p {
+    font-size: 1.8rem;
+}
