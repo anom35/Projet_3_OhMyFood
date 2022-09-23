@@ -5,14 +5,14 @@
 //
 //  variables colors
 // :root {
-    $--primary: #9356dc;
-    $--secondary: #ff79da;
-    $--tertiary: #99e2d0;
-    $--darkgray: darkgray;
-    $--dimgray: dimgray;
-    $--lightgray: lightgray;
-    $--ultralightgray: #EAEAEA;
-    $--graywhite: #F6F6F6;
+$--primary: #9356dc;
+$--secondary: #ff79da;
+$--tertiary: #99e2d0;
+$--darkgray: darkgray;
+$--dimgray: dimgray;
+$--lightgray: lightgray;
+$--ultralightgray: #EAEAEA;
+$--graywhite: #F6F6F6;
 // }
 
 //  hidden <label> position for accessibility       
@@ -30,8 +30,9 @@
 
 body {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0 auto;
     font-family: 'Roboto', sans-serif;
+    max-width: 1224px;
 }
 
 header {
@@ -50,43 +51,47 @@ header h1 {
 .nav-bar {
     text-align: center;
     background-color: $--graywhite;
-}
-.search-bar {
-    margin-top: 5px;
-    font-size: 1.3rem;
-    padding: 1rem 0;
-    background-color: $--ultralightgray;
-}
-.search-bar input {
-    border: none;
-    font-size: 1.3rem;
-    width: 200px;
-    margin-left: 1rem;
-    background-color: $--ultralightgray;
+    .search-bar {
+        margin-top: 5px;
+        font-size: 1.3rem;
+        padding: 1rem 0;
+        background-color: $--ultralightgray;
+    }
+    .search-bar input {
+        border: none;
+        font-size: 1.3rem;
+        width: 200px;
+        margin-left: 1rem;
+        background-color: $--ultralightgray;
+    }
+    .btn-explore {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .btn-explore label {
+        padding: 1.3rem;
+        color: white;
+        border-radius: 2rem;
+        font-size: 1.3rem;
+        background: linear-gradient($--secondary, $--primary);
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        box-shadow: 0 3px 10px $--darkgray;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .btn-explore p {
+        font-size: 1.8rem;
+        margin: 0;
+        margin-top: 1.5rem;
+        padding: 0 1rem;
+        flex-basis: 100%;
+    }
+                
 }
 
-.btn-explore {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-   
-}
-.btn-explore label {
-    padding: 1.3rem;
-    color: white;
-    border-radius: 2rem;
-    font-size: 1.3rem;
-    background: linear-gradient($--secondary, $--primary);
-    margin-bottom: 3rem;
-    margin-top: 2rem;
-    box-shadow: 0 3px 10px $--darkgray;
-}
-.btn-explore p {
-    font-size: 1.8rem;
-    margin: 0;
-    margin-top: 1.5rem;
-    padding: 0 1rem;
-}
 
 
 
