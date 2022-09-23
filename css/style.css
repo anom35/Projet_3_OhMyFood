@@ -24,8 +24,9 @@ header {
 
 header h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 3rem;
-  margin: 0%;
+  font-size: 2.3rem;
+  margin: 0;
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -49,16 +50,34 @@ header h1 {
   background-color: #EAEAEA;
 }
 
+.btn-explore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .btn-explore label {
   padding: 1.3rem;
   color: white;
   border-radius: 2rem;
   font-size: 1.3rem;
   background: linear-gradient(#ff79da, #9356dc);
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  box-shadow: 0 3px 10px darkgray;
 }
 
 .btn-explore p {
   font-size: 1.8rem;
+  margin: 0;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .btn-explore .subtitle {
+    font-size: 1.2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
