@@ -69,6 +69,8 @@ header h1 {
 }
 .nav-bar .btn-explore label:hover {
   cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0 3px 10px #ff79da;
 }
 .nav-bar .btn-explore p {
   font-size: 1.8rem;
@@ -78,11 +80,15 @@ header h1 {
   flex-basis: 100%;
 }
 
+.menu h2 {
+  margin: 2rem 0 0 2rem;
+}
 .menu ol {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: space-evenly;
 }
 @media (max-width: 900px) {
   .menu ol {
@@ -108,6 +114,19 @@ header h1 {
   font-weight: bold;
   background-color: #9356dc;
   color: white;
+}
+.menu ol li label:hover {
+  cursor: pointer;
+}
+.menu ol li:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  background-color: #F5EDFF;
+  box-shadow: 0 3px 5px #ff79da;
+}
+
+.restaurants {
+  margin: 3rem 0 0 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

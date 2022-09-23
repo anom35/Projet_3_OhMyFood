@@ -34,6 +34,8 @@
             box-shadow: 0 3px 10px $--darkgray;
             &:hover {
                 cursor: pointer;
+                transform: scale(1.02);
+                box-shadow: 0 3px 10px $--secondary;
             }
         }
         p {
