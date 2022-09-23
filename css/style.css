@@ -125,21 +125,49 @@ header h1 {
   box-shadow: 0 3px 5px #ff79da;
 }
 
+.restaurants {
+  background-color: #F6F6F6;
+}
 .restaurants .cards {
-  margin: 1rem 1rem 0 2rem;
+  margin: 1rem 1rem 1rem 2rem;
   display: flex;
   justify-content: space-around;
+  gap: 1rem;
 }
-.restaurants .cards .card1 div, .restaurants .cards .card2 div, .restaurants .cards .card3 div, .restaurants .cards .card4 div {
-  width: 25%;
+.restaurants .cards .card1, .restaurants .cards .card2, .restaurants .cards .card3, .restaurants .cards .card4 {
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 3px 5px darkgray;
 }
 .restaurants .cards .card1 img, .restaurants .cards .card2 img, .restaurants .cards .card3 img, .restaurants .cards .card4 img {
   width: 100%;
   object-fit: cover;
-  height: 200px;
+  min-height: 200px;
+  max-height: 200px;
+  border-radius: 1rem 1rem 0 0;
+}
+.restaurants .cards .card1 .description, .restaurants .cards .card2 .description, .restaurants .cards .card3 .description, .restaurants .cards .card4 .description {
+  display: flex;
+  justify-content: space-around;
+}
+.restaurants .cards .card1 .description .layout, .restaurants .cards .card2 .description .layout, .restaurants .cards .card3 .description .layout, .restaurants .cards .card4 .description .layout {
+  width: 90%;
+}
+.restaurants .cards .card1 .description .layout h3, .restaurants .cards .card1 .description .layout p, .restaurants .cards .card2 .description .layout h3, .restaurants .cards .card2 .description .layout p, .restaurants .cards .card3 .description .layout h3, .restaurants .cards .card3 .description .layout p, .restaurants .cards .card4 .description .layout h3, .restaurants .cards .card4 .description .layout p {
+  margin: 0;
+  padding: 0.3rem 0 0 1rem;
+}
+.restaurants .cards .card1 .description .layout-star, .restaurants .cards .card2 .description .layout-star, .restaurants .cards .card3 .description .layout-star, .restaurants .cards .card4 .description .layout-star {
+  width: 10%;
+  height: 50px;
 }
 .restaurants h2 {
   margin: 4rem 0 0 2rem;
+  padding-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
