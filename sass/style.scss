@@ -1,52 +1,5 @@
-//  import font "Shrikhand"
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
-//  font-family: 'Roboto', sans-serif;
-//  font-family: 'Shrikhand', cursive;
-//
-//  variables colors
-// :root {
-$--primary: #9356dc;
-$--secondary: #ff79da;
-$--tertiary: #99e2d0;
-$--darkgray: darkgray;
-$--dimgray: dimgray;
-$--lightgray: lightgray;
-$--ultralightgray: #EAEAEA;
-$--graywhite: #F6F6F6;
-// }
-
-//  hidden <label> position for accessibility       
-.accessibility-label {
-	position:absolute;
-	left:-999px;
-}
-
-.bold {
-    font-weight: bold;
-}
-.gray {
-    color: $--dimgray;
-}
-
-body {
-    box-sizing: border-box;
-    margin: 0 auto;
-    font-family: 'Roboto', sans-serif;
-    max-width: 1224px;
-}
-
-header {
-    box-shadow: 0 5px 10px lightgrey;
-}
-header h1 {
-    font-family : 'Shrikhand', cursive;
-    font-size: 2.3rem;
-    margin: 0;
-    padding: 1rem 0;
-    text-align: center;
- 
-}
-
+@import "base";
+@import "header";
 
 .nav-bar {
     text-align: center;
@@ -56,40 +9,39 @@ header h1 {
         font-size: 1.3rem;
         padding: 1rem 0;
         background-color: $--ultralightgray;
-    }
-    .search-bar input {
-        border: none;
-        font-size: 1.3rem;
-        width: 200px;
-        margin-left: 1rem;
-        background-color: $--ultralightgray;
+        input {
+            border: none;
+            font-size: 1.3rem;
+            width: 200px;
+            margin-left: 1rem;
+            background-color: $--ultralightgray;
+        }
     }
     .btn-explore {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    }
-    .btn-explore label {
-        padding: 1.3rem;
-        color: white;
-        border-radius: 2rem;
-        font-size: 1.3rem;
-        background: linear-gradient($--secondary, $--primary);
-        margin-bottom: 3rem;
-        margin-top: 2rem;
-        box-shadow: 0 3px 10px $--darkgray;
-        &:hover {
-            cursor: pointer;
+        label {
+            padding: 1.3rem;
+            color: white;
+            border-radius: 2rem;
+            font-size: 1.3rem;
+            background: linear-gradient($--secondary, $--primary);
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+            box-shadow: 0 3px 10px $--darkgray;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        p {
+            font-size: 1.8rem;
+            margin: 0;
+            margin-top: 1.5rem;
+            padding: 0 1rem;
+            flex-basis: 100%;
         }
     }
-    .btn-explore p {
-        font-size: 1.8rem;
-        margin: 0;
-        margin-top: 1.5rem;
-        padding: 0 1rem;
-        flex-basis: 100%;
-    }
-                
 }
 
 
