@@ -44,4 +44,20 @@ footer a {
   color: white;
 }
 
+.main {
+  border-radius: 2rem 2rem 0 0;
+}
+.main img {
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 70%;
+  width: 100%;
+}
+.main h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: "Shrikhand", cursive;
+}
+
 /*# sourceMappingURL=a_la_francaise.css.map */

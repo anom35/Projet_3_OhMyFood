@@ -1,3 +1,21 @@
 @import "base";
 @import "header";
 @import "footer";
+
+
+.main {
+    border-radius: 2rem 2rem 0 0;
+    // position: ;
+    & img {
+        height: 400px;
+        object-fit: cover;
+        object-position: 50% 70%;
+        width: 100%;
+    }
+    & h1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        font-family: 'Shrikhand', cursive;
+    }
+}
