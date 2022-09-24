@@ -128,64 +128,103 @@ header h1 {
 .restaurants {
   background-color: #F6F6F6;
 }
-.restaurants .cards {
-  margin: 1rem 1rem 1rem 2rem;
+.restaurants .row-cards-1, .restaurants .row-cards-2 {
+  margin: 1rem 1rem 2rem 2rem;
   display: flex;
   justify-content: space-around;
-  gap: 1rem;
+  gap: 2rem;
 }
-.restaurants .cards .card1, .restaurants .cards .card2, .restaurants .cards .card3, .restaurants .cards .card4 {
+.restaurants .row-cards-1 .card1, .restaurants .row-cards-1 .card2, .restaurants .row-cards-1 .card3, .restaurants .row-cards-1 .card4, .restaurants .row-cards-2 .card1, .restaurants .row-cards-2 .card2, .restaurants .row-cards-2 .card3, .restaurants .row-cards-2 .card4 {
   cursor: pointer;
+  position: relative;
   height: 270px;
   display: flex;
   flex-direction: column;
-  flex-basis: 25%;
+  flex-basis: 50%;
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0 3px 8px darkgray;
 }
-.restaurants .cards .card1 img, .restaurants .cards .card2 img, .restaurants .cards .card3 img, .restaurants .cards .card4 img {
+.restaurants .row-cards-1 .card1 img, .restaurants .row-cards-1 .card2 img, .restaurants .row-cards-1 .card3 img, .restaurants .row-cards-1 .card4 img, .restaurants .row-cards-2 .card1 img, .restaurants .row-cards-2 .card2 img, .restaurants .row-cards-2 .card3 img, .restaurants .row-cards-2 .card4 img {
   width: 100%;
   object-fit: cover;
   min-height: 200px;
   max-height: 200px;
   border-radius: 1rem 1rem 0 0;
 }
-.restaurants .cards .card1 .description, .restaurants .cards .card2 .description, .restaurants .cards .card3 .description, .restaurants .cards .card4 .description {
+.restaurants .row-cards-1 .card1 .description, .restaurants .row-cards-1 .card2 .description, .restaurants .row-cards-1 .card3 .description, .restaurants .row-cards-1 .card4 .description, .restaurants .row-cards-2 .card1 .description, .restaurants .row-cards-2 .card2 .description, .restaurants .row-cards-2 .card3 .description, .restaurants .row-cards-2 .card4 .description {
   display: flex;
   justify-content: space-around;
 }
-.restaurants .cards .card1 .description .layout, .restaurants .cards .card2 .description .layout, .restaurants .cards .card3 .description .layout, .restaurants .cards .card4 .description .layout {
+.restaurants .row-cards-1 .card1 .description .layout, .restaurants .row-cards-1 .card2 .description .layout, .restaurants .row-cards-1 .card3 .description .layout, .restaurants .row-cards-1 .card4 .description .layout, .restaurants .row-cards-2 .card1 .description .layout, .restaurants .row-cards-2 .card2 .description .layout, .restaurants .row-cards-2 .card3 .description .layout, .restaurants .row-cards-2 .card4 .description .layout {
   width: 90%;
 }
-.restaurants .cards .card1 .description .layout h3, .restaurants .cards .card1 .description .layout p, .restaurants .cards .card2 .description .layout h3, .restaurants .cards .card2 .description .layout p, .restaurants .cards .card3 .description .layout h3, .restaurants .cards .card3 .description .layout p, .restaurants .cards .card4 .description .layout h3, .restaurants .cards .card4 .description .layout p {
+.restaurants .row-cards-1 .card1 .description .layout h3, .restaurants .row-cards-1 .card1 .description .layout p, .restaurants .row-cards-1 .card2 .description .layout h3, .restaurants .row-cards-1 .card2 .description .layout p, .restaurants .row-cards-1 .card3 .description .layout h3, .restaurants .row-cards-1 .card3 .description .layout p, .restaurants .row-cards-1 .card4 .description .layout h3, .restaurants .row-cards-1 .card4 .description .layout p, .restaurants .row-cards-2 .card1 .description .layout h3, .restaurants .row-cards-2 .card1 .description .layout p, .restaurants .row-cards-2 .card2 .description .layout h3, .restaurants .row-cards-2 .card2 .description .layout p, .restaurants .row-cards-2 .card3 .description .layout h3, .restaurants .row-cards-2 .card3 .description .layout p, .restaurants .row-cards-2 .card4 .description .layout h3, .restaurants .row-cards-2 .card4 .description .layout p {
   margin: 0;
   padding: 0.3rem 0 0 1rem;
 }
-.restaurants .cards .card1 .description .layout-star, .restaurants .cards .card2 .description .layout-star, .restaurants .cards .card3 .description .layout-star, .restaurants .cards .card4 .description .layout-star {
+.restaurants .row-cards-1 .card1 .description .layout-star, .restaurants .row-cards-1 .card2 .description .layout-star, .restaurants .row-cards-1 .card3 .description .layout-star, .restaurants .row-cards-1 .card4 .description .layout-star, .restaurants .row-cards-2 .card1 .description .layout-star, .restaurants .row-cards-2 .card2 .description .layout-star, .restaurants .row-cards-2 .card3 .description .layout-star, .restaurants .row-cards-2 .card4 .description .layout-star {
   display: flex;
   width: 10%;
   height: 50px;
   align-items: center;
 }
-.restaurants .cards .card1 .description .layout-star .fa-solid.fa-heart, .restaurants .cards .card2 .description .layout-star .fa-solid.fa-heart, .restaurants .cards .card3 .description .layout-star .fa-solid.fa-heart, .restaurants .cards .card4 .description .layout-star .fa-solid.fa-heart {
+.restaurants .row-cards-1 .card1 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-1 .card2 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-1 .card3 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-1 .card4 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card1 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card2 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card3 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card4 .description .layout-star .fa-solid.fa-heart {
   display: none;
 }
-.restaurants .cards .card1 .description .layout-star:hover, .restaurants .cards .card2 .description .layout-star:hover, .restaurants .cards .card3 .description .layout-star:hover, .restaurants .cards .card4 .description .layout-star:hover {
+.restaurants .row-cards-1 .card1 .description .layout-star:hover, .restaurants .row-cards-1 .card2 .description .layout-star:hover, .restaurants .row-cards-1 .card3 .description .layout-star:hover, .restaurants .row-cards-1 .card4 .description .layout-star:hover, .restaurants .row-cards-2 .card1 .description .layout-star:hover, .restaurants .row-cards-2 .card2 .description .layout-star:hover, .restaurants .row-cards-2 .card3 .description .layout-star:hover, .restaurants .row-cards-2 .card4 .description .layout-star:hover {
   background: linear-gradient(#9356dc 20%, #ff79da 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurants .cards .card1 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .cards .card2 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .cards .card3 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .cards .card4 .description .layout-star:hover .fa-regular.fa-heart {
+.restaurants .row-cards-1 .card1 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-1 .card2 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-1 .card3 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-1 .card4 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-2 .card1 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-2 .card2 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-2 .card3 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-2 .card4 .description .layout-star:hover .fa-regular.fa-heart {
   display: none;
 }
-.restaurants .cards .card1 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .cards .card2 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .cards .card3 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .cards .card4 .description .layout-star:hover .fa-solid.fa-heart {
+.restaurants .row-cards-1 .card1 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-1 .card2 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-1 .card3 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-1 .card4 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-2 .card1 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-2 .card2 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-2 .card3 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-2 .card4 .description .layout-star:hover .fa-solid.fa-heart {
   display: inline;
+}
+.restaurants .row-cards-1 .card1:hover, .restaurants .row-cards-1 .card2:hover, .restaurants .row-cards-1 .card3:hover, .restaurants .row-cards-1 .card4:hover, .restaurants .row-cards-2 .card1:hover, .restaurants .row-cards-2 .card2:hover, .restaurants .row-cards-2 .card3:hover, .restaurants .row-cards-2 .card4:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px #9356dc;
+}
+.restaurants .row-cards-1 span, .restaurants .row-cards-2 span {
+  position: absolute;
+  content: "";
+  right: 10px;
+  top: 20px;
+  font-weight: bold;
+  background-color: #99E2D0;
+  color: #2FAF94;
+  padding: 0.5rem;
+  width: 65px;
 }
 .restaurants h2 {
   margin: 4rem 0 0 2rem;
   padding-top: 2rem;
+}
+@media (max-width: 576px) {
+  .restaurants .row-cards-1, .restaurants .row-cards-2 {
+    display: block;
+    flex-wrap: wrap;
+    margin: 1rem;
+  }
+  .restaurants .row-cards-1 .card1, .restaurants .row-cards-1 .card2, .restaurants .row-cards-1 .card3, .restaurants .row-cards-1 .card4, .restaurants .row-cards-2 .card1, .restaurants .row-cards-2 .card2, .restaurants .row-cards-2 .card3, .restaurants .row-cards-2 .card4 {
+    display: flex;
+    flex-basis: 100%;
+    min-width: 210px;
+    margin-top: 1rem;
+  }
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 2rem;
+}
+footer h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
