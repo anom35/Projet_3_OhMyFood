@@ -12,13 +12,14 @@
         justify-content: space-around;
         gap: 1rem;
         .card1, .card2, .card3, .card4 {
+            cursor: pointer;
             height: 270px;
             display: flex;
             flex-direction: column;
             flex-basis: 25%;
             background-color: white;
             border-radius: 1rem;
-            box-shadow: 0 3px 5px $--darkgray;
+            box-shadow: 0 3px 8px $--darkgray;
             & img {
                 width: 100%;
                 object-fit: cover;
@@ -35,11 +36,27 @@
                         margin: 0;
                         padding: 0.3rem 0 0 1rem;
                     }
-                    
                 }
                 .layout-star {
+                    display: flex;
                     width: 10%;
                     height: 50px;
+                    align-items: center;
+                    .fa-solid.fa-heart { 
+                        display: none;
+                    }
+                    &:hover {
+                        .fa-regular.fa-heart {
+                            display: none;
+                        }
+                        .fa-solid.fa-heart { 
+                            display: inline;
+                        }
+                        background: linear-gradient($--primary 20%, $--secondary 100%);
+                        background-clip: border-box;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
                 }
             }
         }

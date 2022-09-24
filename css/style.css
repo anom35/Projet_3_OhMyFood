@@ -135,13 +135,14 @@ header h1 {
   gap: 1rem;
 }
 .restaurants .cards .card1, .restaurants .cards .card2, .restaurants .cards .card3, .restaurants .cards .card4 {
+  cursor: pointer;
   height: 270px;
   display: flex;
   flex-direction: column;
   flex-basis: 25%;
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 0 3px 5px darkgray;
+  box-shadow: 0 3px 8px darkgray;
 }
 .restaurants .cards .card1 img, .restaurants .cards .card2 img, .restaurants .cards .card3 img, .restaurants .cards .card4 img {
   width: 100%;
@@ -162,8 +163,25 @@ header h1 {
   padding: 0.3rem 0 0 1rem;
 }
 .restaurants .cards .card1 .description .layout-star, .restaurants .cards .card2 .description .layout-star, .restaurants .cards .card3 .description .layout-star, .restaurants .cards .card4 .description .layout-star {
+  display: flex;
   width: 10%;
   height: 50px;
+  align-items: center;
+}
+.restaurants .cards .card1 .description .layout-star .fa-solid.fa-heart, .restaurants .cards .card2 .description .layout-star .fa-solid.fa-heart, .restaurants .cards .card3 .description .layout-star .fa-solid.fa-heart, .restaurants .cards .card4 .description .layout-star .fa-solid.fa-heart {
+  display: none;
+}
+.restaurants .cards .card1 .description .layout-star:hover, .restaurants .cards .card2 .description .layout-star:hover, .restaurants .cards .card3 .description .layout-star:hover, .restaurants .cards .card4 .description .layout-star:hover {
+  background: linear-gradient(#9356dc 20%, #ff79da 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants .cards .card1 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .cards .card2 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .cards .card3 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .cards .card4 .description .layout-star:hover .fa-regular.fa-heart {
+  display: none;
+}
+.restaurants .cards .card1 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .cards .card2 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .cards .card3 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .cards .card4 .description .layout-star:hover .fa-solid.fa-heart {
+  display: inline;
 }
 .restaurants h2 {
   margin: 4rem 0 0 2rem;
