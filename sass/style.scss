@@ -3,14 +3,6 @@
 @import "navbar";
 @import "menu";
 @import "restaurants";
+@import "footer";
 
 
-footer {
-    background-color: $--grayblack;
-    color: white;
-    padding: 2rem;
-    & h1 {
-        font-family: 'Shrikhand', cursive;
-        font-weight: normal;
-    }
-}
