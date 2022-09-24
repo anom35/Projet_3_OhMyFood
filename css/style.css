@@ -158,7 +158,7 @@ header h1 {
   justify-content: space-around;
 }
 .restaurants .row-cards-1 .card1 .description .layout, .restaurants .row-cards-1 .card2 .description .layout, .restaurants .row-cards-1 .card3 .description .layout, .restaurants .row-cards-1 .card4 .description .layout, .restaurants .row-cards-2 .card1 .description .layout, .restaurants .row-cards-2 .card2 .description .layout, .restaurants .row-cards-2 .card3 .description .layout, .restaurants .row-cards-2 .card4 .description .layout {
-  width: 90%;
+  width: 85%;
 }
 .restaurants .row-cards-1 .card1 .description .layout h3, .restaurants .row-cards-1 .card1 .description .layout p, .restaurants .row-cards-1 .card2 .description .layout h3, .restaurants .row-cards-1 .card2 .description .layout p, .restaurants .row-cards-1 .card3 .description .layout h3, .restaurants .row-cards-1 .card3 .description .layout p, .restaurants .row-cards-1 .card4 .description .layout h3, .restaurants .row-cards-1 .card4 .description .layout p, .restaurants .row-cards-2 .card1 .description .layout h3, .restaurants .row-cards-2 .card1 .description .layout p, .restaurants .row-cards-2 .card2 .description .layout h3, .restaurants .row-cards-2 .card2 .description .layout p, .restaurants .row-cards-2 .card3 .description .layout h3, .restaurants .row-cards-2 .card3 .description .layout p, .restaurants .row-cards-2 .card4 .description .layout h3, .restaurants .row-cards-2 .card4 .description .layout p {
   margin: 0;
@@ -166,9 +166,10 @@ header h1 {
 }
 .restaurants .row-cards-1 .card1 .description .layout-star, .restaurants .row-cards-1 .card2 .description .layout-star, .restaurants .row-cards-1 .card3 .description .layout-star, .restaurants .row-cards-1 .card4 .description .layout-star, .restaurants .row-cards-2 .card1 .description .layout-star, .restaurants .row-cards-2 .card2 .description .layout-star, .restaurants .row-cards-2 .card3 .description .layout-star, .restaurants .row-cards-2 .card4 .description .layout-star {
   display: flex;
-  width: 10%;
+  width: 15%;
   height: 50px;
   align-items: center;
+  font-size: 1.5rem;
 }
 .restaurants .row-cards-1 .card1 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-1 .card2 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-1 .card3 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-1 .card4 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card1 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card2 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card3 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card4 .description .layout-star .fa-solid.fa-heart {
   display: none;
@@ -204,7 +205,7 @@ header h1 {
   margin: 4rem 0 0 2rem;
   padding-top: 2rem;
 }
-@media (max-width: 576px) {
+@media (max-width: 660px) {
   .restaurants .row-cards-1, .restaurants .row-cards-2 {
     display: block;
     flex-wrap: wrap;
