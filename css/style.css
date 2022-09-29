@@ -188,6 +188,10 @@ header h1 {
 .restaurants .card .description .layout-star:hover .fa-solid.fa-heart {
   display: inline;
 }
+.restaurants .card a {
+  text-decoration: none;
+  color: inherit;
+}
 .restaurants .card:hover {
   transform: scale(1.02);
   box-shadow: 0 0 8px #9356dc;
@@ -204,7 +208,8 @@ header h1 {
   width: 65px;
 }
 .restaurants h2 {
-  margin: 2rem 0 0 2rem;
+  margin: 4rem 0 0 2rem;
+  padding-top: 2rem;
   width: 100%;
 }
 @media (max-width: 660px) {
