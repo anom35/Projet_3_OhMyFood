@@ -2,20 +2,51 @@
 @import "header";
 @import "footer";
 
+@mixin display_flex() {
+    display: flex;
+}
 
-.main {
-    border-radius: 2rem 2rem 0 0;
-    // position: ;
-    & img {
-        height: 400px;
-        object-fit: cover;
-        object-position: 50% 70%;
-        width: 100%;
+body {
+    header {
+        > div {
+            display: flex;
+        }
+        .logo {
+            display: flex;
+            flex-basis: 2rem;
+            align-items: center;
+            margin-left: 1rem;
+            & i {
+                font-size: 2rem;
+                cursor: pointer;
+            }
+            & i:hover {
+                
+            }
+        }
+        .titre {
+            display: flex;
+            flex-basis: 100%;
+            justify-content: center;
+            & h1 {
+                font-family: "Shrickhand", cursive;
+            }
+        }
     }
-    & h1 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        font-family: 'Shrikhand', cursive;
+    main {
+        border-radius: 2rem 2rem 0 0;
+        // position: ;
+        & img {
+            height: 400px;
+            object-fit: cover;
+            object-position: 50% 70%;
+            width: 100%;
+        }
+        & h1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            font-family: 'Shrikhand', cursive;
+        }
     }
 }
