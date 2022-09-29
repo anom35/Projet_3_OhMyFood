@@ -40,11 +40,25 @@ body {
             object-position: 50% 70%;
             width: 100%;
         }
-        & h1 {
+        .titre-menu {
+            position: relative;
+            top: -5rem;
+            border-radius: 3rem 3rem 0 0;
+            background-color: white;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            font-family: 'Shrikhand', cursive;
+            justify-content: space-between;
+            flex-basis: 95%;
+            padding-left: 2rem;;
+            & h1 {
+                font-family: 'Shrikhand', cursive;
+            }
+            & i {
+                display: flex;
+                font-size: 2rem;
+                align-items: center;
+                padding-right: 3rem;
+            }
         }
+
     }
 }

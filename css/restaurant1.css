@@ -75,11 +75,24 @@ body main img {
   object-position: 50% 70%;
   width: 100%;
 }
-body main h1 {
+body main .titre-menu {
+  position: relative;
+  top: -5rem;
+  border-radius: 3rem 3rem 0 0;
+  background-color: white;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-basis: 95%;
+  padding-left: 2rem;
+}
+body main .titre-menu h1 {
   font-family: "Shrikhand", cursive;
+}
+body main .titre-menu i {
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  padding-right: 3rem;
 }
 
 /*# sourceMappingURL=restaurant1.css.map */
