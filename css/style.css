@@ -80,6 +80,9 @@ header h1 {
   flex-basis: 100%;
 }
 
+.menu {
+  margin-bottom: 4rem;
+}
 .menu h2 {
   margin: 2rem 0 0 2rem;
 }
@@ -126,11 +129,10 @@ header h1 {
 }
 
 .restaurants {
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   background-color: #F6F6F6;
-  margin: 1rem 1rem 2rem 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
@@ -168,6 +170,7 @@ header h1 {
   width: 15%;
   height: 50px;
   align-items: center;
+  justify-content: center;
   font-size: 1.5rem;
 }
 .restaurants .card .description .layout-star .fa-solid.fa-heart {
@@ -201,17 +204,11 @@ header h1 {
   width: 65px;
 }
 .restaurants h2 {
-  margin: 4rem 0 0 2rem;
-  padding-top: 2rem;
+  margin: 2rem 0 0 2rem;
   width: 100%;
 }
 @media (max-width: 660px) {
-  .restaurants .row-cards-1, .restaurants .row-cards-2 {
-    display: block;
-    flex-wrap: wrap;
-    margin: 1rem;
-  }
-  .restaurants .row-cards-1 .card1, .restaurants .row-cards-1 .card2, .restaurants .row-cards-1 .card3, .restaurants .row-cards-1 .card4, .restaurants .row-cards-2 .card1, .restaurants .row-cards-2 .card2, .restaurants .row-cards-2 .card3, .restaurants .row-cards-2 .card4 {
+  .restaurants .card {
     display: flex;
     flex-basis: 100%;
     min-width: 210px;
