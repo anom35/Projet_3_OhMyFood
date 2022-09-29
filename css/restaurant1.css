@@ -55,6 +55,7 @@ body header .logo {
 }
 body header .logo i {
   font-size: 2rem;
+  color: black;
   cursor: pointer;
 }
 body header .titre {
@@ -63,7 +64,7 @@ body header .titre {
   justify-content: center;
 }
 body header .titre h1 {
-  font-family: "Shrickhand", cursive;
+  font-family: "Shrikhand", cursive;
 }
 body main {
   border-radius: 2rem 2rem 0 0;
