@@ -44,16 +44,37 @@ footer a {
   color: white;
 }
 
-.main {
+body header > div {
+  display: flex;
+}
+body header .logo {
+  display: flex;
+  flex-basis: 2rem;
+  align-items: center;
+  margin-left: 1rem;
+}
+body header .logo i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+body header .titre {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+}
+body header .titre h1 {
+  font-family: "Shrickhand", cursive;
+}
+body main {
   border-radius: 2rem 2rem 0 0;
 }
-.main img {
+body main img {
   height: 400px;
   object-fit: cover;
   object-position: 50% 70%;
   width: 100%;
 }
-.main h1 {
+body main h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
