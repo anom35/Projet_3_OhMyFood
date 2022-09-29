@@ -105,7 +105,7 @@ header h1 {
 .menu ol li i {
   margin-right: 0.5rem;
 }
-.menu ol li label {
+.menu ol li span {
   position: relative;
   left: -1rem;
   border: 1px solid #9356dc;
@@ -115,7 +115,7 @@ header h1 {
   background-color: #9356dc;
   color: white;
 }
-.menu ol li label:hover {
+.menu ol li span:hover {
   cursor: pointer;
 }
 .menu ol li:hover {
@@ -128,69 +128,68 @@ header h1 {
 .restaurants {
   padding-bottom: 2rem;
   background-color: #F6F6F6;
-}
-.restaurants .row-cards-1, .restaurants .row-cards-2 {
   margin: 1rem 1rem 2rem 2rem;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   gap: 2rem;
 }
-.restaurants .row-cards-1 .card1, .restaurants .row-cards-1 .card2, .restaurants .row-cards-1 .card3, .restaurants .row-cards-1 .card4, .restaurants .row-cards-2 .card1, .restaurants .row-cards-2 .card2, .restaurants .row-cards-2 .card3, .restaurants .row-cards-2 .card4 {
+.restaurants .card {
   cursor: pointer;
   position: relative;
   height: 270px;
   display: flex;
   flex-direction: column;
-  flex-basis: 50%;
+  flex-basis: 45%;
   background-color: white;
   border-radius: 1rem;
   box-shadow: 0 3px 8px darkgray;
 }
-.restaurants .row-cards-1 .card1 img, .restaurants .row-cards-1 .card2 img, .restaurants .row-cards-1 .card3 img, .restaurants .row-cards-1 .card4 img, .restaurants .row-cards-2 .card1 img, .restaurants .row-cards-2 .card2 img, .restaurants .row-cards-2 .card3 img, .restaurants .row-cards-2 .card4 img {
+.restaurants .card img {
   width: 100%;
   object-fit: cover;
   min-height: 200px;
   max-height: 200px;
   border-radius: 1rem 1rem 0 0;
 }
-.restaurants .row-cards-1 .card1 .description, .restaurants .row-cards-1 .card2 .description, .restaurants .row-cards-1 .card3 .description, .restaurants .row-cards-1 .card4 .description, .restaurants .row-cards-2 .card1 .description, .restaurants .row-cards-2 .card2 .description, .restaurants .row-cards-2 .card3 .description, .restaurants .row-cards-2 .card4 .description {
+.restaurants .card .description {
   display: flex;
   justify-content: space-around;
 }
-.restaurants .row-cards-1 .card1 .description .layout, .restaurants .row-cards-1 .card2 .description .layout, .restaurants .row-cards-1 .card3 .description .layout, .restaurants .row-cards-1 .card4 .description .layout, .restaurants .row-cards-2 .card1 .description .layout, .restaurants .row-cards-2 .card2 .description .layout, .restaurants .row-cards-2 .card3 .description .layout, .restaurants .row-cards-2 .card4 .description .layout {
+.restaurants .card .description .layout {
   width: 85%;
 }
-.restaurants .row-cards-1 .card1 .description .layout h3, .restaurants .row-cards-1 .card1 .description .layout p, .restaurants .row-cards-1 .card2 .description .layout h3, .restaurants .row-cards-1 .card2 .description .layout p, .restaurants .row-cards-1 .card3 .description .layout h3, .restaurants .row-cards-1 .card3 .description .layout p, .restaurants .row-cards-1 .card4 .description .layout h3, .restaurants .row-cards-1 .card4 .description .layout p, .restaurants .row-cards-2 .card1 .description .layout h3, .restaurants .row-cards-2 .card1 .description .layout p, .restaurants .row-cards-2 .card2 .description .layout h3, .restaurants .row-cards-2 .card2 .description .layout p, .restaurants .row-cards-2 .card3 .description .layout h3, .restaurants .row-cards-2 .card3 .description .layout p, .restaurants .row-cards-2 .card4 .description .layout h3, .restaurants .row-cards-2 .card4 .description .layout p {
+.restaurants .card .description .layout h3, .restaurants .card .description .layout p {
   margin: 0;
   padding: 0.3rem 0 0 1rem;
 }
-.restaurants .row-cards-1 .card1 .description .layout-star, .restaurants .row-cards-1 .card2 .description .layout-star, .restaurants .row-cards-1 .card3 .description .layout-star, .restaurants .row-cards-1 .card4 .description .layout-star, .restaurants .row-cards-2 .card1 .description .layout-star, .restaurants .row-cards-2 .card2 .description .layout-star, .restaurants .row-cards-2 .card3 .description .layout-star, .restaurants .row-cards-2 .card4 .description .layout-star {
+.restaurants .card .description .layout-star {
   display: flex;
   width: 15%;
   height: 50px;
   align-items: center;
   font-size: 1.5rem;
 }
-.restaurants .row-cards-1 .card1 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-1 .card2 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-1 .card3 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-1 .card4 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card1 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card2 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card3 .description .layout-star .fa-solid.fa-heart, .restaurants .row-cards-2 .card4 .description .layout-star .fa-solid.fa-heart {
+.restaurants .card .description .layout-star .fa-solid.fa-heart {
   display: none;
 }
-.restaurants .row-cards-1 .card1 .description .layout-star:hover, .restaurants .row-cards-1 .card2 .description .layout-star:hover, .restaurants .row-cards-1 .card3 .description .layout-star:hover, .restaurants .row-cards-1 .card4 .description .layout-star:hover, .restaurants .row-cards-2 .card1 .description .layout-star:hover, .restaurants .row-cards-2 .card2 .description .layout-star:hover, .restaurants .row-cards-2 .card3 .description .layout-star:hover, .restaurants .row-cards-2 .card4 .description .layout-star:hover {
+.restaurants .card .description .layout-star:hover {
   background: linear-gradient(#9356dc 20%, #ff79da 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurants .row-cards-1 .card1 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-1 .card2 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-1 .card3 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-1 .card4 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-2 .card1 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-2 .card2 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-2 .card3 .description .layout-star:hover .fa-regular.fa-heart, .restaurants .row-cards-2 .card4 .description .layout-star:hover .fa-regular.fa-heart {
+.restaurants .card .description .layout-star:hover .fa-regular.fa-heart {
   display: none;
 }
-.restaurants .row-cards-1 .card1 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-1 .card2 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-1 .card3 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-1 .card4 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-2 .card1 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-2 .card2 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-2 .card3 .description .layout-star:hover .fa-solid.fa-heart, .restaurants .row-cards-2 .card4 .description .layout-star:hover .fa-solid.fa-heart {
+.restaurants .card .description .layout-star:hover .fa-solid.fa-heart {
   display: inline;
 }
-.restaurants .row-cards-1 .card1:hover, .restaurants .row-cards-1 .card2:hover, .restaurants .row-cards-1 .card3:hover, .restaurants .row-cards-1 .card4:hover, .restaurants .row-cards-2 .card1:hover, .restaurants .row-cards-2 .card2:hover, .restaurants .row-cards-2 .card3:hover, .restaurants .row-cards-2 .card4:hover {
+.restaurants .card:hover {
   transform: scale(1.02);
   box-shadow: 0 0 8px #9356dc;
 }
-.restaurants .row-cards-1 span, .restaurants .row-cards-2 span {
+.restaurants span {
   position: absolute;
   content: "";
   right: 10px;
@@ -204,6 +203,7 @@ header h1 {
 .restaurants h2 {
   margin: 4rem 0 0 2rem;
   padding-top: 2rem;
+  width: 100%;
 }
 @media (max-width: 660px) {
   .restaurants .row-cards-1, .restaurants .row-cards-2 {

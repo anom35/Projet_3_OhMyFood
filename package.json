@@ -1,0 +1,20 @@
+{
+  "name": "projet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/style.scss css/style.css",
+    "sass": "sass --watch sass/restaurant1.scss css/restaurant1.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anom35/Projet_3_OhMyFood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anom35/Projet_3_OhMyFood/issues"
+  },
+  "homepage": "https://github.com/anom35/Projet_3_OhMyFood#readme"
+}
