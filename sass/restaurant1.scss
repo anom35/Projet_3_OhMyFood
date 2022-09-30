@@ -2,8 +2,49 @@
 @import "header";
 @import "footer";
 
-@mixin display_flex() {
+@mixin choix-de-menu() {
     display: flex;
+    border: 1px solid white;
+    width: 300px;
+    height: 60px;
+    background-color: white;
+    border-radius: 1rem;
+    .description {
+        display: flex;
+        flex-direction: column;
+        width: 98%;
+        gap: 0.2rem;
+        padding: 0.5rem;
+        align-content: space-around;
+        // & h4 {
+        //     padding-bottom: 5px;
+        // }
+    }
+    .prix {
+        display: flex;
+        width: 10%;
+        align-items: flex-end;
+        justify-content: end;
+        padding: 0 0.5rem 0.8rem 0;
+        border-radius: 0 1rem 1rem 0;
+    }
+    .select-choix {
+        display: flex;
+        background-color: $--lightgreen;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 1rem 1rem 0;
+        width: 4rem;
+        display: none;
+        & i:hver {
+            font-size: 1.2rem;
+            color: $--green;
+            background: white;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 }
 
 body {
@@ -72,27 +113,7 @@ body {
                 display: none;
             }
             & form {
-                display: flex;
-                border: 1px solid white;
-                width: 300px;
-                height: 60px;
-                background-color: white;
-                border-radius: 1rem;
-                .description {
-                    display: flex;
-                    flex-direction: column;
-                    width: 90%;
-                    padding: 0 0 0.8rem 0.5 rem;
-                }
-                .prix {
-                    display: flex;
-                    width: 10%;
-                    align-items: flex-end;
-                    justify-content: end;
-                    padding: 0 0.5rem 0.8rem 0;
-                    background-color: $--lightgreen;
-                    border-radius: 0 1rem 1rem 0;
-                }
+                @include choix-de-menu();
             }
         }
 

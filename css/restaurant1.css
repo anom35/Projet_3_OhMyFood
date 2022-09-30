@@ -117,8 +117,10 @@ body main .entrees form {
 body main .entrees form .description {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  padding: 0 0 0.8rem 0.5 rem;
+  width: 98%;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  align-content: space-around;
 }
 body main .entrees form .prix {
   display: flex;
@@ -126,8 +128,24 @@ body main .entrees form .prix {
   align-items: flex-end;
   justify-content: end;
   padding: 0 0.5rem 0.8rem 0;
-  background-color: #99E2D0;
   border-radius: 0 1rem 1rem 0;
+}
+body main .entrees form .select-choix {
+  display: flex;
+  background-color: #99E2D0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 1rem 1rem 0;
+  width: 4rem;
+  display: none;
+}
+body main .entrees form .select-choix i:hver {
+  font-size: 1.2rem;
+  color: #2FAF94;
+  background: white;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*# sourceMappingURL=restaurant1.css.map */
