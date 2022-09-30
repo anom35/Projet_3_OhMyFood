@@ -68,6 +68,7 @@ body header .titre h1 {
 }
 body main {
   border-radius: 2rem 2rem 0 0;
+  background-color: #EAEAEA;
 }
 body main img {
   height: 400px;
@@ -84,6 +85,7 @@ body main .titre-menu {
   justify-content: space-between;
   flex-basis: 95%;
   padding-left: 2rem;
+  background-color: #EAEAEA;
 }
 body main .titre-menu h1 {
   font-family: "Shrikhand", cursive;
@@ -94,9 +96,38 @@ body main .titre-menu i {
   align-items: center;
   padding-right: 3rem;
 }
-body main .entrees h3 {
+body main .entrees h4, body main .entrees p {
+  margin: 0;
+}
+body main .entrees span {
   border-bottom: 3rem;
   border-color: #2FAF94;
+}
+body main .entrees input {
+  display: none;
+}
+body main .entrees form {
+  display: flex;
+  border: 1px solid white;
+  width: 300px;
+  height: 60px;
+  background-color: white;
+  border-radius: 1rem;
+}
+body main .entrees form .description {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 0 0 0.8rem 0.5 rem;
+}
+body main .entrees form .prix {
+  display: flex;
+  width: 10%;
+  align-items: flex-end;
+  justify-content: end;
+  padding: 0 0.5rem 0.8rem 0;
+  background-color: #99E2D0;
+  border-radius: 0 1rem 1rem 0;
 }
 
 /*# sourceMappingURL=restaurant1.css.map */
