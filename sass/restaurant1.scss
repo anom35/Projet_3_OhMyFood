@@ -59,6 +59,12 @@ body {
                 padding-right: 3rem;
             }
         }
+        .entrees {
+            & h3 {
+                border-bottom: 3rem;
+                border-color: $--green;
+            }
+        }
 
     }
 }

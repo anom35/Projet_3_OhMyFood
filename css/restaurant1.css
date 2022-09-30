@@ -94,5 +94,9 @@ body main .titre-menu i {
   align-items: center;
   padding-right: 3rem;
 }
+body main .entrees h3 {
+  border-bottom: 3rem;
+  border-color: #2FAF94;
+}
 
 /*# sourceMappingURL=restaurant1.css.map */
