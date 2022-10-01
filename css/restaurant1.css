@@ -120,17 +120,16 @@ body main .entrees .form {
 body main .entrees .form .description {
   display: flex;
   flex-direction: column;
-  width: 98%;
-  gap: 0.2rem;
-  padding: 0.5rem;
-  align-content: space-around;
+  justify-content: space-between;
+  width: 85%;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 body main .entrees .form .prix {
   display: flex;
-  width: 10%;
+  width: 15%;
   align-items: flex-end;
-  justify-content: end;
-  padding: 0 0.5rem 0.8rem 0;
+  justify-content: center;
+  padding: 0 0.5rem 0.5rem 0;
   border-radius: 0 1rem 1rem 0;
 }
 body main .entrees .form .select-choix {
@@ -142,7 +141,7 @@ body main .entrees .form .select-choix {
   justify-content: center;
   border-radius: 0 1rem 1rem 0;
   width: 4rem;
-  margin-right: -3rem;
+  margin-right: -4rem;
 }
 body main .entrees .form:hover .select-choix {
   margin: 0;
