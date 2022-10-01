@@ -67,7 +67,6 @@ body header .titre h1 {
   font-family: "Shrikhand", cursive;
 }
 body main {
-  border-radius: 2rem 2rem 0 0;
   background-color: #EAEAEA;
 }
 body main img {
@@ -98,6 +97,12 @@ body main .titre-menu i {
 }
 body main .entrees {
   padding: 0 0 5rem 1rem;
+  display: flex;
+  border: 1px solid white;
+  width: 300px;
+  height: 60px;
+  background-color: white;
+  border-radius: 1rem;
 }
 body main .entrees h4, body main .entrees p {
   margin: 0;
@@ -109,15 +114,7 @@ body main .entrees span {
 body main .entrees input {
   display: none;
 }
-body main .entrees form {
-  display: flex;
-  border: 1px solid white;
-  width: 300px;
-  height: 60px;
-  background-color: white;
-  border-radius: 1rem;
-}
-body main .entrees form .description {
+body main .entrees .description {
   display: flex;
   flex-direction: column;
   width: 98%;
@@ -125,7 +122,7 @@ body main .entrees form .description {
   padding: 0.5rem;
   align-content: space-around;
 }
-body main .entrees form .prix {
+body main .entrees .prix {
   display: flex;
   width: 10%;
   align-items: flex-end;
@@ -133,16 +130,19 @@ body main .entrees form .prix {
   padding: 0 0.5rem 0.8rem 0;
   border-radius: 0 1rem 1rem 0;
 }
-body main .entrees form .select-choix {
+body main .entrees .select-choix {
   display: flex;
   background-color: #99E2D0;
+  color: white;
+  font-weight: bold;
   align-items: center;
   justify-content: center;
   border-radius: 0 1rem 1rem 0;
   width: 4rem;
-  visibility: hidden;
+  overflow: hidden;
+  margin-right: -3rem;
 }
-body main .entrees form .select-choix i:hover {
+body main .entrees:hover .select-choix {
   font-size: 1.2rem;
   color: #2FAF94;
   background: white;
@@ -150,16 +150,8 @@ body main .entrees form .select-choix i:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-body main .entrees form .description:hover, body main .entrees form .prix:hover {
+body main .entrees .description:hover, body main .entrees .prix:hover {
   cursor: pointer;
-}
-body main .entrees form:hover {
-  display: flex;
-  background-color: #99E2D0;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 1rem 1rem 0;
-  width: 4rem;
 }
 
 /*# sourceMappingURL=restaurant1.css.map */

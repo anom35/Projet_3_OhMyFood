@@ -16,9 +16,6 @@
         gap: 0.2rem;
         padding: 0.5rem;
         align-content: space-around;
-        // & h4 {
-        //     padding-bottom: 5px;
-        // }
     }
     .prix {
         display: flex;
@@ -31,32 +28,26 @@
     .select-choix {
         display: flex;
         background-color: $--lightgreen;
+        color: white;
+        font-weight: bold;
         align-items: center;
         justify-content: center;
         border-radius: 0 1rem 1rem 0;
         width: 4rem;
-        & i:hover {
-            font-size: 1.2rem;
-            color: $--green;
-            background: white;
-            background-clip: border-box;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: 1s ease-in;
-        }
+        overflow: hidden;
+        margin-right: -3rem;
     }
-    .description:hover, .prix:hover {
+    &:hover .select-choix {
+        font-size: 1.2rem;
+        color: $--green;
+        background: white;
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+.description:hover, .prix:hover {
         cursor: pointer;
     }
-    &:hover {
-        display: flex;
-        background-color: $--lightgreen;
-        align-items: center;
-        justify-content: center;
-        border-radius: 0 1rem 1rem 0;
-        width: 4rem;
-    }
-
 }
 
 body {
@@ -85,9 +76,8 @@ body {
         }
     }
     main {
-        border-radius: 2rem 2rem 0 0;
         background-color: $--ultralightgray;
-        overflow: hidden;
+        // overflow: hidden;
         & img {
             height: 400px;
             object-fit: cover;
@@ -126,11 +116,11 @@ body {
             & input {
                 display: none;
             }
-            .form {
+            // .form .select-choix {
                 @include choix-de-menu();
-            }
-            
+            // }
         }
 
     }
 }
+
