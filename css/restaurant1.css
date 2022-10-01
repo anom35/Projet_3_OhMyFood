@@ -101,9 +101,9 @@ body main .entrees {
 body main .entrees h4, body main .entrees p {
   margin: 0;
 }
-body main .entrees span {
-  border-bottom: 3rem;
-  border-color: #2FAF94;
+body main .entrees h3 {
+  border: 3rem;
+  border-color: green;
 }
 body main .entrees input {
   display: none;
@@ -121,7 +121,9 @@ body main .entrees .form {
 body main .entrees .form .description {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis "...";
   width: 85%;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
@@ -149,11 +151,10 @@ body main .entrees .form .select-choix {
 body main .entrees .form:hover .select-choix {
   margin: 0;
   transition: all 0.5s;
-  animation: spin 1s;
   cursor: pointer;
 }
 body main .entrees .form:hover .select-choix i {
-  transform: rotate(-360deg);
+  animation: spin 1s;
 }
 body main .entrees .form .description:hover,
 body main .entrees .form .prix:hover {

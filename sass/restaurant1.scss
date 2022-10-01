@@ -14,7 +14,10 @@
     .description {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis "...";
+        // justify-content: space-between;
         width: 85%;
         padding: 0.5rem 0.5rem 0.5rem 1rem;
     }
@@ -43,10 +46,9 @@
         .select-choix {
             margin: 0;
             transition: all 0.5s;
-            animation: spin 1s;
             cursor: pointer;
             & i {
-                transform: rotate(-360deg);
+                animation: spin 1s;
             }
         }
     }
@@ -118,9 +120,9 @@ body {
             & h4, p {
                 margin: 0;
             }
-            & span {
-                border-bottom: 3rem;
-                border-color: $--green;
+            & h3 {
+                border: 3rem;
+                border-color: green;
             }
             & input {
                 display: none;
