@@ -100,6 +100,9 @@ body main .entrees {
 }
 body main .entrees h4, body main .entrees p {
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 body main .entrees h3 {
   border: 3rem;
@@ -123,7 +126,7 @@ body main .entrees .form .description {
   flex-direction: column;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis "...";
+  text-overflow: ellipsis;
   width: 85%;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
 }

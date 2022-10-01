@@ -2,6 +2,12 @@
 @import "header";
 @import "footer";
 
+@mixin overhidden() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 @mixin choix-de-menu() {
     display: flex;
     border: 1px solid transparent;
@@ -14,9 +20,7 @@
     .description {
         display: flex;
         flex-direction: column;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis "...";
+        @include overhidden();
         // justify-content: space-between;
         width: 85%;
         padding: 0.5rem 0.5rem 0.5rem 1rem;
@@ -61,6 +65,8 @@
         100% { transform: rotate(360deg); }
     }
 }
+
+
 
 body {
     header {
@@ -119,6 +125,8 @@ body {
             padding: 0 0 5rem 1rem;
             & h4, p {
                 margin: 0;
+                @include overhidden();
+
             }
             & h3 {
                 border: 3rem;
