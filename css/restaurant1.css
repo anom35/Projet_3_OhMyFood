@@ -97,12 +97,6 @@ body main .titre-menu i {
 }
 body main .entrees {
   padding: 0 0 5rem 1rem;
-  display: flex;
-  border: 1px solid white;
-  width: 300px;
-  height: 60px;
-  background-color: white;
-  border-radius: 1rem;
 }
 body main .entrees h4, body main .entrees p {
   margin: 0;
@@ -114,7 +108,16 @@ body main .entrees span {
 body main .entrees input {
   display: none;
 }
-body main .entrees .description {
+body main .entrees .form {
+  display: flex;
+  border: 1px solid white;
+  width: 300px;
+  height: 60px;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+body main .entrees .form .description {
   display: flex;
   flex-direction: column;
   width: 98%;
@@ -122,7 +125,7 @@ body main .entrees .description {
   padding: 0.5rem;
   align-content: space-around;
 }
-body main .entrees .prix {
+body main .entrees .form .prix {
   display: flex;
   width: 10%;
   align-items: flex-end;
@@ -130,7 +133,7 @@ body main .entrees .prix {
   padding: 0 0.5rem 0.8rem 0;
   border-radius: 0 1rem 1rem 0;
 }
-body main .entrees .select-choix {
+body main .entrees .form .select-choix {
   display: flex;
   background-color: #99E2D0;
   color: white;
@@ -139,18 +142,13 @@ body main .entrees .select-choix {
   justify-content: center;
   border-radius: 0 1rem 1rem 0;
   width: 4rem;
-  overflow: hidden;
   margin-right: -3rem;
 }
-body main .entrees:hover .select-choix {
-  font-size: 1.2rem;
-  color: #2FAF94;
-  background: white;
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+body main .entrees .form:hover .select-choix {
+  margin: 0;
+  transition: all 0.5s;
 }
-body main .entrees .description:hover, body main .entrees .prix:hover {
+body main .entrees .form .description:hover, body main .entrees .form .prix:hover {
   cursor: pointer;
 }
 

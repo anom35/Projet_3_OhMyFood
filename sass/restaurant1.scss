@@ -9,6 +9,8 @@
     height: 60px;
     background-color: white;
     border-radius: 1rem;
+    overflow: hidden;
+
     .description {
         display: flex;
         flex-direction: column;
@@ -34,18 +36,21 @@
         justify-content: center;
         border-radius: 0 1rem 1rem 0;
         width: 4rem;
-        overflow: hidden;
         margin-right: -3rem;
     }
-    &:hover .select-choix {
-        font-size: 1.2rem;
-        color: $--green;
-        background: white;
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    &:hover {
+        .select-choix {
+            margin: 0;
+            transition: all 0.5s;
+        }
+        // font-size: 1.2rem;
+        // color: $--green;
+        // background: white;
+        // background-clip: border-box;
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
     }
-.description:hover, .prix:hover {
+    .description:hover, .prix:hover {
         cursor: pointer;
     }
 }
@@ -116,9 +121,9 @@ body {
             & input {
                 display: none;
             }
-            // .form .select-choix {
+            .form {
                 @include choix-de-menu();
-            // }
+            }
         }
 
     }
