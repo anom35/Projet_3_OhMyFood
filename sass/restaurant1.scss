@@ -4,12 +4,13 @@
 
 @mixin choix-de-menu() {
     display: flex;
-    border: 1px solid white;
+    border: 1px solid transparent;
     width: 300px;
     height: 60px;
     background-color: white;
     border-radius: 1rem;
     overflow: hidden;
+    margin-bottom: 1rem;
     .description {
         display: flex;
         flex-direction: column;
@@ -20,8 +21,9 @@
     .prix {
         display: flex;
         width: 15%;
+        font-weight: bold;
         align-items: flex-end;
-        justify-content: center;
+        justify-content: start;
         padding: 0 0.5rem 0.5rem 0;
         border-radius: 0 1rem 1rem 0;
     }
@@ -30,6 +32,7 @@
         background-color: $--lightgreen;
         color: white;
         font-weight: bold;
+        font-size: 1.3rem;
         align-items: center;
         justify-content: center;
         border-radius: 0 1rem 1rem 0;
@@ -40,10 +43,20 @@
         .select-choix {
             margin: 0;
             transition: all 0.5s;
+            animation: spin 1s;
+            cursor: pointer;
+            & i {
+                transform: rotate(-360deg);
+            }
         }
     }
-    .description:hover, .prix:hover {
+    .description:hover, 
+    .prix:hover {
         cursor: pointer;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
     }
 }
 
@@ -74,7 +87,6 @@ body {
     }
     main {
         background-color: $--ultralightgray;
-        // overflow: hidden;
         & img {
             height: 400px;
             object-fit: cover;
