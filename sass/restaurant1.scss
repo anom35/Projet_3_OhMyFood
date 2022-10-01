@@ -35,16 +35,28 @@
         justify-content: center;
         border-radius: 0 1rem 1rem 0;
         width: 4rem;
-        display: none;
-        & i:hver {
+        & i:hover {
             font-size: 1.2rem;
             color: $--green;
             background: white;
             background-clip: border-box;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: 1s ease-in;
         }
     }
+    .description:hover, .prix:hover {
+        cursor: pointer;
+    }
+    &:hover {
+        display: flex;
+        background-color: $--lightgreen;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 1rem 1rem 0;
+        width: 4rem;
+    }
+
 }
 
 body {
@@ -75,6 +87,7 @@ body {
     main {
         border-radius: 2rem 2rem 0 0;
         background-color: $--ultralightgray;
+        overflow: hidden;
         & img {
             height: 400px;
             object-fit: cover;
@@ -102,6 +115,7 @@ body {
             }
         }
         .entrees {
+            padding: 0 0 5rem 1rem;
             & h4, p {
                 margin: 0;
             }
@@ -112,9 +126,10 @@ body {
             & input {
                 display: none;
             }
-            & form {
+            .form {
                 @include choix-de-menu();
             }
+            
         }
 
     }

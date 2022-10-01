@@ -96,6 +96,9 @@ body main .titre-menu i {
   align-items: center;
   padding-right: 3rem;
 }
+body main .entrees {
+  padding: 0 0 5rem 1rem;
+}
 body main .entrees h4, body main .entrees p {
   margin: 0;
 }
@@ -137,15 +140,26 @@ body main .entrees form .select-choix {
   justify-content: center;
   border-radius: 0 1rem 1rem 0;
   width: 4rem;
-  display: none;
+  visibility: hidden;
 }
-body main .entrees form .select-choix i:hver {
+body main .entrees form .select-choix i:hover {
   font-size: 1.2rem;
   color: #2FAF94;
   background: white;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+body main .entrees form .description:hover, body main .entrees form .prix:hover {
+  cursor: pointer;
+}
+body main .entrees form:hover {
+  display: flex;
+  background-color: #99E2D0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 1rem 1rem 0;
+  width: 4rem;
 }
 
 /*# sourceMappingURL=restaurant1.css.map */
