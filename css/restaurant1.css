@@ -95,33 +95,38 @@ body main .titre-menu i {
   align-items: center;
   padding-right: 3rem;
 }
-body main .entrees {
+body main .entrees, body main .plats, body main .desserts {
   padding: 0 0 5rem 1rem;
 }
-body main .entrees h4, body main .entrees p {
+body main .entrees h4, body main .entrees p, body main .plats h4, body main .plats p, body main .desserts h4, body main .desserts p {
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-body main .entrees h3 {
-  border: 3rem;
-  border-color: green;
+body main .entrees h3, body main .plats h3, body main .desserts h3 {
+  margin: 0;
+  margin-bottom: 0.3rem;
 }
-body main .entrees input {
+body main .entrees > p, body main .plats > p, body main .desserts > p {
+  width: 47px;
+  color: #EAEAEA;
+  border-top: 3px solid #99E2D0;
+}
+body main .entrees input, body main .plats input, body main .desserts input {
   display: none;
 }
-body main .entrees .form {
+body main .entrees .form, body main .plats .form, body main .desserts .form {
   display: flex;
   border: 1px solid transparent;
-  width: 300px;
+  width: 370px;
   height: 60px;
   background-color: white;
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1rem;
 }
-body main .entrees .form .description {
+body main .entrees .form .description, body main .plats .form .description, body main .desserts .form .description {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -130,7 +135,7 @@ body main .entrees .form .description {
   width: 85%;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
-body main .entrees .form .prix {
+body main .entrees .form .prix, body main .plats .form .prix, body main .desserts .form .prix {
   display: flex;
   width: 15%;
   font-weight: bold;
@@ -139,7 +144,7 @@ body main .entrees .form .prix {
   padding: 0 0.5rem 0.5rem 0;
   border-radius: 0 1rem 1rem 0;
 }
-body main .entrees .form .select-choix {
+body main .entrees .form .select-choix, body main .plats .form .select-choix, body main .desserts .form .select-choix {
   display: flex;
   background-color: #99E2D0;
   color: white;
@@ -151,16 +156,18 @@ body main .entrees .form .select-choix {
   width: 4rem;
   margin-right: -4rem;
 }
-body main .entrees .form:hover .select-choix {
+body main .entrees .form:hover .select-choix, body main .plats .form:hover .select-choix, body main .desserts .form:hover .select-choix {
   margin: 0;
   transition: all 0.5s;
   cursor: pointer;
 }
-body main .entrees .form:hover .select-choix i {
+body main .entrees .form:hover .select-choix i, body main .plats .form:hover .select-choix i, body main .desserts .form:hover .select-choix i {
   animation: spin 1s;
 }
 body main .entrees .form .description:hover,
-body main .entrees .form .prix:hover {
+body main .entrees .form .prix:hover, body main .plats .form .description:hover,
+body main .plats .form .prix:hover, body main .desserts .form .description:hover,
+body main .desserts .form .prix:hover {
   cursor: pointer;
 }
 @keyframes spin {

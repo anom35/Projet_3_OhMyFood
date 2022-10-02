@@ -11,7 +11,7 @@
 @mixin choix-de-menu() {
     display: flex;
     border: 1px solid transparent;
-    width: 300px;
+    width: 370px;
     height: 60px;
     background-color: white;
     border-radius: 1rem;
@@ -121,7 +121,7 @@ body {
                 padding-right: 3rem;
             }
         }
-        .entrees {
+        .entrees, .plats, .desserts {
             padding: 0 0 5rem 1rem;
             & h4, p {
                 margin: 0;
@@ -129,8 +129,13 @@ body {
 
             }
             & h3 {
-                border: 3rem;
-                border-color: green;
+                margin: 0;
+                margin-bottom: 0.3rem;
+            }
+            & > p {
+                width: 47px;
+                color: $--ultralightgray;
+                border-top: 3px solid $--lightgreen;
             }
             & input {
                 display: none;
