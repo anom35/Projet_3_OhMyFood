@@ -1,17 +1,227 @@
-/* Error: Undefined mixin.
- *    ,
- * 70 |                     @include overhidden();
- *    |                     ^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   sass\restaurant1.scss 70:21  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 70 \2502                      @include overhidden();\d\a    \2502                      ^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\restaurant1.scss 70:21  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+.accessibility-label {
+  position: absolute;
+  left: -999px;
 }
+
+.bold {
+  font-weight: bold;
+}
+
+.gray {
+  color: dimgray;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  max-width: 1024px;
+}
+
+header {
+  box-shadow: 0 5px 10px lightgrey;
+}
+header h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.3rem;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 1rem 0 3rem 2rem;
+}
+footer h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+body header > div {
+  display: flex;
+}
+body header .logo {
+  display: flex;
+  flex-basis: 2rem;
+  align-items: center;
+  margin-left: 1rem;
+}
+body header .logo i {
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+}
+body header .titre {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+}
+body header .titre h1 {
+  font-family: "Shrikhand", cursive;
+}
+body main {
+  background-color: #EAEAEA;
+}
+body main img {
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 70%;
+  width: 100%;
+}
+body main .titre-menu {
+  position: relative;
+  top: -5rem;
+  border-radius: 3rem 3rem 0 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 95%;
+  padding-left: 2rem;
+  background-color: #EAEAEA;
+}
+body main .titre-menu h1 {
+  font-family: "Shrikhand", cursive;
+}
+body main .titre-menu i {
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  padding-right: 3rem;
+}
+body main .titre-menu i:hover {
+  cursor: pointer;
+}
+body main .titre-menu i:hover .layout-star {
+  display: flex;
+  width: 15%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+body main .titre-menu i:hover .layout-star .fa-solid.fa-heart {
+  display: none;
+}
+body main .titre-menu i:hover .layout-star:hover {
+  background: linear-gradient(#9356dc 20%, #ff79da 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body main .titre-menu i:hover .layout-star:hover .fa-regular.fa-heart {
+  display: none;
+}
+body main .titre-menu i:hover .layout-star:hover .fa-solid.fa-heart {
+  display: inline;
+}
+body main .menus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .menus .entrees, body main .menus .plats, body main .menus .desserts {
+  padding: 0 1rem 3rem 1rem;
+}
+body main .menus .entrees h4, body main .menus .entrees p, body main .menus .plats h4, body main .menus .plats p, body main .menus .desserts h4, body main .menus .desserts p {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+body main .menus .entrees h3, body main .menus .plats h3, body main .menus .desserts h3 {
+  margin: 0;
+  margin-bottom: 0.3rem;
+}
+body main .menus .entrees > p, body main .menus .plats > p, body main .menus .desserts > p {
+  width: 47px;
+  color: #EAEAEA;
+  border-top: 3px solid #99E2D0;
+}
+body main .menus .entrees input, body main .menus .plats input, body main .menus .desserts input {
+  display: none;
+}
+body main .menus .entrees .form, body main .menus .plats .form, body main .menus .desserts .form {
+  display: flex;
+  border: 1px solid transparent;
+  width: 470px;
+  height: 60px;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+@media (max-width: 530px) {
+  body main .menus .entrees .form, body main .menus .plats .form, body main .menus .desserts .form {
+    width: 350px;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  body main .menus .entrees .form .entrees, body main .menus .entrees .form .plats, body main .menus .entrees .form .desserts, body main .menus .plats .form .entrees, body main .menus .plats .form .plats, body main .menus .plats .form .desserts, body main .menus .desserts .form .entrees, body main .menus .desserts .form .plats, body main .menus .desserts .form .desserts {
+    padding: 0;
+  }
+  body main .menus .entrees .form .entrees h3, body main .menus .entrees .form .plats h3, body main .menus .entrees .form .desserts h3, body main .menus .plats .form .entrees h3, body main .menus .plats .form .plats h3, body main .menus .plats .form .desserts h3, body main .menus .desserts .form .entrees h3, body main .menus .desserts .form .plats h3, body main .menus .desserts .form .desserts h3 {
+    margin-left: 1rem;
+  }
+}
+body main .menus .entrees .form .description, body main .menus .plats .form .description, body main .menus .desserts .form .description {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+body main .menus .entrees .form .prix, body main .menus .plats .form .prix, body main .menus .desserts .form .prix {
+  display: flex;
+  width: 4rem;
+  font-weight: bold;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 0.5rem 0.5rem 0;
+  border-radius: 0 1rem 1rem 0;
+}
+body main .menus .entrees .form .select-choix, body main .menus .plats .form .select-choix, body main .menus .desserts .form .select-choix {
+  display: flex;
+  background-color: #99E2D0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 1rem 1rem 0;
+  width: 4rem;
+  margin-right: -4rem;
+}
+body main .menus .entrees .form:hover .select-choix, body main .menus .plats .form:hover .select-choix, body main .menus .desserts .form:hover .select-choix {
+  margin: 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+body main .menus .entrees .form:hover .select-choix i, body main .menus .plats .form:hover .select-choix i, body main .menus .desserts .form:hover .select-choix i {
+  animation: spin 1s;
+}
+body main .menus .entrees .form .description:hover,
+body main .menus .entrees .form .prix:hover, body main .menus .plats .form .description:hover,
+body main .menus .plats .form .prix:hover, body main .menus .desserts .form .description:hover,
+body main .menus .desserts .form .prix:hover {
+  cursor: pointer;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=restaurant1.css.map */
