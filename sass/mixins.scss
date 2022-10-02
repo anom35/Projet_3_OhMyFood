@@ -1,0 +1,109 @@
+@mixin overhidden() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin choix-de-menu() {
+    display: flex;
+    border: 1px solid transparent;
+    width: 470px;
+    height: 60px;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    @media (max-width: 530px) {
+        width: 350px;
+        margin: auto;
+        margin-bottom: 1rem;
+        .entrees, .plats, .desserts {
+            padding: 0;
+            & h3 {
+                margin-left: 1rem;
+            }
+        }
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+        @include overhidden();
+        justify-content: space-between;
+        width: 80%;
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+    }
+    .prix {
+        display: flex;
+        width: 4rem;
+        font-weight: bold;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0 0.5rem 0.5rem 0;
+        border-radius: 0 1rem 1rem 0;
+    }
+    .select-choix {
+        display: flex;
+        background-color: $--lightgreen;
+        color: white;
+        font-weight: bold;
+        font-size: 1.3rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 1rem 1rem 0;
+        width: 4rem;
+        margin-right: -4rem;
+    }
+    &:hover {
+        .select-choix {
+            margin: 0;
+            transition: all 0.5s;
+            cursor: pointer;
+            & i {
+                animation: spin 1s;
+            }
+        }
+    }
+    .description:hover, 
+    .prix:hover {
+        cursor: pointer;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}
+
+@mixin btn-style() {
+    .btn-explore {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media (max-width : 768px) {
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+        label {
+            padding: 1.3rem;
+            color: white;
+            border-radius: 2rem;
+            font-size: 1.3rem;
+            background: linear-gradient($--secondary, $--primary);
+            margin-bottom: 3rem;
+            margin-top: 2rem;
+            box-shadow: 0 3px 10px $--darkgray;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.02);
+                box-shadow: 0 3px 10px $--secondary;
+            }
+        }
+        p {
+            font-size: 1.8rem;
+            margin: 0;
+            margin-top: 1.5rem;
+            padding: 0 1rem;
+            flex-basis: 100%;
+        }
+    }
+}
