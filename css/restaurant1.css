@@ -97,10 +97,11 @@ body main .titre-menu i {
 }
 body main .menus {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 body main .menus .entrees, body main .menus .plats, body main .menus .desserts {
-  padding: 0 0 5rem 1rem;
-  width: 33%;
+  padding: 0 1rem 3rem 1rem;
 }
 body main .menus .entrees h4, body main .menus .entrees p, body main .menus .plats h4, body main .menus .plats p, body main .menus .desserts h4, body main .menus .desserts p {
   margin: 0;
@@ -123,12 +124,25 @@ body main .menus .entrees input, body main .menus .plats input, body main .menus
 body main .menus .entrees .form, body main .menus .plats .form, body main .menus .desserts .form {
   display: flex;
   border: 1px solid transparent;
-  width: 370px;
+  width: 470px;
   height: 60px;
   background-color: white;
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1rem;
+}
+@media (max-width: 530px) {
+  body main .menus .entrees .form, body main .menus .plats .form, body main .menus .desserts .form {
+    width: 350px;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  body main .menus .entrees .form .entrees, body main .menus .entrees .form .plats, body main .menus .entrees .form .desserts, body main .menus .plats .form .entrees, body main .menus .plats .form .plats, body main .menus .plats .form .desserts, body main .menus .desserts .form .entrees, body main .menus .desserts .form .plats, body main .menus .desserts .form .desserts {
+    padding: 0;
+  }
+  body main .menus .entrees .form .entrees h3, body main .menus .entrees .form .plats h3, body main .menus .entrees .form .desserts h3, body main .menus .plats .form .entrees h3, body main .menus .plats .form .plats h3, body main .menus .plats .form .desserts h3, body main .menus .desserts .form .entrees h3, body main .menus .desserts .form .plats h3, body main .menus .desserts .form .desserts h3 {
+    margin-left: 1rem;
+  }
 }
 body main .menus .entrees .form .description, body main .menus .plats .form .description, body main .menus .desserts .form .description {
   display: flex;
@@ -136,15 +150,15 @@ body main .menus .entrees .form .description, body main .menus .plats .form .des
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 85%;
+  width: 80%;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 body main .menus .entrees .form .prix, body main .menus .plats .form .prix, body main .menus .desserts .form .prix {
   display: flex;
-  width: 15%;
+  width: 4rem;
   font-weight: bold;
   align-items: flex-end;
-  justify-content: start;
+  justify-content: center;
   padding: 0 0.5rem 0.5rem 0;
   border-radius: 0 1rem 1rem 0;
 }
