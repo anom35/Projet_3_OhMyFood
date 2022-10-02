@@ -121,30 +121,34 @@ body {
                 padding-right: 3rem;
             }
         }
-        .entrees, .plats, .desserts {
-            padding: 0 0 5rem 1rem;
-            & h4, p {
-                margin: 0;
-                @include overhidden();
+        .menus {
+            display: flex;
+            .entrees, .plats, .desserts {
+                padding: 0 0 5rem 1rem;
+                width: 33%;
+                & h4, p {
+                    margin: 0;
+                    @include overhidden();
 
+                }
+                & h3 {
+                    margin: 0;
+                    margin-bottom: 0.3rem;
+                }
+                & > p {
+                    width: 47px;
+                    color: $--ultralightgray;
+                    border-top: 3px solid $--lightgreen;
+                }
+                & input {
+                    display: none;
+                }
+                .form {
+                    @include choix-de-menu();
+                }
             }
-            & h3 {
-                margin: 0;
-                margin-bottom: 0.3rem;
-            }
-            & > p {
-                width: 47px;
-                color: $--ultralightgray;
-                border-top: 3px solid $--lightgreen;
-            }
-            & input {
-                display: none;
-            }
-            .form {
-                @include choix-de-menu();
-            }
+
         }
-
     }
 }
 
