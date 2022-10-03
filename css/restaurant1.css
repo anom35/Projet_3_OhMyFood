@@ -95,10 +95,7 @@ body main .titre-menu i {
   align-items: center;
   padding-right: 3rem;
 }
-body main .titre-menu i:hover {
-  cursor: pointer;
-}
-body main .titre-menu i:hover .layout-star {
+body main .titre-menu .layout-star {
   display: flex;
   width: 15%;
   height: 50px;
@@ -106,19 +103,20 @@ body main .titre-menu i:hover .layout-star {
   justify-content: center;
   font-size: 1.5rem;
 }
-body main .titre-menu i:hover .layout-star .fa-solid.fa-heart {
+body main .titre-menu .layout-star .fa-solid.fa-heart {
   display: none;
 }
-body main .titre-menu i:hover .layout-star:hover {
+body main .titre-menu .layout-star:hover {
+  cursor: pointer;
   background: linear-gradient(#9356dc 20%, #ff79da 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-body main .titre-menu i:hover .layout-star:hover .fa-regular.fa-heart {
+body main .titre-menu .layout-star:hover .fa-regular.fa-heart {
   display: none;
 }
-body main .titre-menu i:hover .layout-star:hover .fa-solid.fa-heart {
+body main .titre-menu .layout-star:hover .fa-solid.fa-heart {
   display: inline;
 }
 body main .menus {

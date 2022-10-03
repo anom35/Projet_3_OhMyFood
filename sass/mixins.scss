@@ -10,6 +10,7 @@
             display: none;
         }
         &:hover {
+            cursor: pointer;
             .fa-regular.fa-heart {
                 display: none;
             }

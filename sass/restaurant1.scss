@@ -55,10 +55,7 @@ body {
                 align-items: center;
                 padding-right: 3rem;
             }
-            & i:hover {
-                cursor: pointer;
-                @include color-stars();
-            }
+            @include color-stars();
 
         }
         .menus {
