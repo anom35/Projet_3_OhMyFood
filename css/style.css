@@ -16,7 +16,7 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  max-width: 1224px;
+  max-width: 1024px;
 }
 
 header {
@@ -177,6 +177,7 @@ header h1 {
   display: none;
 }
 .restaurants .card .description .layout-star:hover {
+  cursor: pointer;
   background: linear-gradient(#9356dc 20%, #ff79da 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
