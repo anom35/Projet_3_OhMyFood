@@ -86,6 +86,7 @@ body {
                 }
             }
         }
+        @include btn-style();
     }
 }
 
