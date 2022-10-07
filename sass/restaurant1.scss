@@ -28,6 +28,9 @@ body {
     }
     main {
         background-color: $--ultralightgray;
+        fieldset {
+            border: 0
+        }
         & img {
             height: 400px;
             object-fit: cover;
