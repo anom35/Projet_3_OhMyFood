@@ -1,8 +1,155 @@
 @import "mixins";
-@import "base";
-@import "header";
-@import "navbar";
-@import "menu";
-@import "restaurants";
-@import "footer";
+
+
+
+//  import font "Shrikhand"
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+//  font-family: 'Roboto', sans-serif;
+//  font-family: 'Shrikhand', cursive;
+//
+//  variables colors
+// :root {
+$--primary: #9356dc;
+$--secondary: #ff79da;
+$--tertiary: #99e2d0;
+$--darkgray: darkgray;
+$--dimgray: dimgray;
+$--lightgray: lightgray;
+$--ultralightgray: #EAEAEA;
+$--graywhite: #F6F6F6;
+$--lightpurple: #F5EDFF;
+$--lightgreen: #99E2D0;
+$--green: #2FAF94;
+$--grayblack: #353535;
+// }
+
+//  hidden <label> position for accessibility       
+.accessibility-label {
+	position:absolute;
+	left:-999px;
+}
+
+.bold {
+    font-weight: bold;
+}
+.gray {
+    color: $--dimgray;
+}
+
+
+/*
+*       HEADER
+*/
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    max-width: 1024px;
+}
+
+header {
+    box-shadow: 0 5px 10px lightgrey;
+    h1 {
+        font-family : 'Shrikhand', cursive;
+        font-size: 2.3rem;
+        margin: 0;
+        padding: 1rem 0;
+        text-align: center;
+     
+    }
+}
+
+
+/*
+*       FOOTER
+*/
+footer {
+    background-color: $--grayblack;
+    color: white;
+    padding: 1rem 0 3rem 2rem;
+    & h1 {
+        font-family: 'Shrikhand', cursive;
+        font-weight: normal;
+    }
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+
+/*
+*       NAVBAR
+*/
+.nav-bar {
+    text-align: center;
+    background-color: $--graywhite;
+    .search-bar {
+        margin-top: 5px;
+        font-size: 1.3rem;
+        padding: 1rem 0;
+        background-color: $--ultralightgray;
+        input {
+            border: none;
+            font-size: 1.3rem;
+            width: 200px;
+            margin-left: 1rem;
+            background-color: $--ultralightgray;
+        }
+    }
+    @include btn-style();
+}
+
+
+/*
+*       MENU
+*/
+.menu {
+    margin-bottom: 4rem;
+    & h2 {
+        margin: 2rem 0 0 2rem;
+    }
+    & ol {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-evenly;
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
+      
+        & li {
+            width: 255px;
+            background-color: $--graywhite;
+            border-radius: 1rem;
+            padding: 1.5rem 0;
+            box-shadow: 0 3px 5px $--darkgray;
+            & i {
+                margin-right: 0.5rem;
+            }
+            & span {
+                position: relative;
+                left: -1rem;
+                border: 1px solid $--primary;
+                padding: 0.4rem 0.8rem;
+                border-radius: 50%;
+                font-weight: bold;
+                background-color: $--primary;
+                color: white;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.02);
+                background-color: $--lightpurple;
+                box-shadow: 0 3px 5px $--secondary;
+            }
+        }
+    }
+}
+
+
 
