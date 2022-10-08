@@ -80,11 +80,16 @@ body {
                     color: $--ultralightgray;
                     border-top: 3px solid $--lightgreen;
                 }
-                & input {
-                    display: none;
+                & input[type="checkbox"]:checked  {
+                    .description, .prix {
+                        & h4 { color: red; }
+                        background-color: $--lightpurple;
+                        border: 1px solid red;
+                    }
                 }
-                .form {
-                    @include choix-de-menu();
+                & article {
+                        @include choix-de-menu();
+                        & input { display: none; }
                 }
             }
         }
