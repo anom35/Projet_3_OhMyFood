@@ -82,12 +82,14 @@ body {
                 }
 
                 article {
-                    .check:checked {
-                        background-color: $--lightpurple;
-                      
-                    }    
                     input { visibility: hidden; }
-                    @include choix-de-menu();
+                    label {
+                        @include choix-de-menu();
+                        input:checked + label {
+                            background-color: $--lightpurple;
+                          
+                        }    
+                        }
                 }
             }
         }
