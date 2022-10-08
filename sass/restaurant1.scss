@@ -11,7 +11,7 @@ body {
             flex-basis: 2rem;
             align-items: center;
             margin-left: 1rem;
-            & i {
+            i {
                 font-size: 2rem;
                 color: black;
                 cursor: pointer;
@@ -21,7 +21,7 @@ body {
             display: flex;
             flex-basis: 100%;
             justify-content: center;
-            & h1 {
+            h1 {
                 font-family: "Shrikhand", cursive;
             }
         }
@@ -31,7 +31,7 @@ body {
         fieldset {
             border: 0
         }
-        & img {
+        img {
             height: 400px;
             object-fit: cover;
             object-position: 50% 70%;
@@ -47,10 +47,10 @@ body {
             flex-basis: 95%;
             padding-left: 2rem;;
             background-color: $--ultralightgray;
-            & h1 {
+            h1 {
                 font-family: 'Shrikhand', cursive;
             }
-            & i {
+            i {
                 display: flex;
                 font-size: 2rem;
                 align-items: center;
@@ -65,31 +65,37 @@ body {
             align-items: center;
             .entrees, .plats, .desserts {
                 padding: 0 1rem 3rem 1rem;
-                & h4, p {
+                h4, p {
                     margin: 0;
                     @include overhidden();
 
                 }
-                & h3 {
+                h3 {
                     text-transform: uppercase;
                     margin: 0;
                     margin-bottom: 0.3rem;
                 }
-                & > p {
+                > p {
                     width: 47px;
                     color: $--ultralightgray;
                     border-top: 3px solid $--lightgreen;
                 }
-                & input[type="checkbox"]:checked  {
-                    .description, .prix {
-                        & h4 { color: red; }
+
+                article {
+                    > label {
+                        width: 472px;
+                        height: 62px;
+                        display: none;
+                    }
+                    input { 
+                        visibility: hidden; 
+                    }
+                    @include choix-de-menu();
+                    input[type="checkbox"]:checked + label {
+                        h4 { color: red; }
                         background-color: $--lightpurple;
                         border: 1px solid red;
                     }
-                }
-                & article {
-                        @include choix-de-menu();
-                        & input { display: none; }
                 }
             }
         }

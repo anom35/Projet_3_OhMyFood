@@ -353,13 +353,6 @@ body main .menus .entrees > p, body main .menus .plats > p, body main .menus .de
   color: #EAEAEA;
   border-top: 3px solid #99E2D0;
 }
-body main .menus .entrees input[type=checkbox]:checked .description, body main .menus .entrees input[type=checkbox]:checked .prix, body main .menus .plats input[type=checkbox]:checked .description, body main .menus .plats input[type=checkbox]:checked .prix, body main .menus .desserts input[type=checkbox]:checked .description, body main .menus .desserts input[type=checkbox]:checked .prix {
-  background-color: #F5EDFF;
-  border: 1px solid red;
-}
-body main .menus .entrees input[type=checkbox]:checked .description h4, body main .menus .entrees input[type=checkbox]:checked .prix h4, body main .menus .plats input[type=checkbox]:checked .description h4, body main .menus .plats input[type=checkbox]:checked .prix h4, body main .menus .desserts input[type=checkbox]:checked .description h4, body main .menus .desserts input[type=checkbox]:checked .prix h4 {
-  color: red;
-}
 body main .menus .entrees article, body main .menus .plats article, body main .menus .desserts article {
   display: flex;
   border: 1px solid transparent;
@@ -369,6 +362,14 @@ body main .menus .entrees article, body main .menus .plats article, body main .m
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1rem;
+}
+body main .menus .entrees article > label, body main .menus .plats article > label, body main .menus .desserts article > label {
+  width: 472px;
+  height: 62px;
+  display: none;
+}
+body main .menus .entrees article input, body main .menus .plats article input, body main .menus .desserts article input {
+  visibility: hidden;
 }
 @media (max-width: 530px) {
   body main .menus .entrees article, body main .menus .plats article, body main .menus .desserts article {
@@ -436,8 +437,12 @@ body main .menus .desserts article .prix:hover {
     transform: rotate(360deg);
   }
 }
-body main .menus .entrees article input, body main .menus .plats article input, body main .menus .desserts article input {
-  display: none;
+body main .menus .entrees article input[type=checkbox]:checked + label, body main .menus .plats article input[type=checkbox]:checked + label, body main .menus .desserts article input[type=checkbox]:checked + label {
+  background-color: #F5EDFF;
+  border: 1px solid red;
+}
+body main .menus .entrees article input[type=checkbox]:checked + label h4, body main .menus .plats article input[type=checkbox]:checked + label h4, body main .menus .desserts article input[type=checkbox]:checked + label h4 {
+  color: red;
 }
 body main .btn-explore {
   display: flex;
