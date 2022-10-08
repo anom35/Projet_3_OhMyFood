@@ -363,10 +363,8 @@ body main .menus .entrees article, body main .menus .plats article, body main .m
   overflow: hidden;
   margin-bottom: 1rem;
 }
-body main .menus .entrees article > label, body main .menus .plats article > label, body main .menus .desserts article > label {
-  width: 472px;
-  height: 62px;
-  display: none;
+body main .menus .entrees article .check:checked, body main .menus .plats article .check:checked, body main .menus .desserts article .check:checked {
+  background-color: #F5EDFF;
 }
 body main .menus .entrees article input, body main .menus .plats article input, body main .menus .desserts article input {
   visibility: hidden;
@@ -423,10 +421,7 @@ body main .menus .entrees article:hover .select-choix, body main .menus .plats a
 body main .menus .entrees article:hover .select-choix i, body main .menus .plats article:hover .select-choix i, body main .menus .desserts article:hover .select-choix i {
   animation: spin 1s;
 }
-body main .menus .entrees article .description:hover,
-body main .menus .entrees article .prix:hover, body main .menus .plats article .description:hover,
-body main .menus .plats article .prix:hover, body main .menus .desserts article .description:hover,
-body main .menus .desserts article .prix:hover {
+body main .menus .entrees article .description:hover, body main .menus .entrees article .prix:hover, body main .menus .plats article .description:hover, body main .menus .plats article .prix:hover, body main .menus .desserts article .description:hover, body main .menus .desserts article .prix:hover {
   cursor: pointer;
 }
 @keyframes spin {
@@ -436,13 +431,6 @@ body main .menus .desserts article .prix:hover {
   100% {
     transform: rotate(360deg);
   }
-}
-body main .menus .entrees article input[type=checkbox]:checked + label, body main .menus .plats article input[type=checkbox]:checked + label, body main .menus .desserts article input[type=checkbox]:checked + label {
-  background-color: #F5EDFF;
-  border: 1px solid red;
-}
-body main .menus .entrees article input[type=checkbox]:checked + label h4, body main .menus .plats article input[type=checkbox]:checked + label h4, body main .menus .desserts article input[type=checkbox]:checked + label h4 {
-  color: red;
 }
 body main .btn-explore {
   display: flex;

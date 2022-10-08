@@ -86,13 +86,12 @@
             margin: 0;
             transition: all 0.5s;
             cursor: pointer;
-            & i {
+            i {
                 animation: spin 1s;
             }
         }
     }
-    .description:hover, 
-    .prix:hover {
+    .description:hover, .prix:hover {
         cursor: pointer;
     }
     @keyframes spin {

@@ -82,20 +82,12 @@ body {
                 }
 
                 article {
-                    > label {
-                        width: 472px;
-                        height: 62px;
-                        display: none;
-                    }
-                    input { 
-                        visibility: hidden; 
-                    }
-                    @include choix-de-menu();
-                    input[type="checkbox"]:checked + label {
-                        h4 { color: red; }
+                    .check:checked {
                         background-color: $--lightpurple;
-                        border: 1px solid red;
-                    }
+                      
+                    }    
+                    input { visibility: hidden; }
+                    @include choix-de-menu();
                 }
             }
         }
