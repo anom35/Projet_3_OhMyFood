@@ -26,6 +26,15 @@
 }
 
 
+@mixin effet-menu() {
+    @for $cpt from 1 through 3 {
+        &:nth-child(#{cpt}) {
+            animation-delay: 100ms * $cpt;
+        }
+    }
+}
+
+
 @mixin overhidden() {
     overflow: hidden;
     white-space: nowrap;
