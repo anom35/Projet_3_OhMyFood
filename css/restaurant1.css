@@ -337,6 +337,12 @@ body main .menus {
 body main .menus .entrees, body main .menus .plats, body main .menus .desserts {
   padding: 0 1rem 3rem 0;
 }
+body main .menus .entrees h4, body main .menus .entrees p, body main .menus .plats h4, body main .menus .plats p, body main .menus .desserts h4, body main .menus .desserts p {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 body main .menus .entrees h3, body main .menus .plats h3, body main .menus .desserts h3 {
   text-transform: uppercase;
   margin: 0;
@@ -347,22 +353,106 @@ body main .menus .entrees > p, body main .menus .plats > p, body main .menus .de
   color: #EAEAEA;
   border-top: 3px solid #99E2D0;
 }
+body main .menus .entrees article, body main .menus .plats article, body main .menus .desserts article {
+  display: flex;
+  border: 1px solid transparent;
+  width: 470px;
+  height: 60px;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  animation: effet-menu 2s ease-in-out;
+}
 body main .menus .entrees article h2, body main .menus .plats article h2, body main .menus .desserts article h2 {
   display: none;
 }
-body main .menus .entrees article label, body main .menus .plats article label, body main .menus .desserts article label {
-  width: 472px;
-  height: 62px;
-  display: block;
-  border-radius: 1rem;
-  background-color: white;
+body main .menus .entrees article:nth-child(1), body main .menus .plats article:nth-child(1), body main .menus .desserts article:nth-child(1) {
+  animation-delay: 100ms;
 }
-body main .menus .entrees article label input, body main .menus .plats article label input, body main .menus .desserts article label input {
-  visibility: hidden;
+body main .menus .entrees article:nth-child(2), body main .menus .plats article:nth-child(2), body main .menus .desserts article:nth-child(2) {
+  animation-delay: 200ms;
 }
-body main .menus .entrees article label input:checked, body main .menus .plats article label input:checked, body main .menus .desserts article label input:checked {
-  border: 3px solid red;
-  background-color: blue;
+body main .menus .entrees article:nth-child(3), body main .menus .plats article:nth-child(3), body main .menus .desserts article:nth-child(3) {
+  animation-delay: 300ms;
+}
+@media (max-width: 530px) {
+  body main .menus .entrees article, body main .menus .plats article, body main .menus .desserts article {
+    width: 350px;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  body main .menus .entrees article .entrees, body main .menus .entrees article .plats, body main .menus .entrees article .desserts, body main .menus .plats article .entrees, body main .menus .plats article .plats, body main .menus .plats article .desserts, body main .menus .desserts article .entrees, body main .menus .desserts article .plats, body main .menus .desserts article .desserts {
+    padding: 0;
+  }
+  body main .menus .entrees article .entrees h3, body main .menus .entrees article .plats h3, body main .menus .entrees article .desserts h3, body main .menus .plats article .entrees h3, body main .menus .plats article .plats h3, body main .menus .plats article .desserts h3, body main .menus .desserts article .entrees h3, body main .menus .desserts article .plats h3, body main .menus .desserts article .desserts h3 {
+    margin-left: 1rem;
+  }
+}
+body main .menus .entrees article .description, body main .menus .plats article .description, body main .menus .desserts article .description {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+body main .menus .entrees article .prix, body main .menus .plats article .prix, body main .menus .desserts article .prix {
+  display: flex;
+  width: 4rem;
+  font-weight: bold;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 0.5rem 0.5rem 0;
+  border-radius: 0 1rem 1rem 0;
+}
+body main .menus .entrees article .select-choix, body main .menus .plats article .select-choix, body main .menus .desserts article .select-choix {
+  display: flex;
+  background-color: #99E2D0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 1rem 1rem 0;
+  width: 4rem;
+  margin-right: -4rem;
+}
+body main .menus .entrees article:hover .select-choix, body main .menus .plats article:hover .select-choix, body main .menus .desserts article:hover .select-choix {
+  margin: 0;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+body main .menus .entrees article:hover .select-choix i, body main .menus .plats article:hover .select-choix i, body main .menus .desserts article:hover .select-choix i {
+  animation: spin 1s;
+}
+body main .menus .entrees article .description:hover, body main .menus .entrees article .prix:hover, body main .menus .plats article .description:hover, body main .menus .plats article .prix:hover, body main .menus .desserts article .description:hover, body main .menus .desserts article .prix:hover {
+  cursor: pointer;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes effet-menu {
+  0% {
+    opacity: 0;
+    transform: rotateX(-180deg);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+}
+body main .menus .entrees article :active, body main .menus .plats article :active, body main .menus .desserts article :active {
+  background-color: darkgray;
 }
 body main .btn-explore {
   display: flex;

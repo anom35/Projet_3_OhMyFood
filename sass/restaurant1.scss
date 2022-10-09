@@ -65,11 +65,11 @@ body {
             align-items: center;
             .entrees, .plats, .desserts {
                 padding: 0 1rem 3rem 0;
-                // h4, p {
-                //     margin: 0;
-                //     @include overhidden();
+                h4, p {
+                    margin: 0;
+                    @include overhidden();
 
-                // }
+                }
                 h3 {
                     text-transform: uppercase;
                     margin: 0;
@@ -85,26 +85,13 @@ body {
 
                 article {
                     h2 { display: none; }
-                    label {
-                        width: 472px;   
-                        height: 62px;
-                        display: block;
-                        border-radius: 1rem;
-                        background-color: white;
-                        input {
-                            visibility: hidden;
-                            &:checked {
-                                border: 3px solid red;
-                                background-color: blue //$--lightgray;
-        
-                            }                        }
+                    @include choix-de-menu();
+                    :active {
+                        background-color: $--darkgray;
                     }
-
-                    // @include choix-de-menu();
                 }
             }
         }
         @include btn-style();
     }
 }
-
