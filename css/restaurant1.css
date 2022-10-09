@@ -335,7 +335,7 @@ body main .menus {
   align-items: center;
 }
 body main .menus .entrees, body main .menus .plats, body main .menus .desserts {
-  padding: 0 1rem 3rem 1rem;
+  padding: 0 1rem 3rem 0;
 }
 body main .menus .entrees h4, body main .menus .entrees p, body main .menus .plats h4, body main .menus .plats p, body main .menus .desserts h4, body main .menus .desserts p {
   margin: 0;
@@ -353,10 +353,7 @@ body main .menus .entrees > p, body main .menus .plats > p, body main .menus .de
   color: #EAEAEA;
   border-top: 3px solid #99E2D0;
 }
-body main .menus .entrees article input, body main .menus .plats article input, body main .menus .desserts article input {
-  visibility: hidden;
-}
-body main .menus .entrees article label, body main .menus .plats article label, body main .menus .desserts article label {
+body main .menus .entrees article, body main .menus .plats article, body main .menus .desserts article {
   display: flex;
   border: 1px solid transparent;
   width: 470px;
@@ -366,20 +363,33 @@ body main .menus .entrees article label, body main .menus .plats article label, 
   overflow: hidden;
   margin-bottom: 1rem;
 }
+body main .menus .entrees article label, body main .menus .plats article label, body main .menus .desserts article label {
+  width: 472px;
+  height: 62px;
+}
+body main .menus .entrees article label input[type=checkbox]:hover, body main .menus .plats article label input[type=checkbox]:hover, body main .menus .desserts article label input[type=checkbox]:hover {
+  display: none;
+  border: 3px solid red;
+  background-color: blue;
+}
+body main .menus .entrees article label input[type=checkbox]:checked, body main .menus .plats article label input[type=checkbox]:checked, body main .menus .desserts article label input[type=checkbox]:checked {
+  border: 3px solid red;
+  background-color: blue;
+}
 @media (max-width: 530px) {
-  body main .menus .entrees article label, body main .menus .plats article label, body main .menus .desserts article label {
+  body main .menus .entrees article, body main .menus .plats article, body main .menus .desserts article {
     width: 350px;
     margin: auto;
     margin-bottom: 1rem;
   }
-  body main .menus .entrees article label .entrees, body main .menus .entrees article label .plats, body main .menus .entrees article label .desserts, body main .menus .plats article label .entrees, body main .menus .plats article label .plats, body main .menus .plats article label .desserts, body main .menus .desserts article label .entrees, body main .menus .desserts article label .plats, body main .menus .desserts article label .desserts {
+  body main .menus .entrees article .entrees, body main .menus .entrees article .plats, body main .menus .entrees article .desserts, body main .menus .plats article .entrees, body main .menus .plats article .plats, body main .menus .plats article .desserts, body main .menus .desserts article .entrees, body main .menus .desserts article .plats, body main .menus .desserts article .desserts {
     padding: 0;
   }
-  body main .menus .entrees article label .entrees h3, body main .menus .entrees article label .plats h3, body main .menus .entrees article label .desserts h3, body main .menus .plats article label .entrees h3, body main .menus .plats article label .plats h3, body main .menus .plats article label .desserts h3, body main .menus .desserts article label .entrees h3, body main .menus .desserts article label .plats h3, body main .menus .desserts article label .desserts h3 {
+  body main .menus .entrees article .entrees h3, body main .menus .entrees article .plats h3, body main .menus .entrees article .desserts h3, body main .menus .plats article .entrees h3, body main .menus .plats article .plats h3, body main .menus .plats article .desserts h3, body main .menus .desserts article .entrees h3, body main .menus .desserts article .plats h3, body main .menus .desserts article .desserts h3 {
     margin-left: 1rem;
   }
 }
-body main .menus .entrees article label .description, body main .menus .plats article label .description, body main .menus .desserts article label .description {
+body main .menus .entrees article .description, body main .menus .plats article .description, body main .menus .desserts article .description {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -389,7 +399,7 @@ body main .menus .entrees article label .description, body main .menus .plats ar
   width: 80%;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
-body main .menus .entrees article label .prix, body main .menus .plats article label .prix, body main .menus .desserts article label .prix {
+body main .menus .entrees article .prix, body main .menus .plats article .prix, body main .menus .desserts article .prix {
   display: flex;
   width: 4rem;
   font-weight: bold;
@@ -398,7 +408,7 @@ body main .menus .entrees article label .prix, body main .menus .plats article l
   padding: 0 0.5rem 0.5rem 0;
   border-radius: 0 1rem 1rem 0;
 }
-body main .menus .entrees article label .select-choix, body main .menus .plats article label .select-choix, body main .menus .desserts article label .select-choix {
+body main .menus .entrees article .select-choix, body main .menus .plats article .select-choix, body main .menus .desserts article .select-choix {
   display: flex;
   background-color: #99E2D0;
   color: white;
@@ -410,15 +420,15 @@ body main .menus .entrees article label .select-choix, body main .menus .plats a
   width: 4rem;
   margin-right: -4rem;
 }
-body main .menus .entrees article label:hover .select-choix, body main .menus .plats article label:hover .select-choix, body main .menus .desserts article label:hover .select-choix {
+body main .menus .entrees article:hover .select-choix, body main .menus .plats article:hover .select-choix, body main .menus .desserts article:hover .select-choix {
   margin: 0;
   transition: all 0.5s;
   cursor: pointer;
 }
-body main .menus .entrees article label:hover .select-choix i, body main .menus .plats article label:hover .select-choix i, body main .menus .desserts article label:hover .select-choix i {
+body main .menus .entrees article:hover .select-choix i, body main .menus .plats article:hover .select-choix i, body main .menus .desserts article:hover .select-choix i {
   animation: spin 1s;
 }
-body main .menus .entrees article label .description:hover, body main .menus .entrees article label .prix:hover, body main .menus .plats article label .description:hover, body main .menus .plats article label .prix:hover, body main .menus .desserts article label .description:hover, body main .menus .desserts article label .prix:hover {
+body main .menus .entrees article .description:hover, body main .menus .entrees article .prix:hover, body main .menus .plats article .description:hover, body main .menus .plats article .prix:hover, body main .menus .desserts article .description:hover, body main .menus .desserts article .prix:hover {
   cursor: pointer;
 }
 @keyframes spin {
@@ -428,9 +438,6 @@ body main .menus .entrees article label .description:hover, body main .menus .en
   100% {
     transform: rotate(360deg);
   }
-}
-body main .menus .entrees article label input:checked + label, body main .menus .plats article label input:checked + label, body main .menus .desserts article label input:checked + label {
-  background-color: #F5EDFF;
 }
 body main .btn-explore {
   display: flex;
