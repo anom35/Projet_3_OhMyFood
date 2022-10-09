@@ -28,7 +28,7 @@
 
 @mixin effet-menu() {
     @for $cpt from 1 through 3 {
-        &:nth-child(#{cpt}) {
+        &:nth-child(#{$cpt}) {
             animation-delay: 100ms * $cpt;
         }
     }
@@ -50,6 +50,8 @@
     border-radius: 1rem;
     overflow: hidden;
     margin-bottom: 1rem;
+    animation: effet-menu 2s ease-in-out;
+    @include effet-menu();
     @media (max-width: 530px) {
         width: 350px;
         margin: auto;
@@ -106,6 +108,20 @@
     @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
+    }
+
+    @keyframes effet-menu {
+        0% {
+            opacity: 0;
+            transform: rotateX(-180deg);
+            transform-origin: top;
+        }
+    
+        100% {
+            opacity: 1;
+            transform: rotateX(0deg);
+            transform-origin: top;
+        }
     }
 }
 
