@@ -6,6 +6,11 @@
   color: var(--dimgray);
 }
 
+.accessibility-label {
+  position: absolute;
+  left: -999px;
+}
+
 body {
   box-sizing: border-box;
   margin: 0 auto;

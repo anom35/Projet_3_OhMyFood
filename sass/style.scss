@@ -3,195 +3,169 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
 
-//  hidden <label> position for accessibility       
-.accessibility-label {
-	position:absolute;
-	left:-999px;
-}
-
-.bold {
-    font-weight: bold;
-}
-.gray {
-    color: $--dimgray;
-}
-
-
-/*
-*       HEADER
-*/
 body {
     box-sizing: border-box;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     max-width: 1024px;
-}
 
-header {
-    box-shadow: 0 5px 10px lightgrey;
-    h1 {
-        font-family : 'Shrikhand', cursive;
-        font-size: 2.3rem;
-        margin: 0;
-        padding: 1rem 0;
+
+    header {
+        box-shadow: 0 5px 10px lightgrey;
+        h1 {
+            font-family : 'Shrikhand', cursive;
+            font-size: 2.3rem;
+            margin: 0;
+            padding: 1rem 0;
+            text-align: center;
+         
+        }
+    }
+
+    .nav-bar {
         text-align: center;
-     
-    }
-}
-
-
-/*
-*       FOOTER
-*/
-footer {
-    background-color: $--grayblack;
-    color: white;
-    padding: 1rem 0 3rem 2rem;
-    & h1 {
-        font-family: 'Shrikhand', cursive;
-        font-weight: normal;
-    }
-    & a {
-        text-decoration: none;
-        color: white;
-    }
-}
-
-
-/*
-*       NAVBAR
-*/
-.nav-bar {
-    text-align: center;
-    background-color: $--graywhite;
-    .search-bar {
-        margin-top: 5px;
-        font-size: 1.3rem;
-        padding: 1rem 0;
-        background-color: $--ultralightgray;
-        input {
-            border: none;
+        background-color: $--graywhite;
+        .search-bar {
+            margin-top: 5px;
             font-size: 1.3rem;
-            width: 200px;
-            margin-left: 1rem;
+            padding: 1rem 0;
             background-color: $--ultralightgray;
+            input {
+                border: none;
+                font-size: 1.3rem;
+                width: 200px;
+                margin-left: 1rem;
+                background-color: $--ultralightgray;
+            }
         }
+        @include btn-style();
     }
-    @include btn-style();
-}
+    
+    main {
 
+        .menu {
+            margin-bottom: 4rem;
+            h2 {
+                margin: 2rem 0 0 2rem;
+            }
+            ol {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: space-evenly;
+                li {
+                    width: 255px;
+                    background-color: $--graywhite;
+                    border-radius: 1rem;
+                    padding: 1.5rem 0;
+                    box-shadow: 0 3px 5px $--darkgray;
+                    i {
+                        margin-right: 0.5rem;
+                    }
+                    span {
+                        position: relative;
+                        left: -1rem;
+                        border: 1px solid $--primary;
+                        padding: 0.4rem 0.8rem;
+                        border-radius: 50%;
+                        font-weight: bold;
+                        background-color: $--primary;
+                        color: white;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.02);
+                        background-color: $--lightpurple;
+                        box-shadow: 0 3px 5px $--secondary;
+                    }
+                }
+            }
+        }
+    
+        
 
-/*
-*       MENU
-*/
-.menu {
-    margin-bottom: 4rem;
-    & h2 {
-        margin: 2rem 0 0 2rem;
-    }
-    & ol {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: space-evenly;
-        & li {
-            width: 255px;
+        .restaurants {
+            padding-bottom: 4rem;
             background-color: $--graywhite;
-            border-radius: 1rem;
-            padding: 1.5rem 0;
-            box-shadow: 0 3px 5px $--darkgray;
-            & i {
-                margin-right: 0.5rem;
-            }
-            & span {
-                position: relative;
-                left: -1rem;
-                border: 1px solid $--primary;
-                padding: 0.4rem 0.8rem;
-                border-radius: 50%;
-                font-weight: bold;
-                background-color: $--primary;
-                color: white;
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-            &:hover {
-                cursor: pointer;
-                transform: scale(1.02);
-                background-color: $--lightpurple;
-                box-shadow: 0 3px 5px $--secondary;
-            }
-        }
-    }
-}
-
-
-/*
-*       RESTAURANTS
-*/
-.restaurants {
-    padding-bottom: 4rem;
-    background-color: $--graywhite;
-    // margin: 1rem 1rem 2rem 2rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    .card {
-        cursor: pointer;
-        position: relative;
-        height: 270px;
-        display: flex;
-        flex-direction: column;
-        flex-basis: 45%;
-        background-color: white;
-        border-radius: 1rem;
-        box-shadow: 0 3px 8px $--darkgray;
-        & img {
-            width: 100%;
-            object-fit: cover;
-            min-height: 200px;
-            max-height: 200px;
-            border-radius: 1rem 1rem 0 0;
-        }
-        .description {
+            // margin: 1rem 1rem 2rem 2rem;
             display: flex;
-            justify-content: space-around;
-            .layout {
-                width: 85%;
-                & h3, p {
-                    margin: 0;
-                    padding: 0.3rem 0 0 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            .card {
+                cursor: pointer;
+                position: relative;
+                height: 270px;
+                display: flex;
+                flex-direction: column;
+                flex-basis: 45%;
+                background-color: white;
+                border-radius: 1rem;
+                box-shadow: 0 3px 8px $--darkgray;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    min-height: 200px;
+                    max-height: 200px;
+                    border-radius: 1rem 1rem 0 0;
+                }
+                .description {
+                    display: flex;
+                    justify-content: space-around;
+                    .layout {
+                        width: 85%;
+                        h3, p {
+                            margin: 0;
+                            padding: 0.3rem 0 0 1rem;
+                        }
+                    }
+                    @include color-stars;
+                }
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+                &:hover {
+                    transform: scale(1.02);
+                    box-shadow: 0 0 8px $--primary;
                 }
             }
-            @include color-stars;
+            span {
+                position: absolute;
+                content: "";
+                right: 10px;
+                top: 20px;
+                font-weight: bold;
+                background-color: $--lightgreen;
+                color: $--green;
+                padding: 0.5rem;
+                width: 65px;
+            } 
+            h2 {
+                margin: 4rem 0 0 2rem;
+                padding-top: 2rem;
+                width: 100%;
+            }
+        }
+
+    }
+
+    footer {
+        background-color: $--grayblack;
+        color: white;
+        padding: 1rem 0 3rem 2rem;
+        & h1 {
+            font-family: 'Shrikhand', cursive;
+            font-weight: normal;
         }
         & a {
             text-decoration: none;
-            color: inherit;
+            color: white;
         }
-        &:hover {
-            transform: scale(1.02);
-            box-shadow: 0 0 8px $--primary;
-        }
-    }
-    & span {
-        position: absolute;
-        content: "";
-        right: 10px;
-        top: 20px;
-        font-weight: bold;
-        background-color: $--lightgreen;
-        color: $--green;
-        padding: 0.5rem;
-        width: 65px;
-    } 
-    & h2 {
-        margin: 4rem 0 0 2rem;
-        padding-top: 2rem;
-        width: 100%;
     }
 }
 
@@ -204,18 +178,18 @@ footer {
 
 
 @media (max-width: 630px) {
+    .menu {
+        margin-bottom: 2rem;
+        h2 {
+            margin: 1rem 0 0 1rem;
+        }
+    }
     #choix-menu {
         padding: 0;
         padding-left: 20px;
     }
     .restaurants h2 {
         margin: 0 0 0 1rem;
-    }
-    .menu h2 {
-        margin: 1rem 0 0 1rem;
-    }
-    .menu {
-        margin-bottom: 2rem;
     }
     .card {
         display: flex;

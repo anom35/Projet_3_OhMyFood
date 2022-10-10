@@ -6,4 +6,9 @@
   color: var(--dimgray);
 }
 
+.accessibility-label {
+  position: absolute;
+  left: -999px;
+}
+
 /*# sourceMappingURL=base.css.map */
