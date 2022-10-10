@@ -99,6 +99,7 @@ main img {
     background-color: white;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-basis: 95%;
     padding-left: 2rem;;
     background-color: var(--ultralightgray);
@@ -109,7 +110,6 @@ main img {
 .titre-menu i {
     display: flex;
     font-size: 2rem;
-    align-items: center;
     padding-right: 3rem;
 }
    
@@ -118,7 +118,6 @@ main img {
     display: flex;
     width: 15%;
     height: 50px;
-    align-items: center;
     justify-content: center;
     font-size: 1.5rem;
 }
