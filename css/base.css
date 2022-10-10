@@ -1,0 +1,9 @@
+.bold {
+  font-weight: bold;
+}
+
+.gray {
+  color: var(--dimgray);
+}
+
+/*# sourceMappingURL=base.css.map */

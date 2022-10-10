@@ -1,0 +1,20 @@
+$--primary: #9356dc;
+$--secondary: #ff79da;
+$--tertiary: #99e2d0;
+$--darkgray: darkgray;
+$--dimgray: dimgray;
+$--lightgray: lightgray;
+$--ultralightgray: #EAEAEA;
+$--graywhite: #F6F6F6;
+$--lightpurple: #F5EDFF;
+$--lightgreen: #99E2D0;
+$--green: #2FAF94;
+$--grayblack: #353535;
+
+
+.bold {
+    font-weight: bold;
+}
+.gray {
+    color: var(--dimgray);
+}

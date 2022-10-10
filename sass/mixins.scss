@@ -26,13 +26,6 @@
 }
 
 
-@mixin effet-menu() {
-    @for $cpt from 1 through 3 {
-        &:nth-child(#{$cpt}) {
-            animation-delay: 100ms * $cpt;
-        }
-    }
-}
 
 
 @mixin overhidden() {
@@ -130,11 +123,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        @media (max-width : 768px) {
-            .subtitle {
-                font-size: 1.2rem;
-            }
-        }
         label {
             padding: 1.3rem;
             color: white;

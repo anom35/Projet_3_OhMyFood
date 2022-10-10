@@ -1,357 +1,290 @@
-:root {
-    --primary: #9356dc;
-    --secondary: #ff79da;
-    --tertiary: #99e2d0;
-    --darkgray: darkgray;
-    --dimgray: dimgray;
-    --lightgray: lightgray;
-    --ultralightgray: #EAEAEA;
-    --graywhite: #F6F6F6;
-    --lightpurple: #F5EDFF;
-    --lightgreen: #99E2D0;
-    --green: #2FAF94;
-    --grayblack: #353535;
-}
-
-
-
-
 .bold {
-    font-weight: bold;
+  font-weight: bold;
 }
+
 .gray {
-    color: var(--dimgray);
+  color: var(--dimgray);
 }
 
-
-/*
-*       HEADER
-*/
 body {
-    box-sizing: border-box;
-    margin: 0 auto;
-    font-family: 'Roboto', sans-serif;
-    max-width: 1024px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  max-width: 1024px;
 }
-
-header {
-    box-shadow: 0 5px 10px lightgrey;
+body header {
+  box-shadow: 0 5px 10px lightgrey;
 }
- header h1 {
-        font-family : 'Shrikhand', cursive;
-        font-size: 2.3rem;
-        margin: 0;
-        padding: 1rem 0;
-        text-align: center;
- }
-
-
-/*
-*       HEADER
-*/
-
-header > div {
-    display: flex;
+body header h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.3rem;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
 }
-.logo {
-    display: flex;
-    flex-basis: 2rem;
-    align-items: center;
-    margin-left: 1rem;
+body header > div {
+  display: flex;
 }
-.logo i {
-    font-size: 2rem;
-    color: black;
-    cursor: pointer;
+body header .logo {
+  display: flex;
+  flex-basis: 2rem;
+  align-items: center;
+  margin-left: 1rem;
 }
-
-.titre {
-    display: flex;
-    flex-basis: 100%;
-    justify-content: center;
+body header .logo i {
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
 }
-.titre h1 {
-    font-family: "Shrikhand", cursive;
+body header .titre {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
 }
-
-
-
-/*
-*       MAIN
-*/
-main {
-    background-color: var(--ultralightgray);
+body header .titre h1 {
+  font-family: "Shrikhand", cursive;
 }
-fieldset {
-    border: 0
+body main {
+  background-color: #EAEAEA;
 }
-main img {
-    height: 400px;
-    object-fit: cover;
-    object-position: 50% 70%;
-    width: 100%;
+body main img {
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 70%;
+  width: 100%;
 }
-
-.titre-menu {
-    position: relative;
-    top: -5rem;
-    border-radius: 3rem 3rem 0 0;
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-basis: 95%;
-    padding-left: 2rem;;
-    background-color: var(--ultralightgray);
+body main .titre-menu {
+  position: relative;
+  top: -5rem;
+  border-radius: 3rem 3rem 0 0;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 95%;
+  padding-left: 2rem;
+  background-color: #EAEAEA;
 }
-.titre-menu h1 {
-    font-family: 'Shrikhand', cursive;
+body main .titre-menu h1 {
+  font-family: "Shrikhand", cursive;
 }
-.titre-menu i {
-    display: flex;
-    font-size: 2rem;
-    padding-right: 3rem;
+body main .titre-menu i {
+  display: flex;
+  font-size: 2rem;
+  padding-right: 3rem;
 }
-   
-
-.layout-star {
-    display: flex;
-    width: 15%;
-    height: 50px;
-    align-items: center;
-    font-size: 1.5rem;
+body main .titre-menu .layout-star {
+  display: flex;
+  width: 15%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
 }
-.layout-star .fa-solid.fa-heart { 
-    display: none;
+body main .titre-menu .layout-star .fa-solid.fa-heart {
+  display: none;
 }
-.layout-star:hover {
-    cursor: pointer;
-    background: linear-gradient(var(--primary) 20%, var(--secondary) 100%);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+body main .titre-menu .layout-star:hover {
+  cursor: pointer;
+  background: linear-gradient(#9356dc 20%, #ff79da 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.layout-star:hover .fa-regular.fa-heart {
-    display: none;
+body main .titre-menu .layout-star:hover .fa-regular.fa-heart {
+  display: none;
 }
-.layout-star:hover .fa-solid.fa-heart { 
-    display: inline;
+body main .titre-menu .layout-star:hover .fa-solid.fa-heart {
+  display: inline;
 }
-
-
-
-
-/*
-*       MENU
-*/
-.menus {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body main .menus {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.entrees, .plats, .desserts {
-    padding: 0 1rem 3rem 0;
+body main .menus .entrees, body main .menus .plats, body main .menus .desserts {
+  padding: 0 1rem 3rem 0;
 }
-.entrees h4, .plats h4, .desserts h4,
-.entrees p, .plats p, .desserts p {
-    margin: 0;
-    overflow: hidden;               /* OVERHIDDEN */
-    white-space: nowrap;
-    text-overflow: ellipsis;
+body main .menus .entrees h4, body main .menus .entrees p, body main .menus .plats h4, body main .menus .plats p, body main .menus .desserts h4, body main .menus .desserts p {
+  margin: 0;
+  overflow: hidden; /* OVERHIDDEN */
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.entrees h3, .plats h3, .desserts h3 {
-    text-transform: uppercase;
-    margin: 0;
-    margin-bottom: 0.3rem;
+body main .menus .entrees h3, body main .menus .plats h3, body main .menus .desserts h3 {
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 0.3rem;
 }
-
-
-    /* Barre verte sous titre de menu */
-.entrees > p, .plats > p, .desserts > p {
-    width: 47px;
-    color: var(--ultralightgray);
-    border-top: 3px solid var(--lightgreen);
+body main .menus .entrees > p, body main .menus .plats > p, body main .menus .desserts > p {
+  width: 47px;
+  color: #EAEAEA;
+  border-top: 3px solid #99E2D0;
 }
-
-
-.article-menu {
-    display: flex;
-    border: 1px solid transparent;
-    background-color: white;
-    width: 470px;
-    height: 60px;
-    border-radius: 1rem;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    animation: effet-menu 1s ease-in;
+body main .menus .entrees .article-menu, body main .menus .plats .article-menu, body main .menus .desserts .article-menu {
+  display: flex;
+  border: 1px solid transparent;
+  background-color: white;
+  width: 470px;
+  height: 60px;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  animation: effet-menu 1s ease-in;
 }
-
-.article-menu:hover .select-choix {
-    margin: 0;
-    transition: all 0.5s;
-    cursor: pointer;
+body main .menus .entrees .article-menu:hover .select-choix, body main .menus .plats .article-menu:hover .select-choix, body main .menus .desserts .article-menu:hover .select-choix {
+  margin: 0;
+  transition: all 0.5s;
+  cursor: pointer;
 }
-.article-menu:hover .select-choix i {
-    animation: spin 1s;
+body main .menus .entrees .article-menu:hover .select-choix i, body main .menus .plats .article-menu:hover .select-choix i, body main .menus .desserts .article-menu:hover .select-choix i {
+  animation: spin 1s;
 }
-.article-menu input {
-    width: 470px; 
-    height: 60px;
-    position: absolute;
-    visibility: hidden;
+body main .menus .entrees .article-menu input, body main .menus .plats .article-menu input, body main .menus .desserts .article-menu input {
+  width: 470px;
+  height: 60px;
+  position: absolute;
+  visibility: hidden;
 }
-
-.article-menu label { 
-    position: absolute;
-    width: 470px; 
-    height: 60px;
-    border-radius: 1rem;
+body main .menus .entrees .article-menu label, body main .menus .plats .article-menu label, body main .menus .desserts .article-menu label {
+  position: absolute;
+  width: 470px;
+  height: 60px;
+  border-radius: 1rem;
 }
-.article-menu label:hover {
-    cursor: pointer;
+body main .menus .entrees .article-menu label:hover, body main .menus .plats .article-menu label:hover, body main .menus .desserts .article-menu label:hover {
+  cursor: pointer;
 }
-
-.article-menu input[type="checkbox"]:checked + label {
-    background-color: var(--green);
-    opacity: 0.2;
-    box-shadow: 0 0 5px 3px black;
+body main .menus .entrees .article-menu input[type=checkbox]:checked + label, body main .menus .plats .article-menu input[type=checkbox]:checked + label, body main .menus .desserts .article-menu input[type=checkbox]:checked + label {
+  background-color: #2FAF94;
+  opacity: 0.2;
+  box-shadow: 0 0 5px 3px black;
 }
-
-.article-menu h2 { 
-    display: none; 
+body main .menus .entrees .article-menu .description, body main .menus .plats .article-menu .description, body main .menus .desserts .article-menu .description {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* OVERHIDDEN */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  justify-content: space-between;
+  width: 80%;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
-
-.description {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;               /* OVERHIDDEN */
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    justify-content: space-between;
-    width: 80%;
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
+body main .menus .entrees .article-menu .description:hover, body main .menus .plats .article-menu .description:hover, body main .menus .desserts .article-menu .description:hover {
+  cursor: pointer;
 }
-.prix {
-    display: flex;
-    width: 4rem;
-    font-weight: bold;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0 0.5rem 0.5rem 0;
-    border-radius: 0 1rem 1rem 0;
+body main .menus .entrees .article-menu .prix, body main .menus .plats .article-menu .prix, body main .menus .desserts .article-menu .prix {
+  display: flex;
+  width: 4rem;
+  font-weight: bold;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 0.5rem 0.5rem 0;
+  border-radius: 0 1rem 1rem 0;
 }
-.select-choix {
-    display: flex;
-    background-color: var(--lightgreen);
-    color: white;
-    font-weight: bold;
-    font-size: 1.3rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0 1rem 1rem 0;
-    width: 4rem;
-    margin-right: -4rem;
+body main .menus .entrees .article-menu .prix:hover, body main .menus .plats .article-menu .prix:hover, body main .menus .desserts .article-menu .prix:hover {
+  cursor: pointer;
 }
-.description:hover, .prix:hover {
-    cursor: pointer;
+body main .menus .entrees .article-menu .select-choix, body main .menus .plats .article-menu .select-choix, body main .menus .desserts .article-menu .select-choix {
+  display: flex;
+  background-color: #99E2D0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 1rem 1rem 0;
+  width: 4rem;
+  margin-right: -4rem;
 }
-
-.btn-explore {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+body main .btn-explore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.btn-explore label {
-    padding: 1.3rem;
-    color: white;
-    border-radius: 2rem;
-    font-size: 1.3rem;
-    background: linear-gradient(var(--secondary), var(--primary));
-    margin-bottom: 3rem;
-    margin-top: 2rem;
-    box-shadow: 0 3px 10px var(--darkgray);
+body main .btn-explore label {
+  padding: 1.3rem;
+  color: white;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  background: linear-gradient(#ff79da, #9356dc);
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+  box-shadow: 0 3px 10px darkgray;
 }
-.btn-explore label:hover {
-    cursor: pointer;
-    transform: scale(1.02);
-    box-shadow: 0 3px 10px var(--secondary);
+body main .btn-explore label:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0 3px 10px #ff79da;
 }
-.btn-explore p {
-    font-size: 1.8rem;
-    margin: 0;
-    margin-top: 1.5rem;
-    padding: 0 1rem;
-    flex-basis: 100%;
+body main .btn-explore p {
+  font-size: 1.8rem;
+  margin: 0;
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+  flex-basis: 100%;
 }
-
-
-/*
-*       FOOTER
-*/
-footer {
-    background-color: var(--grayblack);
-    color: white;
-    padding: 1rem 0 3rem 2rem;
+body footer {
+  background-color: #353535;
+  color: white;
+  padding: 1rem 0 3rem 2rem;
 }
-footer h1 {
-    font-family: 'Shrikhand', cursive;
-    font-weight: normal;
+body footer h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
 }
-footer a {
-    text-decoration: none;
-    color: white;
+body footer a {
+  text-decoration: none;
+  color: white;
 }
-
-
-
-
 
 /*
 *       MEDIA QUERIES
 */
-@media (max-width : 768px) {
-    .subtitle {
-        font-size: 1.2rem;
-    }
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 1.2rem;
+  }
 }
-
 @media (max-width: 530px) {
-    .article-menu, .article-menu input, .article-menu label {
-        width: 350px;
-        margin: auto;
-        margin-bottom: 1rem;
-    }
-    .entrees, .plats, .desserts {
-        padding: 0;
-    }
-    .entrees h3, .plats h3, .desserts h3 {
-        margin-left: 1rem;
-        
-    }
-    .entrees > p, .plats > p, .desserts > p {
-        margin-left: 1rem;
-    }
+  .article-menu, .article-menu input, .article-menu label {
+    width: 350px;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .entrees, .plats, .desserts {
+    padding: 0;
+  }
+  .entrees h3, .plats h3, .desserts h3 {
+    margin-left: 1rem;
+  }
+  .entrees > p, .plats > p, .desserts > p {
+    margin-left: 1rem;
+  }
 }
-
 /*
 *       KeyFrames
 */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
 @keyframes effet-menu {
-    0% {
-        opacity: 0;
-        transform: rotateX(-100deg);
-        transform-origin: top;
-    }
-
-    100% {
-        opacity: 1;
-        transform: rotateX(0deg);
-        transform-origin: top;
-    }
+  0% {
+    opacity: 0;
+    transform: rotateX(-100deg);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
 }
+
+/*# sourceMappingURL=restaurants.css.map */

@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+.bold {
+  font-weight: bold;
+}
+
+.gray {
+  color: var(--dimgray);
+}
+
 .accessibility-label {
   position: absolute;
   left: -999px;
@@ -74,11 +82,6 @@ footer a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-@media (max-width: 768px) {
-  .nav-bar .btn-explore .subtitle {
-    font-size: 1.2rem;
-  }
 }
 .nav-bar .btn-explore label {
   padding: 1.3rem;
