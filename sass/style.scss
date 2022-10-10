@@ -115,10 +115,6 @@ footer {
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: space-evenly;
-        @media (max-width: 900px) {
-            flex-direction: column;
-        }
-      
         & li {
             width: 255px;
             background-color: $--graywhite;
@@ -217,13 +213,34 @@ footer {
         padding-top: 2rem;
         width: 100%;
     }
-    @media (max-width: 660px) {
-        .card {
-            display: flex;
-            flex-basis: 100%;
-            min-width: 210px;
-            margin-top: 1rem;
-        }
+}
+
+
+@media (max-width: 900px) {
+    .menu {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 660px) {
+    #choix-menu {
+        padding: 0;
+    }
+    .restaurants h2 {
+        margin: 0 0 0 1rem;
+    }
+    .menu h2 {
+        margin: 1rem 0 0 1rem;
+    }
+    .menu {
+        margin-bottom: 2rem;
+    }
+    .card {
+        display: flex;
+        flex-basis: 100%;
+        min-width: 350px;
+        margin: 1rem 1rem 0 1rem;
     }
 }
 

@@ -118,7 +118,7 @@ main img {
     display: flex;
     width: 15%;
     height: 50px;
-    justify-content: center;
+    align-items: center;
     font-size: 1.5rem;
 }
 .layout-star .fa-solid.fa-heart { 
@@ -212,10 +212,10 @@ main img {
     cursor: pointer;
 }
 
-input[type="checkbox"]:checked + label {
+.article-menu input[type="checkbox"]:checked + label {
     background-color: var(--green);
     opacity: 0.2;
-    box-shadow: 0 0 8px black;
+    box-shadow: 0 0 5px 3px black;
 }
 
 .article-menu h2 { 
@@ -329,8 +329,10 @@ footer a {
         margin-left: 1rem;
         
     }
+    .entrees > p, .plats > p, .desserts > p {
+        margin-left: 1rem;
+    }
 }
-
 
 /*
 *       KeyFrames
