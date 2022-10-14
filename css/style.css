@@ -35,7 +35,8 @@ body .nav-bar {
 body .nav-bar .search-bar {
   margin-top: 5px;
   font-size: 1.3rem;
-  padding: 1rem 0;
+  padding-top: 1rem;
+  align-items: center;
   background-color: #EAEAEA;
 }
 body .nav-bar .search-bar input {
@@ -43,14 +44,16 @@ body .nav-bar .search-bar input {
   font-size: 1.3rem;
   width: 200px;
   margin-left: 1rem;
+  margin-bottom: 1rem;
   background-color: #EAEAEA;
 }
-body .nav-bar .btn-explore {
+body .nav-bar .search-bar .btn-explore {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #F6F6F6;
 }
-body .nav-bar .btn-explore label {
+body .nav-bar .search-bar .btn-explore label {
   padding: 1.3rem;
   color: white;
   border-radius: 2rem;
@@ -60,12 +63,12 @@ body .nav-bar .btn-explore label {
   margin-top: 2rem;
   box-shadow: 0 3px 10px darkgray;
 }
-body .nav-bar .btn-explore label:hover {
+body .nav-bar .search-bar .btn-explore label:hover {
   cursor: pointer;
   transform: scale(1.02);
   box-shadow: 0 3px 10px #ff79da;
 }
-body .nav-bar .btn-explore p {
+body .nav-bar .search-bar .btn-explore p {
   font-size: 1.8rem;
   margin: 0;
   margin-top: 1.5rem;
@@ -76,6 +79,8 @@ body main .menu {
   margin-bottom: 4rem;
 }
 body main .menu h2 {
+  display: flex;
+  justify-content: center;
   margin: 2rem 0 0 2rem;
 }
 body main .menu ol {

@@ -207,6 +207,7 @@ body main .btn-explore {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #F6F6F6;
 }
 body main .btn-explore label {
   padding: 1.3rem;

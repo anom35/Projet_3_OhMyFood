@@ -10,7 +10,7 @@ body {
 
     header {
         box-shadow: 0 5px 10px lightgrey;
-        & h1 {
+        h1 {
             font-family : 'Shrikhand', cursive;
             font-size: 2.3rem;
             margin: 0;
@@ -18,7 +18,7 @@ body {
             text-align: center;
         }
         
-        & > div {
+        > div {
             display: flex;
         }
 
@@ -27,7 +27,7 @@ body {
             flex-basis: 2rem;
             align-items: center;
             margin-left: 1rem;
-            & i {
+            i {
                 font-size: 2rem;
                 color: black;
                 cursor: pointer;
@@ -38,7 +38,7 @@ body {
             display: flex;
             flex-basis: 100%;
             justify-content: center;
-            & h1 {
+            h1 {
                 font-family: "Shrikhand", cursive;
             }
         }
@@ -141,10 +141,7 @@ body {
                         box-shadow: 0 0 5px 3px black;
                     }
                     
-                    // & h2 { 
-                    //     display: none; 
-                    // }
-    
+  
                     .description {
                         display: flex;
                         flex-direction: column;

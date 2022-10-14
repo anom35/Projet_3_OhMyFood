@@ -28,17 +28,20 @@ body {
         .search-bar {
             margin-top: 5px;
             font-size: 1.3rem;
-            padding: 1rem 0;
+            padding-top: 1rem;
+            align-items: center;
             background-color: $--ultralightgray;
             input {
                 border: none;
                 font-size: 1.3rem;
                 width: 200px;
                 margin-left: 1rem;
+                margin-bottom: 1rem;
                 background-color: $--ultralightgray;
             }
+            @include btn-style();
+
         }
-        @include btn-style();
     }
     
     main {
@@ -46,6 +49,8 @@ body {
         .menu {
             margin-bottom: 4rem;
             h2 {
+                display: flex;
+                justify-content: center;
                 margin: 2rem 0 0 2rem;
             }
             ol {
