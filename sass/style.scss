@@ -1,16 +1,16 @@
 @import "base";
 @import "mixins";
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
-
 body {
     box-sizing: border-box;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
-    max-width: 1024px;
+    max-width: 1400px;
 
 
     header {
+        @include loader(5rem);
+
         box-shadow: 0 5px 10px lightgrey;
         h1 {
             font-family : 'Shrikhand', cursive;
