@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
-    max-width: 1024px;
+    max-width: $max-width;
 
     header {
         box-shadow: 0 5px 10px lightgrey;
@@ -79,10 +79,14 @@ body {
         .menus {
             border: 0;
             display: flex;
-            flex-direction: column;
             align-items: center;
+
             .entrees, .plats, .desserts {
                 padding: 0 1rem 3rem 0;
+                display: flex;
+                flex-wrap: wrap;
+                width: 33%;
+
                 h4, p {
                     margin: 0;
                     overflow: hidden;             
@@ -90,25 +94,51 @@ body {
                     text-overflow: ellipsis;
                 }
                 h3 {
+                    flex-basis: 100%;
                     text-transform: uppercase;
                     margin: 0;
                     margin-bottom: 0.3rem;
                 }
-                > p {
-                    width: 47px;
-                    color: $--ultralightgray;
-                    border-top: 3px solid $--lightgreen;
+                h3::after {
+                    border-bottom: 30px solid $--lightgreen;
                 }
+
                 .article-menu {
                     display: flex;
+                    // flex-wrap: wrap;
                     border: 1px solid transparent;
                     background-color: white;
-                    width: 470px;
+                    min-width: $largeur-menu;
                     height: 60px;
                     border-radius: 1rem;
                     overflow: hidden;
                     margin-bottom: 1rem;
                     animation: effet-menu 1s ease-in;
+
+                    .for-input {
+                        input {
+                            width: $largeur-menu; 
+                            height: 60px;
+                            position: absolute;
+                            visibility: hidden;
+                        }
+                        
+                        label { 
+                            position: absolute;
+                            width: $largeur-menu; 
+                            height: 60px;
+                            border-radius: 1rem;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                        
+                        input[type="checkbox"]:checked + label {
+                            background-color: $--green;
+                            opacity: 0.2;
+                            box-shadow: 0 0 5px 3px black;
+                        }
+                    }
     
                     &:hover .select-choix {
                         margin: 0;
@@ -118,29 +148,6 @@ body {
                     &:hover .select-choix i {
                         animation: spin 1s;
                     }
-                    input {
-                        width: 470px; 
-                        height: 60px;
-                        position: absolute;
-                        visibility: hidden;
-                    }
-                    
-                    label { 
-                        position: absolute;
-                        width: 470px; 
-                        height: 60px;
-                        border-radius: 1rem;
-                        &:hover {
-                            cursor: pointer;
-                        }
-                    }
-                    
-                    input[type="checkbox"]:checked + label {
-                        background-color: $--green;
-                        opacity: 0.2;
-                        box-shadow: 0 0 5px 3px black;
-                    }
-                    
   
                     .description {
                         display: flex;
@@ -186,40 +193,40 @@ body {
 
             }
         }
-        
 
         @include btn-style() ;
 
     }
+
+
     footer {
         background-color: $--grayblack;
         color: white;
         padding: 1rem 0 3rem 2rem;
-        & h1 {
+        h1 {
             font-family: 'Shrikhand', cursive;
             font-weight: normal;
         }
-        & a {
+        a {
             text-decoration: none;
             color: white;
         }
     }
-    
 }
 
 
 /*
 *       MEDIA QUERIES
 */
-@media (max-width : 768px) {
+@media (max-width: $tablette) {
     .subtitle {
         font-size: 1.2rem;
     }
 }
 
-@media (max-width: 530px) {
+@media (max-width: $smartphone) {
     .article-menu, .article-menu input, .article-menu label {
-        width: 350px;
+        width: $largeur-menu;
         margin: auto;
         margin-bottom: 1rem;
     }

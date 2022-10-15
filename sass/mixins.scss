@@ -105,7 +105,7 @@
 @mixin choix-de-menu() {
     display: flex;
     border: 1px solid transparent;
-    width: 470px;
+    // width: $largeur-menu;
     height: 60px;
     background-color: white;
     border-radius: 1rem;
