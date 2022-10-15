@@ -114,7 +114,7 @@ body main .menus .entrees, body main .menus .plats, body main .menus .desserts {
 }
 body main .menus .entrees h4, body main .menus .entrees p, body main .menus .plats h4, body main .menus .plats p, body main .menus .desserts h4, body main .menus .desserts p {
   margin: 0;
-  overflow: hidden; /* OVERHIDDEN */
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -284,13 +284,9 @@ body footer a {
 @keyframes effet-menu {
   0% {
     opacity: 0;
-    transform: rotateX(-100deg);
-    transform-origin: top;
   }
   100% {
     opacity: 1;
-    transform: rotateX(0deg);
-    transform-origin: top;
   }
 }
 
