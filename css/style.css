@@ -61,7 +61,7 @@ body .nav-bar .search-bar .btn-explore {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #F6F6F6;
+  background-color: #EAEAEA;
 }
 body .nav-bar .search-bar .btn-explore label {
   padding: 1.3rem;
@@ -195,8 +195,7 @@ body main .restaurants .card a {
   color: inherit;
 }
 body main .restaurants .card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 8px #9356dc;
+  box-shadow: 0 0 15px #9356dc;
 }
 body main .restaurants span {
   position: absolute;
