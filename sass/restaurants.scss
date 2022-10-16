@@ -90,7 +90,6 @@ body {
                     display: flex;
                     flex-wrap: wrap;
                     width: $largeur-menu;
-                    min-width: $largeur-menu;
                     h4, p {
                         margin: 0;
                         overflow: hidden;             
@@ -98,6 +97,8 @@ body {
                         text-overflow: ellipsis;
                     }
                     h3 {
+                        display: flex;
+                        justify-content: center;
                         flex-basis: 100%;
                         text-transform: uppercase;
                         margin: 0;
@@ -112,7 +113,7 @@ body {
                         // flex-wrap: wrap;
                         border: 1px solid transparent;
                         background-color: white;
-                        min-width: $largeur-menu;
+                        width: $largeur-menu;
                         height: 60px;
                         border-radius: 1rem;
                         overflow: hidden;
@@ -121,15 +122,16 @@ body {
 
                         .for-input {
                             input {
-                                width: $largeur-menu; 
+                                width: $largeur-menu;
                                 height: 60px;
                                 position: absolute;
                                 visibility: hidden;
                             }
                             
                             label { 
+                                width: $largeur-menu;
                                 position: absolute;
-                                width: $largeur-menu; 
+                                flex-basis: 100%; 
                                 height: 60px;
                                 border-radius: 1rem;
                                 &:hover {
@@ -221,6 +223,20 @@ body {
 /*
 *       MEDIA QUERIES
 */
+
+
+@media (max-width: $netbook) {
+    body {
+        width: 0 auto;
+        .entrees, .plats, .desserts {
+            h3 {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
 @media (max-width: $tablette) {
     .subtitle {
         font-size: 1.2rem;
@@ -229,11 +245,14 @@ body {
 
 @media (max-width: $smartphone) {
     body {
-        width: 375px;
+        min-width: 390px;
     }
     .entrees, .plats, .desserts {
+        margin: 0;
         padding: 0;
         h3 {
+            display: flex;
+            justify-content: flex-start;
             margin-left: 1rem;
         }
         .article-menu, .article-menu input, .article-menu label {

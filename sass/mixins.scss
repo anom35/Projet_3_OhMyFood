@@ -112,7 +112,7 @@
     animation: effet-menu 2s ease-in-out;
     @include effet-menu();
     @media (max-width: $smartphone) {
-        width: $largeur-menu;
+        min-width: $largeur-menu;
         margin: auto;
         margin-bottom: 1rem;
         .entrees, .plats, .desserts {
