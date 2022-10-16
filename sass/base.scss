@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap');
 
+/*
+*       Variables Colors
+*/
 $--primary: #9356dc;
 $--secondary: #ff79da;
 $--tertiary: #99e2d0;
@@ -13,12 +16,23 @@ $--lightgreen: #99E2D0;
 $--green: #2FAF94;
 $--grayblack: #353535;
 
-$largeur-menu: 380px;
+
+/*
+*       Largeur des éléments menu
+*/
+$largeur-menu: 370px;
+
+
+/*
+*       Variables pour média queries
+*/
 $smartphone: 576px;
 $tablette: 768px;
 $netbook: 992px;
 $desktop: 1200px;
 $max-width: 1400px;
+
+
 
 .bold {
     font-weight: bold;

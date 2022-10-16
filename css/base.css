@@ -1,4 +1,14 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
+/*
+*       Variables Colors
+*/
+/*
+*       Largeur des éléments menu
+*/
+/*
+*       Variables pour média queries
+*/
 .bold {
   font-weight: bold;
 }

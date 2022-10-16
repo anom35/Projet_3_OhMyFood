@@ -94,8 +94,6 @@
 }
 
 
-
-
 @mixin overhidden() {
     overflow: hidden;
     white-space: nowrap;
@@ -114,7 +112,7 @@
     animation: effet-menu 2s ease-in-out;
     @include effet-menu();
     @media (max-width: $smartphone) {
-        width: 350px;
+        width: $largeur-menu;
         margin: auto;
         margin-bottom: 1rem;
         .entrees, .plats, .desserts {
@@ -163,9 +161,11 @@
             }
         }
     }
+ 
     .description:hover, .prix:hover {
         cursor: pointer;
     }
+ 
     @keyframes spin {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }

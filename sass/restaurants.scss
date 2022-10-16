@@ -78,119 +78,121 @@ body {
 
         .menus {
             border: 0;
-            display: flex;
-            align-items: center;
 
-            .entrees, .plats, .desserts {
-                padding: 0 1rem 3rem 0;
+            .articles {
                 display: flex;
                 flex-wrap: wrap;
-                width: 33%;
-
-                h4, p {
-                    margin: 0;
-                    overflow: hidden;             
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                }
-                h3 {
-                    flex-basis: 100%;
-                    text-transform: uppercase;
-                    margin: 0;
-                    margin-bottom: 0.3rem;
-                }
-                h3::after {
-                    border-bottom: 30px solid $--lightgreen;
-                }
-
-                .article-menu {
-                    display: flex;
-                    // flex-wrap: wrap;
-                    border: 1px solid transparent;
-                    background-color: white;
-                    min-width: $largeur-menu;
-                    height: 60px;
-                    border-radius: 1rem;
-                    overflow: hidden;
-                    margin-bottom: 1rem;
-                    animation: effet-menu 1s ease-in;
-
-                    .for-input {
-                        input {
-                            width: $largeur-menu; 
-                            height: 60px;
-                            position: absolute;
-                            visibility: hidden;
-                        }
-                        
-                        label { 
-                            position: absolute;
-                            width: $largeur-menu; 
-                            height: 60px;
-                            border-radius: 1rem;
-                            &:hover {
-                                cursor: pointer;
-                            }
-                        }
-                        
-                        input[type="checkbox"]:checked + label {
-                            background-color: $--green;
-                            opacity: 0.2;
-                            box-shadow: 0 0 5px 3px black;
-                        }
-                    }
+                // align-items: center;
     
-                    &:hover .select-choix {
+                .entrees, .plats, .desserts {
+                    padding: 0 1rem 3rem 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 33%;
+
+                    h4, p {
                         margin: 0;
-                        transition: all 0.5s;
-                        cursor: pointer;
-                    }
-                    &:hover .select-choix i {
-                        animation: spin 1s;
-                    }
-  
-                    .description {
-                        display: flex;
-                        flex-direction: column;
-                        overflow: hidden;               /* OVERHIDDEN */
+                        overflow: hidden;             
                         white-space: nowrap;
                         text-overflow: ellipsis;
-                        justify-content: space-between;
-                        width: 80%;
-                        padding: 0.5rem 0.5rem 0.5rem 1rem;
-                        &:hover {
-                            cursor: pointer;
-                        
-                        }
                     }
-                    .prix {
-                        display: flex;
-                        width: 4rem;
-                        font-weight: bold;
-                        align-items: flex-end;
-                        justify-content: center;
-                        padding: 0 0.5rem 0.5rem 0;
-                        border-radius: 0 1rem 1rem 0;
-                        &:hover {
-                            cursor: pointer;
-                        
-                        }
+                    h3 {
+                        flex-basis: 100%;
+                        text-transform: uppercase;
+                        margin: 0;
+                        margin-bottom: 0.3rem;
                     }
-                    .select-choix {
+                    h3::after {
+                        border-bottom: 30px solid $--lightgreen;
+                    }
+
+                    .article-menu {
                         display: flex;
-                        background-color: $--lightgreen;
-                        color: white;
-                        font-weight: bold;
-                        font-size: 1.3rem;
-                        align-items: center;
-                        justify-content: center;
-                        border-radius: 0 1rem 1rem 0;
-                        width: 4rem;
-                        margin-right: -4rem;
+                        // flex-wrap: wrap;
+                        border: 1px solid transparent;
+                        background-color: white;
+                        min-width: $largeur-menu;
+                        height: 60px;
+                        border-radius: 1rem;
+                        overflow: hidden;
+                        margin-bottom: 1rem;
+                        animation: effet-menu 1s ease-in;
+
+                        .for-input {
+                            input {
+                                width: $largeur-menu; 
+                                height: 60px;
+                                position: absolute;
+                                visibility: hidden;
+                            }
+                            
+                            label { 
+                                position: absolute;
+                                width: $largeur-menu; 
+                                height: 60px;
+                                border-radius: 1rem;
+                                &:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                            
+                            input[type="checkbox"]:checked + label {
+                                background-color: $--green;
+                                opacity: 0.2;
+                                box-shadow: 0 0 5px 3px black;
+                            }
+                        }
+        
+                        &:hover .select-choix {
+                            margin: 0;
+                            transition: all 0.5s;
+                            cursor: pointer;
+                        }
+                        &:hover .select-choix i {
+                            animation: spin 1s;
+                        }
+    
+                        .description {
+                            display: flex;
+                            flex-direction: column;
+                            overflow: hidden;               /* OVERHIDDEN */
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            justify-content: space-between;
+                            width: 80%;
+                            padding: 0.5rem 0.5rem 0.5rem 1rem;
+                            &:hover {
+                                cursor: pointer;
+                            
+                            }
+                        }
+                        .prix {
+                            display: flex;
+                            width: 4rem;
+                            font-weight: bold;
+                            align-items: flex-end;
+                            justify-content: center;
+                            padding: 0 0.5rem 0.5rem 0;
+                            border-radius: 0 1rem 1rem 0;
+                            &:hover {
+                                cursor: pointer;
+                            
+                            }
+                        }
+                        .select-choix {
+                            display: flex;
+                            background-color: $--lightgreen;
+                            color: white;
+                            font-weight: bold;
+                            font-size: 1.3rem;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 0 1rem 1rem 0;
+                            width: 4rem;
+                            margin-right: -4rem;
+                        }
                     }
                 }
-        
-
             }
         }
 
