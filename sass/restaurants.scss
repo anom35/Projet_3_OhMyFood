@@ -80,16 +80,33 @@ body {
             border: 0;
 
             .articles {
-                display: flex;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 10px;
+                grid-auto-rows: minmax($largeur-menu, auto);
+                // flex-wrap: wrap;
                 // align-items: center;
-                justify-content: center;
+                // justify-content: center;
     
+                .entrees {
+                    grid-column: 1;
+                }
+                .plats {
+                    grid-column: 2;
+                }
+                .desserts {
+                    grid-column: 3;
+                }
+                .btn-explore {
+                    grid-column: 2;
+                    grid-row: 3;
+                }
                 .entrees, .plats, .desserts {
                     padding: 0 1rem 3rem 0;
                     display: flex;
                     flex-wrap: wrap;
                     width: $largeur-menu;
+                    justify-content: center;
                     h4, p {
                         margin: 0;
                         overflow: hidden;             
@@ -104,11 +121,17 @@ body {
                         color: $--grayblack;
                         font-weight: normal;
                         margin: 0;
-                        margin-bottom: 0.3rem;
-                        &:after {
-                            border-bottom: 3px solid $--lightgreen;
+                        padding-bottom: 1rem;
+                        position: relative;
+                        &::after {
+                            position: absolute;
+                            top: 25px;
+                            content: "";
+                            height: 3px;
+                            width: 50px;
+                            background-color: $--tertiary;
                         }
-                    }
+                        }
 
                     .article-menu {
                         display: flex;
@@ -230,13 +253,20 @@ body {
 @media (min-width: $netbook) and (max-width: $desktop) {
     body {
         width: 0 auto;
-        .entrees, .plats, .desserts {
-            display: flex;
-            border: 1px solid red;
-            width: 50%;
-            h3 {
+        .articles {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            grid-auto-rows: minmax($largeur-menu, auto);
+            .entrees, .plats, .desserts {
                 display: flex;
-                justify-content: center;
+                border: 1px solid red;
+                width: 50%;
+                h3 {
+                    display: flex;
+                    justify-content: center;
+                }
             }
         }
     }
