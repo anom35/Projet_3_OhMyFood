@@ -120,6 +120,7 @@ body main .menus .articles {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(365px, auto);
+  justify-content: center;
 }
 body main .menus .articles .entrees {
   grid-column: 1;
@@ -135,10 +136,9 @@ body main .menus .articles .btn-explore {
   grid-row: 3;
 }
 body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
-  padding: 0 1rem 3rem 0;
   display: flex;
   flex-wrap: wrap;
-  width: 365px;
+  width: 100%;
   justify-content: center;
 }
 body main .menus .articles .entrees h4, body main .menus .articles .entrees p, body main .menus .articles .plats h4, body main .menus .articles .plats p, body main .menus .articles .desserts h4, body main .menus .articles .desserts p {
@@ -155,7 +155,6 @@ body main .menus .articles .entrees h3, body main .menus .articles .plats h3, bo
   color: #353535;
   font-weight: normal;
   margin: 0;
-  padding-bottom: 1rem;
   position: relative;
 }
 body main .menus .articles .entrees h3::after, body main .menus .articles .plats h3::after, body main .menus .articles .desserts h3::after {
@@ -170,11 +169,10 @@ body main .menus .articles .entrees .article-menu, body main .menus .articles .p
   display: flex;
   border: 1px solid transparent;
   background-color: white;
-  width: 365px;
+  width: 100%;
   height: 60px;
   border-radius: 1rem;
   overflow: hidden;
-  margin-bottom: 1rem;
   animation: effet-menu 1s ease-in;
 }
 body main .menus .articles .entrees .article-menu .for-input input, body main .menus .articles .plats .article-menu .for-input input, body main .menus .articles .desserts .article-menu .for-input input {
@@ -288,7 +286,7 @@ body footer a {
 /*
 *       MEDIA QUERIES
 */
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (max-width: 1040px) {
   body {
     width: 0 auto;
   }
@@ -297,6 +295,15 @@ body footer a {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(365px, auto);
+  }
+  body .articles .entrees {
+    grid-column: 1;
+  }
+  body .articles .plats {
+    grid-column: 2;
+  }
+  body .articles .desserts {
+    grid-column: 3;
   }
   body .articles .entrees, body .articles .plats, body .articles .desserts {
     display: flex;
@@ -328,7 +335,7 @@ body footer a {
     margin-left: 0.5rem !important;
   }
   body .menus .entrees .article-menu, body .menus .entrees .article-menu input, body .menus .entrees .article-menu label, body .menus .plats .article-menu, body .menus .plats .article-menu input, body .menus .plats .article-menu label, body .menus .desserts .article-menu, body .menus .desserts .article-menu input, body .menus .desserts .article-menu label {
-    width: 365px;
+    width: 100%;
     margin: auto;
     margin-bottom: 1rem;
   }
