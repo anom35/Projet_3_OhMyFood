@@ -101,11 +101,13 @@ body {
                         justify-content: center;
                         flex-basis: 100%;
                         text-transform: uppercase;
+                        color: $--grayblack;
+                        font-weight: normal;
                         margin: 0;
                         margin-bottom: 0.3rem;
-                    }
-                    h3::after {
-                        border-bottom: 30px solid $--lightgreen;
+                        &:after {
+                            border-bottom: 3px solid $--lightgreen;
+                        }
                     }
 
                     .article-menu {
@@ -225,10 +227,13 @@ body {
 */
 
 
-@media (max-width: $netbook) {
+@media (min-width: $netbook) and (max-width: $desktop) {
     body {
         width: 0 auto;
         .entrees, .plats, .desserts {
+            display: flex;
+            border: 1px solid red;
+            width: 50%;
             h3 {
                 display: flex;
                 justify-content: center;
@@ -245,20 +250,24 @@ body {
 
 @media (max-width: $smartphone) {
     body {
-        min-width: 390px;
-    }
-    .entrees, .plats, .desserts {
-        margin: 0;
-        padding: 0;
-        h3 {
-            display: flex;
-            justify-content: flex-start;
-            margin-left: 1rem;
-        }
-        .article-menu, .article-menu input, .article-menu label {
-            width: $largeur-menu;
-            margin: auto;
-            margin-bottom: 1rem;
+        min-width: 374px;
+
+        .menus {
+            margin: 0;
+            padding: 0;
+            padding-left: 5px;
+            .entrees, .plats, .desserts {
+                h3 {
+                    display: flex;
+                    justify-content: start!important;
+                    margin-left: 0.5rem!important;
+                }
+                .article-menu, .article-menu input, .article-menu label {
+                    width: $largeur-menu;
+                    margin: auto;
+                    margin-bottom: 1rem;
+                }
+            }
         }
     }
 }
