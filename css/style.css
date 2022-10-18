@@ -60,6 +60,7 @@ body .nav-bar .search-bar input {
 body .nav-bar .search-bar .btn-explore {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: center;
   background-color: #EAEAEA;
 }
@@ -72,6 +73,7 @@ body .nav-bar .search-bar .btn-explore label {
   margin-bottom: 3rem;
   margin-top: 2rem;
   box-shadow: 0 3px 10px darkgray;
+  transition: 100ms;
 }
 body .nav-bar .search-bar .btn-explore label:hover {
   cursor: pointer;
@@ -172,6 +174,7 @@ body main .restaurants .card .description .layout-star {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  transition: all 500ms;
 }
 body main .restaurants .card .description .layout-star .fa-solid.fa-heart {
   display: none;

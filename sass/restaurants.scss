@@ -78,34 +78,25 @@ body {
 
         .menus {
             border: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
 
             .articles {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-gap: 10px;
-                grid-auto-rows: minmax($largeur-menu, auto);
-                // flex-wrap: wrap;
-                // align-items: center;
-                justify-content: center;
-    
-                .entrees {
-                    grid-column: 1;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                gap: 5px;
+                > div {
+                    min-width: $largeur-menu;
                 }
-                .plats {
-                    grid-column: 2;
-                }
-                .desserts {
-                    grid-column: 3;
-                }
-                .btn-explore {
-                    grid-column: 2;
-                    grid-row: 3;
-                }
+                
                 .entrees, .plats, .desserts {
-                    // padding: 0 1rem 3rem 0;
+                    padding-bottom: 3rem;
                     display: flex;
                     flex-wrap: wrap;
-                    width: 100%;
+                    width: 32%;
                     justify-content: center;
                     h4, p {
                         margin: 0;
@@ -121,7 +112,7 @@ body {
                         color: $--grayblack;
                         font-weight: normal;
                         margin: 0;
-                        // padding-bottom: 1rem;
+                        padding-bottom: 1rem;
                         position: relative;
                         &::after {
                             position: absolute;
@@ -138,11 +129,11 @@ body {
                         // flex-wrap: wrap;
                         border: 1px solid transparent;
                         background-color: white;
-                        width: 100%; //$largeur-menu;
+                        width: $largeur-menu;
                         height: 60px;
                         border-radius: 1rem;
                         overflow: hidden;
-                        // margin-bottom: 1rem;
+                        margin-bottom: 1rem;
                         animation: effet-menu 1s ease-in;
 
                         .for-input {
@@ -250,36 +241,25 @@ body {
 */
 
 
-@media (max-width: 1040px) {
-    body {
-        width: 0 auto;
-        .articles {
-            display: grid;
+// @media (max-width: 1040px) {
+//     body {
+//         width: 0 auto;
+//         .articles {
+//             display: flex;
+//             justify-content: center;
 
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 10px;
-            grid-auto-rows: minmax($largeur-menu, auto);
-            .entrees {
-                grid-column: 1;
-            }
-            .plats {
-                grid-column: 2;
-            }
-            .desserts {
-                grid-column: 3;
-            }
-            .entrees, .plats, .desserts {
-                display: flex;
-                border: 1px solid red;
-                width: 50%;
-                h3 {
-                    display: flex;
-                    justify-content: center;
-                }
-            }
-        }
-    }
-}
+//             .entrees, .plats, .desserts {
+//                 display: flex;
+//                 border: 1px solid red;
+//                 width: 50%;
+//                 h3 {
+//                     display: flex;
+//                     justify-content: center;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @media (max-width: $tablette) {
     .subtitle {
@@ -294,7 +274,7 @@ body {
         .menus {
             margin: 0;
             padding: 0;
-            padding-left: 5px;
+            // padding-left: 2px;
             .entrees, .plats, .desserts {
                 h3 {
                     display: flex;

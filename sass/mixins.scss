@@ -77,6 +77,7 @@
         .fa-solid.fa-heart { 
             display: none;
         }
+        transition: all 500ms;
         &:hover {
             cursor: pointer;
             .fa-regular.fa-heart {
@@ -103,7 +104,7 @@
 @mixin choix-de-menu() {
     display: flex;
     border: 1px solid transparent;
-    // width: $largeur-menu;
+    width: 100%;
     height: 60px;
     background-color: white;
     border-radius: 1rem;
@@ -190,6 +191,7 @@
     .btn-explore {
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
         justify-content: center;
         background-color: $--ultralightgray;
         label {
@@ -201,6 +203,7 @@
             margin-bottom: 3rem;
             margin-top: 2rem;
             box-shadow: 0 3px 10px $--darkgray;
+            transition: 100ms;
             &:hover {
                 cursor: pointer;
                 transform: scale(1.02);

@@ -95,6 +95,7 @@ body main .titre-menu .layout-star {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  transition: all 500ms;
 }
 body main .titre-menu .layout-star .fa-solid.fa-heart {
   display: none;
@@ -114,31 +115,25 @@ body main .titre-menu .layout-star:hover .fa-solid.fa-heart {
 }
 body main .menus {
   border: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 body main .menus .articles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(365px, auto);
-  justify-content: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
 }
-body main .menus .articles .entrees {
-  grid-column: 1;
-}
-body main .menus .articles .plats {
-  grid-column: 2;
-}
-body main .menus .articles .desserts {
-  grid-column: 3;
-}
-body main .menus .articles .btn-explore {
-  grid-column: 2;
-  grid-row: 3;
+body main .menus .articles > div {
+  min-width: 365px;
 }
 body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
+  padding-bottom: 3rem;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  width: 32%;
   justify-content: center;
 }
 body main .menus .articles .entrees h4, body main .menus .articles .entrees p, body main .menus .articles .plats h4, body main .menus .articles .plats p, body main .menus .articles .desserts h4, body main .menus .articles .desserts p {
@@ -155,6 +150,7 @@ body main .menus .articles .entrees h3, body main .menus .articles .plats h3, bo
   color: #353535;
   font-weight: normal;
   margin: 0;
+  padding-bottom: 1rem;
   position: relative;
 }
 body main .menus .articles .entrees h3::after, body main .menus .articles .plats h3::after, body main .menus .articles .desserts h3::after {
@@ -169,10 +165,11 @@ body main .menus .articles .entrees .article-menu, body main .menus .articles .p
   display: flex;
   border: 1px solid transparent;
   background-color: white;
-  width: 100%;
+  width: 365px;
   height: 60px;
   border-radius: 1rem;
   overflow: hidden;
+  margin-bottom: 1rem;
   animation: effet-menu 1s ease-in;
 }
 body main .menus .articles .entrees .article-menu .for-input input, body main .menus .articles .plats .article-menu .for-input input, body main .menus .articles .desserts .article-menu .for-input input {
@@ -244,6 +241,7 @@ body main .menus .articles .entrees .article-menu .select-choix, body main .menu
 body main .btn-explore {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   justify-content: center;
   background-color: #EAEAEA;
 }
@@ -256,6 +254,7 @@ body main .btn-explore label {
   margin-bottom: 3rem;
   margin-top: 2rem;
   box-shadow: 0 3px 10px darkgray;
+  transition: 100ms;
 }
 body main .btn-explore label:hover {
   cursor: pointer;
@@ -286,35 +285,6 @@ body footer a {
 /*
 *       MEDIA QUERIES
 */
-@media (max-width: 1040px) {
-  body {
-    width: 0 auto;
-  }
-  body .articles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(365px, auto);
-  }
-  body .articles .entrees {
-    grid-column: 1;
-  }
-  body .articles .plats {
-    grid-column: 2;
-  }
-  body .articles .desserts {
-    grid-column: 3;
-  }
-  body .articles .entrees, body .articles .plats, body .articles .desserts {
-    display: flex;
-    border: 1px solid red;
-    width: 50%;
-  }
-  body .articles .entrees h3, body .articles .plats h3, body .articles .desserts h3 {
-    display: flex;
-    justify-content: center;
-  }
-}
 @media (max-width: 768px) {
   .subtitle {
     font-size: 1.2rem;
@@ -327,7 +297,6 @@ body footer a {
   body .menus {
     margin: 0;
     padding: 0;
-    padding-left: 5px;
   }
   body .menus .entrees h3, body .menus .plats h3, body .menus .desserts h3 {
     display: flex;
