@@ -77,8 +77,7 @@
         .fa-solid.fa-heart { 
             display: none;
         }
-        transition: all 500ms;
-        &:hover {
+       &:hover {
             cursor: pointer;
             .fa-regular.fa-heart {
                 display: none;
@@ -87,6 +86,8 @@
                 display: inline;
             }
             background: linear-gradient($--primary 20%, $--secondary 100%);
+            transform: translateY(-2px);
+            transition: all 500ms ease-in-out;
             background-clip: border-box;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;

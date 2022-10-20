@@ -174,7 +174,6 @@ body main .restaurants .card .description .layout-star {
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  transition: all 500ms;
 }
 body main .restaurants .card .description .layout-star .fa-solid.fa-heart {
   display: none;
@@ -182,6 +181,8 @@ body main .restaurants .card .description .layout-star .fa-solid.fa-heart {
 body main .restaurants .card .description .layout-star:hover {
   cursor: pointer;
   background: linear-gradient(#9356dc 20%, #ff79da 100%);
+  transform: translateY(-2px);
+  transition: all 500ms ease-in-out;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -211,7 +212,9 @@ body main .restaurants span {
   width: 65px;
 }
 body main .restaurants h2 {
-  margin: 4rem 0 0 2rem;
+  margin: 0 0 0 2rem;
+  display: flex;
+  justify-content: center;
   padding-top: 2rem;
   width: 100%;
 }
@@ -247,6 +250,8 @@ body footer a {
   }
   .restaurants h2 {
     margin: 0 0 0 1rem;
+    display: flex;
+    justify-content: flex-start;
   }
   .card {
     display: flex;

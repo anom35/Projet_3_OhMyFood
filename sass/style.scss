@@ -152,7 +152,9 @@ body {
                 width: 65px;
             } 
             h2 {
-                margin: 4rem 0 0 2rem;
+                margin: 0 0 0 2rem;
+                display: flex;
+                justify-content: center;
                 padding-top: 2rem;
                 width: 100%;
             }
@@ -196,6 +198,8 @@ body {
     }
     .restaurants h2 {
         margin: 0 0 0 1rem;
+        display: flex;
+        justify-content: flex-start;
     }
     .card {
         display: flex;
