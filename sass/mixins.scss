@@ -67,8 +67,8 @@
 }
 
 @mixin nowrap-ellipsis {
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    white-space: nowrap!important;
+    text-overflow: ellipsis!important;
 }
 
 
