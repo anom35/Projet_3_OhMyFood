@@ -113,17 +113,7 @@
     margin-bottom: 1rem;
     animation: effet-menu 2s ease-in-out;
     @include effet-menu();
-    // @media (max-width: $smartphone) {
-    //     min-width: $largeur-menu;
-    //     margin: auto;
-    //     margin-bottom: 1rem;
-    //     .entrees, .plats, .desserts {
-    //         padding: 0;
-    //         h3 {
-    //             margin-left: 1rem;
-    //         }
-    //     }
-    // }
+
     .description {
         display: flex;
         flex-direction: column;
