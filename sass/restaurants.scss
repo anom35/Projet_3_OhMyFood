@@ -101,8 +101,7 @@ body {
                     h4, p {
                         margin: 0;
                         overflow: hidden;             
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
+                        @include nowrap-ellipsis;
                     }
                     h3 {
                         display: flex;
@@ -151,8 +150,7 @@ body {
                             display: flex;
                             flex-direction: column;
                             overflow: hidden;              
-                            white-space: nowrap;
-                            text-overflow: ellipsis;
+                            @include nowrap-ellipsis;
                             justify-content: space-between;
                             width: 80%;
                             padding: 0.5rem 0.5rem 0.5rem 1rem;
@@ -257,8 +255,13 @@ body {
                 display: flex;
                 justify-content: left!important;
                 .entrees, .plats, .desserts {
-                    width: 100%!important; 
+                    width: calc(100% - 2rem)!important; 
                     padding-left: 2px!important;
+                    h4, p {
+                        margin: 0;
+                        overflow: hidden;             
+                        @include nowrap-ellipsis;
+                    }
 
                     h3 {
                         display: flex;
@@ -272,15 +275,17 @@ body {
                         margin: 0 1rem 1rem 1rem!important;
 
                         .description {
-                            // display: flex;
-                            // width: 100%!important;
+                            display: flex;
+                            width: 100%!important;
                             
                             // min-width: none!important;
-                            flex-shrink: 2!important;
+                            // flex-shrink: 2!important;
+                            text-overflow: ellipsis;
+
                         }
-                        .prix, .select-choix {
-                            flex-shrink: 1;
-                        }
+                        // .prix, .select-choix {
+                            // flex-shrink: 1;
+                        // }
                     }
                 }
             }
