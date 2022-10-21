@@ -26,7 +26,7 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  max-width: 1300px;
+  max-width: 1500px;
 }
 body header {
   box-shadow: 0 5px 10px lightgrey;
@@ -128,7 +128,7 @@ body main .menus .articles {
   gap: 5px;
 }
 body main .menus .articles > div {
-  min-width: 365px;
+  min-width: 100px;
 }
 body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
   padding-bottom: 3rem;
@@ -164,38 +164,16 @@ body main .menus .articles .entrees h3::after, body main .menus .articles .plats
 }
 body main .menus .articles .entrees .article-menu, body main .menus .articles .plats .article-menu, body main .menus .articles .desserts .article-menu {
   display: flex;
-  border: 1px solid transparent;
   background-color: white;
-  min-width: 365px;
+  min-width: 100px;
+  max-width: 500px;
   width: 100%;
   height: 60px;
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1rem;
+  box-shadow: 0 2px 5px darkgray;
   animation: effet-menu 1s ease-in;
-}
-body main .menus .articles .entrees .article-menu .for-input input, body main .menus .articles .entrees .article-menu .for-input label, body main .menus .articles .plats .article-menu .for-input input, body main .menus .articles .plats .article-menu .for-input label, body main .menus .articles .desserts .article-menu .for-input input, body main .menus .articles .desserts .article-menu .for-input label {
-  content: "";
-  position: relative;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  display: flex;
-  min-width: 365px;
-  width: 100%;
-  height: 60px;
-  opacity: 0;
-  border-radius: 1rem;
-  border: 1px solid red;
-}
-body main .menus .articles .entrees .article-menu .for-input:hover, body main .menus .articles .plats .article-menu .for-input:hover, body main .menus .articles .desserts .article-menu .for-input:hover {
-  cursor: pointer;
-}
-body main .menus .articles .entrees .article-menu .for-input input[type=checkbox]:checked + label, body main .menus .articles .plats .article-menu .for-input input[type=checkbox]:checked + label, body main .menus .articles .desserts .article-menu .for-input input[type=checkbox]:checked + label {
-  background-color: #2FAF94;
-  opacity: 0.2;
-  box-shadow: 0 0 5px 3px black;
 }
 body main .menus .articles .entrees .article-menu:hover .select-choix, body main .menus .articles .plats .article-menu:hover .select-choix, body main .menus .articles .desserts .article-menu:hover .select-choix {
   margin: 0;
@@ -208,7 +186,7 @@ body main .menus .articles .entrees .article-menu:hover .select-choix i, body ma
 body main .menus .articles .entrees .article-menu .description, body main .menus .articles .plats .article-menu .description, body main .menus .articles .desserts .article-menu .description {
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* OVERHIDDEN */
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   justify-content: space-between;
@@ -289,13 +267,16 @@ body footer a {
 /*
 *       MEDIA QUERIES
 */
-@media (max-width: 1108px) {
+@media (max-width: 1122px) {
   .entrees, .plats, .desserts {
     display: flex;
     width: 48% !important;
   }
+  .entrees .article-menu, .plats .article-menu, .desserts .article-menu {
+    max-width: 450px !important;
+  }
 }
-@media (max-width: 742px) {
+@media (max-width: 754px) {
   .entrees, .plats, .desserts {
     display: flex;
     width: 450px !important;
@@ -319,7 +300,10 @@ body footer a {
   }
   body .menus .articles {
     display: flex;
-    justify-content: center !important;
+    justify-content: left !important;
+  }
+  body .menus .articles > div {
+    width: 100% !important;
   }
   body .menus .articles .entrees, body .menus .articles .plats, body .menus .articles .desserts {
     width: 100% !important;
@@ -330,10 +314,16 @@ body footer a {
     justify-content: start !important;
     margin-left: 0.5rem !important;
   }
-  body .menus .articles .entrees .article-menu, body .menus .articles .entrees .article-menu input, body .menus .articles .entrees .article-menu label, body .menus .articles .plats .article-menu, body .menus .articles .plats .article-menu input, body .menus .articles .plats .article-menu label, body .menus .articles .desserts .article-menu, body .menus .articles .desserts .article-menu input, body .menus .articles .desserts .article-menu label {
-    width: 95% !important;
-    max-width: 450px;
-    margin-bottom: 1rem;
+  body .menus .articles .entrees .article-menu, body .menus .articles .plats .article-menu, body .menus .articles .desserts .article-menu {
+    width: calc(100% - 2rem) !important;
+    max-width: calc(100% - 2rem) !important;
+    margin: 0 1rem 1rem 1rem !important;
+  }
+  body .menus .articles .entrees .article-menu .description, body .menus .articles .plats .article-menu .description, body .menus .articles .desserts .article-menu .description {
+    flex-shrink: 2 !important;
+  }
+  body .menus .articles .entrees .article-menu .prix, body .menus .articles .entrees .article-menu .select-choix, body .menus .articles .plats .article-menu .prix, body .menus .articles .plats .article-menu .select-choix, body .menus .articles .desserts .article-menu .prix, body .menus .articles .desserts .article-menu .select-choix {
+    flex-shrink: 1;
   }
 }
 /*

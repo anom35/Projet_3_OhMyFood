@@ -126,44 +126,18 @@ body {
 
                     .article-menu {
                         display: flex;
-                        // flex-wrap: wrap;
-                        border: 1px solid transparent;
+                        // border: 1px solid transparent;
                         background-color: white;
                         min-width: $largeur-menu;
-                        // max-width: 500%;
+                        max-width: 500px;
                         width: 100%;
                         height: 60px;
                         border-radius: 1rem;
                         overflow: hidden;
                         margin-bottom: 1rem;
+                        box-shadow: 0 2px 5px $--darkgray;
                         animation: effet-menu 1s ease-in;
 
-                        .for-input {
-                            input, label {
-                                content: "";
-                                position: relative;
-                                visibility: hidden;
-                                top: 0;
-                                left: 0;
-                                z-index: -1;
-                                display: flex;
-                                min-width: $largeur-menu;
-                                width: 100%;
-                                height: 60px;
-                                opacity: 0;
-                                border-radius: 1rem;
-                                border: 1px solid red;
-                            }
-                            &:hover {
-                                cursor: pointer;
-                            }
-                            input[type="checkbox"]:checked + label {
-                                background-color: $--green;
-                                opacity: 0.2;
-                                box-shadow: 0 0 5px 3px black;
-                            }
-                    }
-        
                         &:hover .select-choix {
                             margin: 0;
                             transition: all 0.5s;
@@ -176,7 +150,7 @@ body {
                         .description {
                             display: flex;
                             flex-direction: column;
-                            overflow: hidden;               /* OVERHIDDEN */
+                            overflow: hidden;              
                             white-space: nowrap;
                             text-overflow: ellipsis;
                             justify-content: space-between;
@@ -197,7 +171,6 @@ body {
                             border-radius: 0 1rem 1rem 0;
                             &:hover {
                                 cursor: pointer;
-                            
                             }
                         }
                         .select-choix {
@@ -243,17 +216,20 @@ body {
 */
 
 
-@media (max-width: 1108px) {
+@media (max-width: 1122px) {
     .entrees, .plats, .desserts {
         display: flex;
         width: 48%!important;
+        .article-menu {
+            max-width: 450px!important;
+        }
     }
 }
 
-@media (max-width: 742px) {
+@media (max-width: 754px) {
     .entrees, .plats, .desserts {
         display: flex;
-        width: 450px!important;//65%!important;
+        width: 450px!important;
     }
 }
 
@@ -266,7 +242,6 @@ body {
 
 @media (max-width: $smartphone) {
     body {
-        // min-width: 374px;
         width: 100%;
         .logo {
             padding-left: 10px;
@@ -275,12 +250,14 @@ body {
         .menus {
             margin: 0;
             padding: 0;
-            // padding-left: 2px;
             .articles {
+                > div {
+                    width: 100%!important;
+                }
                 display: flex;
-                justify-content: center!important;
+                justify-content: left!important;
                 .entrees, .plats, .desserts {
-                    width: 100%!important; //$largeur-menu;
+                    width: 100%!important; 
                     padding-left: 2px!important;
 
                     h3 {
@@ -288,10 +265,22 @@ body {
                         justify-content: start!important;
                         margin-left: 0.5rem!important;
                     }
-                    .article-menu, .article-menu input, .article-menu label {
-                        width: 95%!important;
-                        max-width: 450px;
-                        margin-bottom: 1rem;
+                    .article-menu {
+                        width: calc(100% - 2rem)!important;
+                        max-width: calc(100% - 2rem)!important;
+                        
+                        margin: 0 1rem 1rem 1rem!important;
+
+                        .description {
+                            // display: flex;
+                            // width: 100%!important;
+                            
+                            // min-width: none!important;
+                            flex-shrink: 2!important;
+                        }
+                        .prix, .select-choix {
+                            flex-shrink: 1;
+                        }
                     }
                 }
             }
