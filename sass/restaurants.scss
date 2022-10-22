@@ -76,6 +76,7 @@ body {
                 padding-right: 3rem;
             }
             @include color-stars();
+
         }
 
         .menus {
@@ -106,6 +107,9 @@ body {
                         overflow: hidden;             
                         white-space: nowrap;
                         text-overflow: ellipsis;
+                    }
+                    p {
+                        font-size: 0.9rem;
                     }
 
                     h3 {
@@ -157,7 +161,7 @@ body {
                             @include nowrap-ellipsis;
                             justify-content: space-between;
                             width: 80%;
-                            padding: 0.5rem 0.5rem 0.5rem 1rem;
+                            padding: 0.5rem;
                             &:hover {
                                 cursor: pointer;
                             
@@ -244,26 +248,23 @@ body {
 
 @media (max-width: $smartphone) {
     body {
-        // width: 100%;
         .logo {
             padding-left: 10px;
         }
 
         .entrees, .plats, .desserts {
+            min-width: 300px!important;
             width: 90%!important;
-            @include nowrap-ellipsis;
-            border: 1px solid red;
+            white-space: nowrap!important;
+            text-overflow: ellipsis!important;
             h3 {
                 display: flex;
                 justify-content: flex-start!important;
             }
             .article-menu {
 
-                div {
-                    border: 1px solid green;
-                    p, h4, i {
-                        border: 1px solid blue;
-                    }
+                .prix, .select-choix {
+                    width: 15%!important;
                 }
             }
         }

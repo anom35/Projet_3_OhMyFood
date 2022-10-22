@@ -67,8 +67,8 @@
 }
 
 @mixin nowrap-ellipsis {
-    white-space: nowrap!important;
-    text-overflow: ellipsis!important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 
@@ -92,7 +92,7 @@
             }
             opacity: 0;
             background: linear-gradient($--primary 20%, $--secondary 100%);
-            animation: fill-heart 2s ease;
+            animation: fill-heart 1.5s ease;
             background-clip: border-box;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -198,13 +198,16 @@
         justify-content: center;
         background-color: $--ultralightgray;
         label {
-            padding: 1.3rem;
+            display: flex;
+            justify-content: center;
+            width: 200px;
+            padding: 0.8rem;
             color: white;
             border-radius: 2rem;
             font-size: 1.3rem;
             background: linear-gradient($--secondary, $--primary);
-            margin-bottom: 3rem;
-            margin-top: 2rem;
+            margin-bottom: 4rem;
+            // margin-top: 2rem;
             box-shadow: 0 3px 10px $--darkgray;
             transition: 100ms;
             &:hover {

@@ -175,7 +175,7 @@ body main .titre-menu .layout-star:hover {
   cursor: pointer;
   opacity: 0;
   background: linear-gradient(#9356dc 20%, #ff79da 100%);
-  animation: fill-heart 2s ease;
+  animation: fill-heart 1.5s ease;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -223,6 +223,9 @@ body main .menus .articles .entrees h4, body main .menus .articles .entrees p, b
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+body main .menus .articles .entrees p, body main .menus .articles .plats p, body main .menus .articles .desserts p {
+  font-size: 0.9rem;
+}
 body main .menus .articles .entrees h3, body main .menus .articles .plats h3, body main .menus .articles .desserts h3 {
   display: flex;
   justify-content: center;
@@ -267,11 +270,11 @@ body main .menus .articles .entrees .article-menu .description, body main .menus
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  white-space: nowrap !important;
-  text-overflow: ellipsis !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   justify-content: space-between;
   width: 80%;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  padding: 0.5rem;
 }
 body main .menus .articles .entrees .article-menu .description:hover, body main .menus .articles .plats .article-menu .description:hover, body main .menus .articles .desserts .article-menu .description:hover {
   cursor: pointer;
@@ -308,13 +311,15 @@ body main .btn-explore {
   background-color: #EAEAEA;
 }
 body main .btn-explore label {
-  padding: 1.3rem;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  padding: 0.8rem;
   color: white;
   border-radius: 2rem;
   font-size: 1.3rem;
   background: linear-gradient(#ff79da, #9356dc);
-  margin-bottom: 3rem;
-  margin-top: 2rem;
+  margin-bottom: 4rem;
   box-shadow: 0 3px 10px darkgray;
   transition: 100ms;
 }
@@ -372,20 +377,17 @@ body footer a {
     padding-left: 10px;
   }
   body .entrees, body .plats, body .desserts {
+    min-width: 300px !important;
     width: 90% !important;
     white-space: nowrap !important;
     text-overflow: ellipsis !important;
-    border: 1px solid red;
   }
   body .entrees h3, body .plats h3, body .desserts h3 {
     display: flex;
     justify-content: flex-start !important;
   }
-  body .entrees .article-menu div, body .plats .article-menu div, body .desserts .article-menu div {
-    border: 1px solid green;
-  }
-  body .entrees .article-menu div p, body .entrees .article-menu div h4, body .entrees .article-menu div i, body .plats .article-menu div p, body .plats .article-menu div h4, body .plats .article-menu div i, body .desserts .article-menu div p, body .desserts .article-menu div h4, body .desserts .article-menu div i {
-    border: 1px solid blue;
+  body .entrees .article-menu .prix, body .entrees .article-menu .select-choix, body .plats .article-menu .prix, body .plats .article-menu .select-choix, body .desserts .article-menu .prix, body .desserts .article-menu .select-choix {
+    width: 15% !important;
   }
 }
 /*

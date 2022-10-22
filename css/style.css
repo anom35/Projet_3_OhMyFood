@@ -137,13 +137,15 @@ body .nav-bar .search-bar .btn-explore {
   background-color: #EAEAEA;
 }
 body .nav-bar .search-bar .btn-explore label {
-  padding: 1.3rem;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  padding: 0.8rem;
   color: white;
   border-radius: 2rem;
   font-size: 1.3rem;
   background: linear-gradient(#ff79da, #9356dc);
-  margin-bottom: 3rem;
-  margin-top: 2rem;
+  margin-bottom: 4rem;
   box-shadow: 0 3px 10px darkgray;
   transition: 100ms;
 }
@@ -254,7 +256,7 @@ body main .restaurants .card .description .layout-star:hover {
   cursor: pointer;
   opacity: 0;
   background: linear-gradient(#9356dc 20%, #ff79da 100%);
-  animation: fill-heart 2s ease;
+  animation: fill-heart 1.5s ease;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
