@@ -136,7 +136,7 @@ body {
                         display: flex;
                         background-color: white;
                         min-width: $largeur-menu;
-                        max-width: 500px;
+                        max-width: 440px;
                         width: 100%;
                         height: 60px;
                         border-radius: 1rem;
@@ -227,7 +227,7 @@ body {
         display: flex;
         width: 48%!important;
         .article-menu {
-            max-width: 450px!important;
+            max-width: 440px!important;
         }
     }
 }
@@ -235,7 +235,8 @@ body {
 @media (max-width: 754px) {
     .entrees, .plats, .desserts {
         display: flex;
-        width: 450px!important;
+        width: 440px!important;
+        max-width: 440px!important;
     }
 }
 

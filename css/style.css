@@ -14,7 +14,7 @@
 }
 
 .gray {
-  color: var(--dimgray);
+  color: dimgray;
 }
 
 .accessibility-label {
@@ -128,6 +128,9 @@ body .nav-bar .search-bar input {
   margin-left: 1rem;
   margin-bottom: 1rem;
   background-color: #EAEAEA;
+}
+body .nav-bar .search-bar .btn-explore .subtitle {
+  margin-bottom: 2rem;
 }
 body .nav-bar .search-bar .btn-explore {
   display: flex;

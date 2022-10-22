@@ -14,7 +14,7 @@
 }
 
 .gray {
-  color: var(--dimgray);
+  color: dimgray;
 }
 
 .accessibility-label {
