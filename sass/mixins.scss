@@ -116,78 +116,123 @@
     text-overflow: ellipsis;
 }
 
-@mixin choix-de-menu() {
-    display: flex;
-    border: 1px solid transparent;
-    width: 100%;
-    height: 60px;
-    background-color: white;
-    border-radius: 1rem;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    animation: effet-menu 2s ease-in-out;
-    @include effet-menu();
 
-    .description {
+@mixin choix-menu {
+    .menus {
+        border: 0;
+        padding: 0;
         display: flex;
-        flex-direction: column;
-        @include overhidden();
-        justify-content: space-between;
-        width: calc(80% - 8rem);
-        padding: 0.5rem 0.5rem 0.5rem 1rem;
-    }
-    .prix {
-        display: flex;
-        width: 4rem;
-        font-weight: bold;
-        align-items: flex-end;
         justify-content: center;
-        padding: 0 0.5rem 0.5rem 0;
-        border-radius: 0 1rem 1rem 0;
-    }
-    .select-choix {
-        display: flex;
-        background-color: $--lightgreen;
-        color: white;
-        font-weight: bold;
-        font-size: 1.3rem;
-        align-items: center;
-        justify-content: center;
-        border-radius: 0 1rem 1rem 0;
-        width: 4rem;
-        margin-right: -4rem;
-    }
-    &:hover {
-        .select-choix {
-            margin: 0;
-            transition: all 0.5s;
-            cursor: pointer;
-            i {
-                animation: spin 1s;
+        flex-wrap: wrap;
+
+        .articles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+            > div {
+                min-width: $largeur-menu;
             }
-        }
-    }
- 
-    .description:hover, .prix:hover {
-        cursor: pointer;
-    }
- 
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
+            
+            .entrees, .plats, .desserts {
+                padding-bottom: 3rem;
+                display: flex;
+                flex-wrap: wrap;
+                width: 32%;
+                justify-content: center;
+                align-content: flex-start;
+                min-width: 355px;
+                h4, p {
+                    margin: 0;
+                    overflow: hidden;             
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                p {
+                    font-size: 0.9rem;
+                }
 
-    @keyframes effet-menu {
-        0% {
-            opacity: 0;
-            transform: rotateX(-180deg);
-            transform-origin: top;
-        }
-    
-        100% {
-            opacity: 1;
-            transform: rotateX(0deg);
-            transform-origin: top;
+                h3 {
+                    display: flex;
+                    justify-content: center;
+                    flex-basis: 100%;
+                    text-transform: uppercase;
+                    color: $--grayblack;
+                    font-weight: normal;
+                    margin: 0;
+                    padding-bottom: 1rem;
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        top: 25px;
+                        content: "";
+                        height: 3px;
+                        width: 50px;
+                        background-color: $--tertiary;
+                    }
+                }
+
+                .article-menu {
+                    display: flex;
+                    background-color: white;
+                    min-width: $largeur-menu;
+                    max-width: 440px;
+                    width: 100%;
+                    height: 60px;
+                    border-radius: 1rem;
+                    overflow: hidden;
+                    margin-bottom: 1rem;
+                    box-shadow: 0 2px 5px $--darkgray;
+                    animation: effet-opacity 1s ease-in;
+
+                    &:hover .select-choix {
+                        margin: 0;
+                        transition: all 0.5s;
+                        cursor: pointer;
+                    }
+                    &:hover .select-choix i {
+                        animation: spin 1s;
+                    }
+
+                    .description {
+                        display: flex;
+                        flex-direction: column;
+                        overflow: hidden;              
+                        @include nowrap-ellipsis;
+                        justify-content: space-between;
+                        width: 80%;
+                        padding: 0.5rem 0 0.5rem 1rem;
+                        &:hover {
+                            cursor: pointer;
+                        
+                        }
+                    }
+                    .prix {
+                        display: flex;
+                        width: 4rem;
+                        font-weight: bold;
+                        align-items: flex-end;
+                        justify-content: center;
+                        padding: 0 0.5rem 0.5rem 0;
+                        border-radius: 0 1rem 1rem 0;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    .select-choix {
+                        display: flex;
+                        background-color: $--lightgreen;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 1.3rem;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 0 1rem 1rem 0;
+                        width: 4rem;
+                        margin-right: -4rem;
+                    }
+                }
+            }
         }
     }
 }
@@ -228,7 +273,16 @@
     }
 }
 
-@keyframes boxShadow {
+/*
+*       KeyFrames
+*/
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes effet-opacity {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+

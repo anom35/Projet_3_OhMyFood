@@ -1,4 +1,15 @@
-@keyframes boxShadow {
+/*
+*       KeyFrames
+*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes effet-opacity {
   0% {
     opacity: 0;
   }

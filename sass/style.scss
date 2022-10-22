@@ -38,9 +38,12 @@ body {
                 margin-left: 1rem;
                 margin-bottom: 1rem;
                 background-color: $--ultralightgray;
+                &:focus {
+                    outline-color: $--darkgray;
+                }
             }
             .btn-explore .subtitle {
-                margin-bottom: 2rem;
+                margin-bottom: 3rem;
             }
             @include btn-style();
 

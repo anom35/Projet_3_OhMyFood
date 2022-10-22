@@ -22,7 +22,18 @@
   left: -999px;
 }
 
-@keyframes boxShadow {
+/*
+*       KeyFrames
+*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes effet-opacity {
   0% {
     opacity: 0;
   }
@@ -268,7 +279,7 @@ body main .menus .articles .entrees .article-menu, body main .menus .articles .p
   overflow: hidden;
   margin-bottom: 1rem;
   box-shadow: 0 2px 5px darkgray;
-  animation: effet-menu 1s ease-in;
+  animation: effet-opacity 1s ease-in;
 }
 body main .menus .articles .entrees .article-menu:hover .select-choix, body main .menus .articles .plats .article-menu:hover .select-choix, body main .menus .articles .desserts .article-menu:hover .select-choix {
   margin: 0;
@@ -402,25 +413,6 @@ body footer a {
   }
   body .entrees .article-menu .prix, body .entrees .article-menu .select-choix, body .plats .article-menu .prix, body .plats .article-menu .select-choix, body .desserts .article-menu .prix, body .desserts .article-menu .select-choix {
     width: 15% !important;
-  }
-}
-/*
-*       KeyFrames
-*/
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes effet-menu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
