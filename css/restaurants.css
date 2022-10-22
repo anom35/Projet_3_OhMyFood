@@ -373,10 +373,19 @@ body footer a {
   }
   body .entrees, body .plats, body .desserts {
     width: 90% !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    border: 1px solid red;
   }
   body .entrees h3, body .plats h3, body .desserts h3 {
     display: flex;
     justify-content: flex-start !important;
+  }
+  body .entrees .article-menu div, body .plats .article-menu div, body .desserts .article-menu div {
+    border: 1px solid green;
+  }
+  body .entrees .article-menu div p, body .entrees .article-menu div h4, body .entrees .article-menu div i, body .plats .article-menu div p, body .plats .article-menu div h4, body .plats .article-menu div i, body .desserts .article-menu div p, body .desserts .article-menu div h4, body .desserts .article-menu div i {
+    border: 1px solid blue;
   }
 }
 /*

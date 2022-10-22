@@ -65,7 +65,7 @@ body {
             justify-content: space-between;
             align-items: center;
             flex-basis: 95%;
-            padding-left: 2rem;;
+            padding-left: 2rem;
             background-color: $--ultralightgray;
             h1 {
                 font-family: 'Shrikhand', cursive;
@@ -251,9 +251,20 @@ body {
 
         .entrees, .plats, .desserts {
             width: 90%!important;
+            @include nowrap-ellipsis;
+            border: 1px solid red;
             h3 {
                 display: flex;
                 justify-content: flex-start!important;
+            }
+            .article-menu {
+
+                div {
+                    border: 1px solid green;
+                    p, h4, i {
+                        border: 1px solid blue;
+                    }
+                }
             }
         }
     }
