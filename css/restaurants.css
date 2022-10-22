@@ -22,6 +22,14 @@
   left: -999px;
 }
 
+@keyframes boxShadow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   box-sizing: border-box;
   margin: 0 auto;
@@ -274,7 +282,7 @@ body main .menus .articles .entrees .article-menu .description, body main .menus
   text-overflow: ellipsis;
   justify-content: space-between;
   width: 80%;
-  padding: 0.5rem;
+  padding: 0.5rem 0 0.5rem 1rem;
 }
 body main .menus .articles .entrees .article-menu .description:hover, body main .menus .articles .plats .article-menu .description:hover, body main .menus .articles .desserts .article-menu .description:hover {
   cursor: pointer;
@@ -327,6 +335,7 @@ body main .btn-explore label:hover {
   cursor: pointer;
   transform: scale(1.02);
   box-shadow: 0 3px 10px #ff79da;
+  transition: 0.5s;
 }
 body main .btn-explore p {
   font-size: 1.8rem;

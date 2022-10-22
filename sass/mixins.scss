@@ -207,13 +207,13 @@
             font-size: 1.3rem;
             background: linear-gradient($--secondary, $--primary);
             margin-bottom: 4rem;
-            // margin-top: 2rem;
             box-shadow: 0 3px 10px $--darkgray;
             transition: 100ms;
             &:hover {
                 cursor: pointer;
                 transform: scale(1.02);
                 box-shadow: 0 3px 10px $--secondary;
+                transition: 0.5s;
             }
         }
         p {
@@ -224,4 +224,9 @@
             flex-basis: 100%;
         }
     }
+}
+
+@keyframes boxShadow {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
