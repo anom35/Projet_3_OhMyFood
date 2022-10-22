@@ -1,7 +1,6 @@
 @import "base";
 @import "mixins";
 
-
 body {
     box-sizing: border-box;
     margin: 0 auto;
@@ -101,7 +100,8 @@ body {
                     flex-wrap: wrap;
                     width: 32%;
                     justify-content: center;
-
+                    align-content: flex-start;
+                    min-width: 355px;
                     h4, p {
                         margin: 0;
                         overflow: hidden;             
@@ -254,7 +254,7 @@ body {
         }
 
         .entrees, .plats, .desserts {
-            min-width: 300px!important;
+            min-width: 355px!important;
             width: 90%!important;
             white-space: nowrap!important;
             text-overflow: ellipsis!important;

@@ -40,6 +40,8 @@ body header {
   box-shadow: 0 5px 10px lightgrey;
 }
 body header .loader {
+  display: flex;
+  justify-content: center;
   opacity: 0.9;
   position: fixed;
   inset: 0;
@@ -224,6 +226,8 @@ body main .menus .articles .entrees, body main .menus .articles .plats, body mai
   flex-wrap: wrap;
   width: 32%;
   justify-content: center;
+  align-content: flex-start;
+  min-width: 355px;
 }
 body main .menus .articles .entrees h4, body main .menus .articles .entrees p, body main .menus .articles .plats h4, body main .menus .articles .plats p, body main .menus .articles .desserts h4, body main .menus .articles .desserts p {
   margin: 0;
@@ -387,7 +391,7 @@ body footer a {
     padding-left: 10px;
   }
   body .entrees, body .plats, body .desserts {
-    min-width: 300px !important;
+    min-width: 355px !important;
     width: 90% !important;
     white-space: nowrap !important;
     text-overflow: ellipsis !important;

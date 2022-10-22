@@ -1,6 +1,8 @@
 
 @mixin loader($valFontSize) {
     .loader {
+        display: flex;
+        justify-content: center;
         opacity: 0.9;
         position: fixed;
         inset: 0;
