@@ -62,7 +62,7 @@
         
         @for $item from 1 through 8 {
             span:nth-of-type(#{$item}){ 
-                animation-delay: #{(1 + ($item/10))}s; 
+                animation-delay: #{calc(1 + ($item/10))}s; 
             }
         } 
     }
@@ -180,7 +180,6 @@
                     overflow: hidden;
                     margin-bottom: 1rem;
                     box-shadow: 0 2px 5px $--darkgray;
-                    animation: effet-opacity 1s ease-in;
 
                     &:hover .select-choix {
                         margin: 0;
@@ -231,6 +230,21 @@
         }
     }
 }
+
+#article_1, #article_4, #article7 {
+    animation: effet-opacity 300ms ease-in;
+}
+#article_2, #article_5, #article_8 {
+    animation: effet-opacity 600ms ease-in;
+}
+#article_3, #article_6, #article_9 {
+    animation: effet-opacity 900ms ease-in;
+}
+#article_10 {
+    animation: effet-opacity 1.2s ease-in;
+}
+
+
 
 @mixin btn-style() {
     .btn-explore {
