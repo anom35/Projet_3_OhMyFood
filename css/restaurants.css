@@ -65,6 +65,7 @@ body header .logo {
   justify-content: center;
   flex-basis: 2rem;
   margin-left: 1rem;
+  align-items: center;
 }
 body header .logo i {
   font-size: 2rem;
@@ -90,7 +91,7 @@ body main img {
 }
 body main .titre-menu {
   position: relative;
-  top: -5rem;
+  top: -4rem;
   border-radius: 3rem 3rem 0 0;
   background-color: white;
   display: flex;
@@ -102,6 +103,7 @@ body main .titre-menu {
 }
 body main .titre-menu h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
 }
 body main .titre-menu i {
   display: flex;
@@ -331,9 +333,6 @@ body footer .footer {
   }
 }
 @media (max-width: 576px) {
-  body header .logo {
-    padding-left: 10px;
-  }
   body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
     min-width: 355px;
     width: 90%;
