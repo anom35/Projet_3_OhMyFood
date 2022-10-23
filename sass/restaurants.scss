@@ -8,7 +8,6 @@ body {
     max-width: $max-width;
 
     header {
-        @include loader(5rem);
 
         box-shadow: 0 5px 10px lightgrey;
         h1 {
