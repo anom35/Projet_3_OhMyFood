@@ -121,8 +121,7 @@
     .menus {
         border: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
+        @include flex-center;
         flex-wrap: wrap;
 
         .articles {
@@ -135,11 +134,10 @@
             }
             
             .entrees, .plats, .desserts {
+                @include flex-center;
                 padding-bottom: 3rem;
-                display: flex;
                 flex-wrap: wrap;
                 width: 32%;
-                justify-content: center;
                 align-content: flex-start;
                 min-width: 355px;
                 h4, p {
@@ -153,8 +151,7 @@
                 }
 
                 h3 {
-                    display: flex;
-                    justify-content: center;
+                    @include flex-center;
                     flex-basis: 100%;
                     text-transform: uppercase;
                     color: $--grayblack;
@@ -208,11 +205,10 @@
                         }
                     }
                     .prix {
-                        display: flex;
+                        @include flex-center;
                         width: 4rem;
                         font-weight: bold;
                         align-items: flex-end;
-                        justify-content: center;
                         padding: 0 0.5rem 0.5rem 0;
                         border-radius: 0 1rem 1rem 0;
                         &:hover {
@@ -220,13 +216,12 @@
                         }
                     }
                     .select-choix {
-                        display: flex;
+                        @include flex-center;
                         background-color: $--lightgreen;
                         color: white;
                         font-weight: bold;
                         font-size: 1.3rem;
                         align-items: center;
-                        justify-content: center;
                         border-radius: 0 1rem 1rem 0;
                         width: 4rem;
                         margin-right: -4rem;
@@ -239,14 +234,12 @@
 
 @mixin btn-style() {
     .btn-explore {
-        display: flex;
+        @include flex-center;
         flex-wrap: wrap;
         width: 100%;
-        justify-content: center;
         background-color: $--ultralightgray;
         label {
-            display: flex;
-            justify-content: center;
+            @include flex-center;
             width: 200px;
             padding: 0.8rem;
             color: white;
@@ -271,6 +264,11 @@
             flex-basis: 100%;
         }
     }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
 }
 
 /*

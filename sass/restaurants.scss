@@ -23,9 +23,8 @@ body {
         }
 
         .logo {
-            display: flex;
+            @include flex-center;
             flex-basis: 2rem;
-            align-items: center;
             margin-left: 1rem;
             i {
                 font-size: 2rem;
@@ -35,9 +34,8 @@ body {
         }
 
         .titre {
-            display: flex;
+            @include flex-center;
             flex-basis: 100%;
-            justify-content: center;
             h1 {
                 font-family: "Shrikhand", cursive;
             }
@@ -86,14 +84,26 @@ body {
     footer {
         background-color: $--grayblack;
         color: white;
-        padding: 1rem 0 3rem 2rem;
+        padding: 1rem 0 2rem 0;
         h1 {
+            display: flex;
+            justify-content: center;
+            width: 100%;
             font-family: 'Shrikhand', cursive;
             font-weight: normal;
         }
         a {
             text-decoration: none;
             color: white;
+            align-items: center;
+        }
+        i {
+            padding-right: 5px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
     }
 }
@@ -105,51 +115,78 @@ body {
 
 
 @media (max-width: 1122px) {
-    .entrees, .plats, .desserts {
-        display: flex;
-        width: 48%!important;
-        .article-menu {
-            max-width: 440px!important;
+    body {
+        main {
+            .menus {
+                .articles {
+                    .entrees, .plats, .desserts {
+                        display: flex;
+                        width: 48%;
+                        .article-menu {
+                            max-width: 440px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
 @media (max-width: 754px) {
-    .entrees, .plats, .desserts {
-        display: flex;
-        width: 440px!important;
-        max-width: 440px!important;
+    body {
+        main {
+            .menus {
+                .articles {
+                    .entrees, .plats, .desserts {
+                        display: flex;
+                        width: 440px;
+                        max-width: 440px;
+                    }
+                }
+            }
+        }
     }
 }
 
-
-@media (max-width: $tablette) {
-    .subtitle {
-        font-size: 1.2rem;
-    }
-}
 
 @media (max-width: $smartphone) {
     body {
-        .logo {
-            padding-left: 10px;
+        header {
+            .logo {
+                padding-left: 10px;
+            }
         }
 
-        .entrees, .plats, .desserts {
-            min-width: 355px!important;
-            width: 90%!important;
-            white-space: nowrap!important;
-            text-overflow: ellipsis!important;
-            h3 {
-                display: flex;
-                justify-content: flex-start!important;
-            }
-            .article-menu {
-
-                .prix, .select-choix {
-                    width: 15%!important;
+        main {
+            .menus {
+                .articles {
+                    .entrees, .plats, .desserts {
+                        min-width: 355px;
+                        width: 90%;
+                        @include nowrap-ellipsis;                        
+                        h3 {
+                            display: flex;
+                            justify-content: flex-start;
+                        }
+                        .article-menu {
+                            .prix, .select-choix {
+                                width: 15%;
+                            }
+                        }
+                    }
                 }
             }
+
+            footer {
+                padding-left: 1rem;
+                h1, .footer {
+                    display: block;
+                }
+                .footer .fa-solid.fa-utensils {
+                    margin-right: 6px;
+                }
+            }
+ 
         }
     }
 }

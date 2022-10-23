@@ -62,8 +62,8 @@ body header > div {
 }
 body header .logo {
   display: flex;
+  justify-content: center;
   flex-basis: 2rem;
-  align-items: center;
   margin-left: 1rem;
 }
 body header .logo i {
@@ -73,8 +73,8 @@ body header .logo i {
 }
 body header .titre {
   display: flex;
-  flex-basis: 100%;
   justify-content: center;
+  flex-basis: 100%;
 }
 body header .titre h1 {
   font-family: "Shrikhand", cursive;
@@ -158,11 +158,11 @@ body main .menus .articles > div {
   min-width: 10px;
 }
 body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
-  padding-bottom: 3rem;
   display: flex;
+  justify-content: center;
+  padding-bottom: 3rem;
   flex-wrap: wrap;
   width: 32%;
-  justify-content: center;
   align-content: flex-start;
   min-width: 355px;
 }
@@ -230,10 +230,10 @@ body main .menus .articles .entrees .article-menu .description:hover, body main 
 }
 body main .menus .articles .entrees .article-menu .prix, body main .menus .articles .plats .article-menu .prix, body main .menus .articles .desserts .article-menu .prix {
   display: flex;
+  justify-content: center;
   width: 4rem;
   font-weight: bold;
   align-items: flex-end;
-  justify-content: center;
   padding: 0 0.5rem 0.5rem 0;
   border-radius: 0 1rem 1rem 0;
 }
@@ -242,21 +242,21 @@ body main .menus .articles .entrees .article-menu .prix:hover, body main .menus 
 }
 body main .menus .articles .entrees .article-menu .select-choix, body main .menus .articles .plats .article-menu .select-choix, body main .menus .articles .desserts .article-menu .select-choix {
   display: flex;
+  justify-content: center;
   background-color: #99E2D0;
   color: white;
   font-weight: bold;
   font-size: 1.3rem;
   align-items: center;
-  justify-content: center;
   border-radius: 0 1rem 1rem 0;
   width: 4rem;
   margin-right: -4rem;
 }
 body main .btn-explore {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: center;
   background-color: #EAEAEA;
 }
 body main .btn-explore label {
@@ -288,57 +288,73 @@ body main .btn-explore p {
 body footer {
   background-color: #353535;
   color: white;
-  padding: 1rem 0 3rem 2rem;
+  padding: 1rem 0 2rem 0;
 }
 body footer h1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   font-family: "Shrikhand", cursive;
   font-weight: normal;
 }
 body footer a {
   text-decoration: none;
   color: white;
+  align-items: center;
+}
+body footer i {
+  padding-right: 5px;
+}
+body footer .footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /*
 *       MEDIA QUERIES
 */
 @media (max-width: 1122px) {
-  .entrees, .plats, .desserts {
+  body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
     display: flex;
-    width: 48% !important;
+    width: 48%;
   }
-  .entrees .article-menu, .plats .article-menu, .desserts .article-menu {
-    max-width: 440px !important;
+  body main .menus .articles .entrees .article-menu, body main .menus .articles .plats .article-menu, body main .menus .articles .desserts .article-menu {
+    max-width: 440px;
   }
 }
 @media (max-width: 754px) {
-  .entrees, .plats, .desserts {
+  body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
     display: flex;
-    width: 440px !important;
-    max-width: 440px !important;
-  }
-}
-@media (max-width: 768px) {
-  .subtitle {
-    font-size: 1.2rem;
+    width: 440px;
+    max-width: 440px;
   }
 }
 @media (max-width: 576px) {
-  body .logo {
+  body header .logo {
     padding-left: 10px;
   }
-  body .entrees, body .plats, body .desserts {
-    min-width: 355px !important;
-    width: 90% !important;
-    white-space: nowrap !important;
-    text-overflow: ellipsis !important;
+  body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
+    min-width: 355px;
+    width: 90%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
-  body .entrees h3, body .plats h3, body .desserts h3 {
+  body main .menus .articles .entrees h3, body main .menus .articles .plats h3, body main .menus .articles .desserts h3 {
     display: flex;
-    justify-content: flex-start !important;
+    justify-content: flex-start;
   }
-  body .entrees .article-menu .prix, body .entrees .article-menu .select-choix, body .plats .article-menu .prix, body .plats .article-menu .select-choix, body .desserts .article-menu .prix, body .desserts .article-menu .select-choix {
-    width: 15% !important;
+  body main .menus .articles .entrees .article-menu .prix, body main .menus .articles .entrees .article-menu .select-choix, body main .menus .articles .plats .article-menu .prix, body main .menus .articles .plats .article-menu .select-choix, body main .menus .articles .desserts .article-menu .prix, body main .menus .articles .desserts .article-menu .select-choix {
+    width: 15%;
+  }
+  body main footer {
+    padding-left: 1rem;
+  }
+  body main footer h1, body main footer .footer {
+    display: block;
+  }
+  body main footer .footer .fa-solid.fa-utensils {
+    margin-right: 6px;
   }
 }
 

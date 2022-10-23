@@ -241,22 +241,15 @@ body {
                     margin: 1rem 1rem 0 1rem;
                 }
             }
-        }
 
-        .footer {
-            display: block;
-            h1 {
-                display: flex;
-                justify-content: flex-start;
-        
-            }
-            a {
-                align-items: flex-start;
-            }
-            .footer {
-                display: block;
-                justify-content: flex-start;
+            footer {
                 padding-left: 1rem;
+                h1, .footer {
+                    display: block;
+                }
+                .footer .fa-solid.fa-utensils {
+                    margin-right: 6px;
+                }
             }
         }
     }
