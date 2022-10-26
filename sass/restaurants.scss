@@ -73,7 +73,7 @@ body {
                 font-size: 2rem;
                 padding-right: 3rem;
             }
-            @include color-stars();
+            @include color-heart();
 
         }
 
@@ -153,11 +153,11 @@ body {
 
 @media (max-width: $smartphone) {
     body {
+        min-width: 390px!important;
         main {
             .menus {
                 .articles {
                     .entrees, .plats, .desserts {
-                        min-width: 355px;
                         width: 90%;
                         @include nowrap-ellipsis;                        
                         h3 {

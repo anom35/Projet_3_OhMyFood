@@ -38,9 +38,6 @@
   animation: effet-opacity 1.2s ease-in;
 }
 
-/*
-*       KeyFrames
-*/
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -140,7 +137,7 @@ body main .titre-menu .layout-star:hover {
   cursor: pointer;
   opacity: 0;
   background: linear-gradient(#9356dc 20%, #ff79da 100%);
-  animation: fill-heart 1.5s ease;
+  animation: effet-opacity 1.5s ease;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -150,14 +147,6 @@ body main .titre-menu .layout-star:hover .fa-regular.fa-heart {
 }
 body main .titre-menu .layout-star:hover .fa-solid.fa-heart {
   display: inline;
-}
-@keyframes fill-heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 body main .menus {
   border: 0;
@@ -173,7 +162,7 @@ body main .menus .articles {
   gap: 5px;
 }
 body main .menus .articles > div {
-  min-width: 10px;
+  min-width: 100px;
 }
 body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
   display: flex;
@@ -215,7 +204,7 @@ body main .menus .articles .entrees h3::after, body main .menus .articles .plats
 body main .menus .articles .entrees .article-menu, body main .menus .articles .plats .article-menu, body main .menus .articles .desserts .article-menu {
   display: flex;
   background-color: white;
-  min-width: 10px;
+  min-width: 100px;
   max-width: 440px;
   width: 100%;
   height: 60px;
@@ -348,8 +337,10 @@ body footer .footer {
   }
 }
 @media (max-width: 576px) {
+  body {
+    min-width: 390px !important;
+  }
   body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
-    min-width: 355px;
     width: 90%;
     white-space: nowrap;
     text-overflow: ellipsis;

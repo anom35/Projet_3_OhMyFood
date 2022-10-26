@@ -38,9 +38,6 @@
   animation: effet-opacity 1.2s ease-in;
 }
 
-/*
-*       KeyFrames
-*/
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -301,7 +298,7 @@ body main .restaurants .card .description .layout-star:hover {
   cursor: pointer;
   opacity: 0;
   background: linear-gradient(#9356dc 20%, #ff79da 100%);
-  animation: fill-heart 1.5s ease;
+  animation: effet-opacity 1.5s ease;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -311,14 +308,6 @@ body main .restaurants .card .description .layout-star:hover .fa-regular.fa-hear
 }
 body main .restaurants .card .description .layout-star:hover .fa-solid.fa-heart {
   display: inline;
-}
-@keyframes fill-heart {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 body main .restaurants .card a {
   text-decoration: none;

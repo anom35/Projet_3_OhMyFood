@@ -9,7 +9,7 @@ body {
 
 
     header {
-        @include loader(4rem);
+        @include loader(4rem);   //*  Mixin du loader 
 
         box-shadow: 0 5px 10px lightgrey;
         h1 {
@@ -45,7 +45,7 @@ body {
             .btn-explore .subtitle {
                 margin-bottom: 3rem;
             }
-            @include btn-style();
+            @include btn-style(); // Mixin du bouton
 
         }
     }
@@ -98,8 +98,6 @@ body {
             }
         }
     
-        
-
         .restaurants {
             padding-bottom: 4rem;
             background-color: $--graywhite;
@@ -134,7 +132,7 @@ body {
                             padding: 0.3rem 0 0 1rem;
                         }
                     }
-                    @include color-stars;
+                    @include color-heart; // Mixin pour le coeur
                 }
                 a {
                     text-decoration: none;

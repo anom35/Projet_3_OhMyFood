@@ -1,22 +1,22 @@
-
+// Mixin du loader, $vamFontSize permet d'avoir le résultat avec 
+// une taille différente, pour la compatibilité Smartphone.
 @mixin loader($valFontSize) {
     .loader {
-        display: flex;
-        justify-content: center;
+        @include flex-center;
         opacity: 0.9;
         position: fixed;
         inset: 0;
-        height: 100vh;
+        height: 100vh;                              // prend toute la hauteur de l'écran
         z-index: 1;
         background: $--grayblack;
         overflow: hidden;
-        font: 5vw/100vh "Shrikhand";
-        font-size: $valFontSize;
+        font: 5vw/100vh "Shrikhand";                // défini la taille de la police (5x(1500px/100))=75px
+        font-size: $valFontSize;                    // pour l'adaptation en mode smartphone
         text-align: center;
         color: $--primary;
-        backface-visibility: hidden;
-        animation: stop-loader 0.5s 3s forwards;
-        transform-origin: top right;
+        backface-visibility: hidden;                // cache la face arrière d'un élement qui devient visible
+        animation: stop-loader 0.5s 3s forwards;    // stop l'animation après 3 secondes
+        transform-origin: top right;                // fini l'animation en disparaissant en haut à droite
         span {
             display: inline-block;
             text-shadow: 0 0 0 whitesmoke;
@@ -27,7 +27,7 @@
             animation-name: smoky-mirror;
         }
         
-        @keyframes smoky {
+        @keyframes smoky {                          // Keyframe pour la 1ère partie de l'animation 
             60% {
                 text-shadow: 0 0 40px $--secondary;
             }
@@ -42,7 +42,7 @@
             }
         }
         
-        @keyframes smoky-mirror {
+        @keyframes smoky-mirror {                   // Keyframe pour la 2è partie de l'animation
             60% {
                 text-shadow: 0 0 40px whitesmoke;
              }
@@ -60,7 +60,7 @@
             to { transform: scale(0); }
         }
         
-        @for $item from 1 through 8 {
+        @for $item from 1 through 8 {               // défini un délai pour chaque lettre du mot OhMyFood afin de créer une animation lettre par lettre
             span:nth-of-type(#{$item}){ 
                 animation-delay: #{calc(1 + ($item/10))}s; 
             }
@@ -68,13 +68,13 @@
     }
 }
 
-@mixin nowrap-ellipsis {
+@mixin nowrap-ellipsis {                            // Mixin pour le décalage en arrière du texte des choix de menu pour l'animation
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
 
-@mixin color-stars() {
+@mixin color-heart() {                              // Mixin pour le remplissage du coeur
     .layout-star {
         display: flex;
         height: 50px;
@@ -94,30 +94,21 @@
             }
             opacity: 0;
             background: linear-gradient($--primary 20%, $--secondary 100%);
-            animation: fill-heart 1.5s ease;
+            animation: effet-opacity 1.5s ease;
             background-clip: border-box;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-        }
-        @keyframes fill-heart {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
         }
     }
 }
 
 @mixin overhidden() {
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    @include nowrap-ellipsis;
 }
 
 
-@mixin choix-menu {
+@mixin choix-menu {                 // création d'un choix de menu
     .menus {
         border: 0;
         padding: 0;
@@ -143,8 +134,7 @@
                 h4, p {
                     margin: 0;
                     overflow: hidden;             
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
+                    @include nowrap-ellipsis;
                 }
                 p {
                     font-size: 0.9rem;
@@ -230,23 +220,23 @@
         }
     }
 }
-
-#article_1, #article_4, #article7 {
+                // Durée apparition animation
+#article_1, #article_4, #article7 {                 // 1ère lignes      
     animation: effet-opacity 300ms ease-in;
 }
-#article_2, #article_5, #article_8 {
+#article_2, #article_5, #article_8 {                // 2ème lignes
     animation: effet-opacity 600ms ease-in;
 }
-#article_3, #article_6, #article_9 {
+#article_3, #article_6, #article_9 {                // 3ème lignes
     animation: effet-opacity 900ms ease-in;
 }
-#article_10 {
+#article_10 {                                       // 4ème ligne pour le restaurant qui comporte 4 choix dans un menu
     animation: effet-opacity 1.2s ease-in;
 }
 
 
 
-@mixin btn-style() {
+@mixin btn-style() {                // Style pour les boutons
     .btn-explore {
         @include flex-center;
         flex-wrap: wrap;
@@ -285,10 +275,7 @@
     justify-content: center;
 }
 
-/*
-*       KeyFrames
-*/
-@keyframes spin {
+@keyframes spin {                       // la coche qui pivote sur 360°
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
