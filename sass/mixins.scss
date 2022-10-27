@@ -1,5 +1,7 @@
+
 // Mixin du loader, $vamFontSize permet d'avoir le résultat avec 
 // une taille différente, pour la compatibilité Smartphone.
+
 @mixin loader($valFontSize) {
     .loader {
         @include flex-center;
@@ -85,14 +87,14 @@
             display: none;
         }
        &:hover {
-            cursor: pointer;
+            cursor: pointer;                        // cache le coeur vide
             .fa-regular.fa-heart {
                 display: none;
             }
-            .fa-solid.fa-heart { 
+            .fa-solid.fa-heart {                    // fait apparaitre le coeur plein pour y affecter le dégradé
                 display: inline;
             }
-            opacity: 0;
+            opacity: 0;                             // opère le dégradé de couleurs
             background: linear-gradient($--primary 20%, $--secondary 100%);
             animation: effet-opacity 1.5s ease;
             background-clip: border-box;
@@ -108,7 +110,7 @@
 }
 
 
-@mixin choix-menu {                 // création d'un choix de menu
+@mixin choix-menu {                                 // création d'un choix de menu
     .menus {
         border: 0;
         padding: 0;
@@ -120,9 +122,6 @@
             justify-content: space-around;
             flex-wrap: wrap;
             gap: 5px;
-            > div {
-                min-width: $largeur-menu;
-            }
             
             .entrees, .plats, .desserts {
                 @include flex-center;

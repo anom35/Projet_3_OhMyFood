@@ -161,9 +161,6 @@ body main .menus .articles {
   flex-wrap: wrap;
   gap: 5px;
 }
-body main .menus .articles > div {
-  min-width: 100px;
-}
 body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
   display: flex;
   justify-content: center;
