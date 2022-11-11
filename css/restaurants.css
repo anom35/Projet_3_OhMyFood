@@ -338,7 +338,7 @@ body footer .footer {
     min-width: 320px !important;
   }
   body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
-    width: 85%;
+    width: 90%;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
