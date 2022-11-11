@@ -168,7 +168,7 @@ body main .menus .articles .entrees, body main .menus .articles .plats, body mai
   flex-wrap: wrap;
   width: 32%;
   align-content: flex-start;
-  min-width: 355px;
+  min-width: 320px;
 }
 body main .menus .articles .entrees h4, body main .menus .articles .entrees p, body main .menus .articles .plats h4, body main .menus .articles .plats p, body main .menus .articles .desserts h4, body main .menus .articles .desserts p {
   margin: 0;
@@ -335,16 +335,19 @@ body footer .footer {
 }
 @media (max-width: 576px) {
   body {
-    min-width: 390px !important;
+    min-width: 320px !important;
   }
   body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
-    width: 90%;
+    width: 85%;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
   body main .menus .articles .entrees h3, body main .menus .articles .plats h3, body main .menus .articles .desserts h3 {
     display: flex;
     justify-content: flex-start;
+  }
+  body main .menus .articles .entrees .article-menu .description p, body main .menus .articles .plats .article-menu .description p, body main .menus .articles .desserts .article-menu .description p {
+    font-size: 13px;
   }
   body main .menus .articles .entrees .article-menu .prix, body main .menus .articles .entrees .article-menu .select-choix, body main .menus .articles .plats .article-menu .prix, body main .menus .articles .plats .article-menu .select-choix, body main .menus .articles .desserts .article-menu .prix, body main .menus .articles .desserts .article-menu .select-choix {
     width: 15%;

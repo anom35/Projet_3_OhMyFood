@@ -153,18 +153,21 @@ body {
 
 @media (max-width: $smartphone) {
     body {
-        min-width: 390px!important;
+        min-width: 320px!important;
         main {
             .menus {
                 .articles {
                     .entrees, .plats, .desserts {
-                        width: 90%;
+                        width: 85%;
                         @include nowrap-ellipsis;                        
                         h3 {
                             display: flex;
                             justify-content: flex-start;
                         }
                         .article-menu {
+                            .description p {
+                                font-size: 13px;
+                            }
                             .prix, .select-choix {
                                 width: 15%;
                             }
