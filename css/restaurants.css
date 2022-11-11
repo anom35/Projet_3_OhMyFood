@@ -4,9 +4,6 @@
 *       Variables Colors
 */
 /*
-*       Largeur des éléments menu
-*/
-/*
 *       Variables pour média queries
 */
 .bold {
@@ -22,20 +19,20 @@
   left: -999px;
 }
 
-#article_1, #article_4, #article7 {
-  animation: effet-opacity 300ms ease-in;
+#article_1, #article_4, #article_7 {
+  animation: apparition 600ms ease-in;
 }
 
 #article_2, #article_5, #article_8 {
-  animation: effet-opacity 600ms ease-in;
+  animation: apparition 1.2s ease-in;
 }
 
 #article_3, #article_6, #article_9 {
-  animation: effet-opacity 900ms ease-in;
+  animation: apparition 1.8s ease-in;
 }
 
 #article_10 {
-  animation: effet-opacity 1.2s ease-in;
+  animation: apparition 2.4s ease-in;
 }
 
 @keyframes spin {
@@ -52,6 +49,16 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
   }
 }
 body {
@@ -117,7 +124,6 @@ body main .titre-menu {
 body main .titre-menu h1 {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
-  margin-bottom: 0;
 }
 body main .titre-menu i {
   display: flex;
@@ -169,7 +175,6 @@ body main .menus .articles .entrees, body main .menus .articles .plats, body mai
   flex-wrap: wrap;
   width: 32%;
   align-content: flex-start;
-  min-width: 320px;
 }
 body main .menus .articles .entrees h4, body main .menus .articles .entrees p, body main .menus .articles .plats h4, body main .menus .articles .plats p, body main .menus .articles .desserts h4, body main .menus .articles .desserts p {
   margin: 0;
@@ -202,7 +207,6 @@ body main .menus .articles .entrees h3::after, body main .menus .articles .plats
 body main .menus .articles .entrees .article-menu, body main .menus .articles .plats .article-menu, body main .menus .articles .desserts .article-menu {
   display: flex;
   background-color: white;
-  min-width: 100px;
   width: 100%;
   height: 60px;
   border-radius: 1rem;
@@ -290,7 +294,6 @@ body main .btn-explore p {
 body footer {
   background-color: #353535;
   color: white;
-  padding: 1rem 0 2rem 0;
 }
 body footer h1 {
   display: flex;
@@ -311,6 +314,7 @@ body footer .footer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding: 1rem 0 1rem 1.5rem;
 }
 
 /*
@@ -326,11 +330,8 @@ body footer .footer {
   }
 }
 @media (max-width: 667px) {
-  body {
-    min-width: 320px !important;
-  }
   body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
-    width: 90%;
+    width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
@@ -345,10 +346,12 @@ body footer .footer {
     width: 95%;
   }
   body main .menus .articles .entrees .article-menu .description, body main .menus .articles .plats .article-menu .description, body main .menus .articles .desserts .article-menu .description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
     width: calc(100% - 54px);
   }
   body main .menus .articles .entrees .article-menu .description h4, body main .menus .articles .plats .article-menu .description h4, body main .menus .articles .desserts .article-menu .description h4 {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   body main .menus .articles .entrees .article-menu .description p, body main .menus .articles .plats .article-menu .description p, body main .menus .articles .desserts .article-menu .description p {
     font-size: 13px;

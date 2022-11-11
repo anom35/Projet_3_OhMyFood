@@ -4,9 +4,6 @@
 *       Variables Colors
 */
 /*
-*       Largeur des éléments menu
-*/
-/*
 *       Variables pour média queries
 */
 .bold {
@@ -22,20 +19,20 @@
   left: -999px;
 }
 
-#article_1, #article_4, #article7 {
-  animation: effet-opacity 300ms ease-in;
+#article_1, #article_4, #article_7 {
+  animation: apparition 600ms ease-in;
 }
 
 #article_2, #article_5, #article_8 {
-  animation: effet-opacity 600ms ease-in;
+  animation: apparition 1.2s ease-in;
 }
 
 #article_3, #article_6, #article_9 {
-  animation: effet-opacity 900ms ease-in;
+  animation: apparition 1.8s ease-in;
 }
 
 #article_10 {
-  animation: effet-opacity 1.2s ease-in;
+  animation: apparition 2.4s ease-in;
 }
 
 @keyframes spin {
@@ -52,6 +49,16 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
   }
 }
 body {

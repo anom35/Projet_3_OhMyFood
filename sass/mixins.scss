@@ -129,7 +129,7 @@
                 flex-wrap: wrap;
                 width: 32%;
                 align-content: flex-start;
-                min-width: 320px;
+                // min-width: 320px;
                 h4, p {
                     margin: 0;
                     overflow: hidden;             
@@ -161,7 +161,6 @@
                 .article-menu {
                     display: flex;
                     background-color: white;
-                    min-width: $largeur-menu;
                     // max-width: 440px;
                     width: 100%;
                     height: 60px;
@@ -220,17 +219,17 @@
     }
 }
                 // Durée apparition animation
-#article_1, #article_4, #article7 {                 // 1ère lignes      
-    animation: effet-opacity 300ms ease-in;
+#article_1, #article_4, #article_7 {                 // 1ère lignes      
+    animation: apparition 600ms ease-in;
 }
 #article_2, #article_5, #article_8 {                // 2ème lignes
-    animation: effet-opacity 600ms ease-in;
+    animation: apparition 1.2s ease-in;
 }
 #article_3, #article_6, #article_9 {                // 3ème lignes
-    animation: effet-opacity 900ms ease-in;
+    animation: apparition 1.8s ease-in;
 }
 #article_10 {                                       // 4ème ligne pour le restaurant qui comporte 4 choix dans un menu
-    animation: effet-opacity 1.2s ease-in;
+    animation: apparition 2.4s ease-in;
 }
 
 
@@ -283,3 +282,13 @@
     100% { opacity: 1; }
 }
 
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
