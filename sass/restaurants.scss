@@ -134,22 +134,6 @@ body {
     }
 }
 
-@media (max-width: 754px) {
-    body {
-        main {
-            .menus {
-                .articles {
-                    .entrees, .plats, .desserts {
-                        display: flex;
-                        width: 440px;
-                        max-width: 440px;
-                    }
-                }
-            }
-        }
-    }
-}
-
 
 @media (max-width: $smartphone) {
     body {
@@ -163,13 +147,27 @@ body {
                         h3 {
                             display: flex;
                             justify-content: flex-start;
+                            margin-left: 10px;
                         }
                         .article-menu {
+                            margin-left: 4px;
+                            margin-right: 4px;
+                            width: 95%;
+                            .description {
+                                width: calc(100% - 54px);
+                            }
+                            .description h4 {
+                                font-size: 0.9rem;
+                            }
                             .description p {
                                 font-size: 13px;
                             }
-                            .prix, .select-choix {
-                                width: 15%;
+                            .prix {
+                                width: 30px!important;
+                                padding: 0 8 0 0;
+                            }
+                            .select-choix {
+                                width: 35px;
                             }
                         }
                     }

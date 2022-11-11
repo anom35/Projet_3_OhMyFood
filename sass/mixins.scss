@@ -162,7 +162,7 @@
                     display: flex;
                     background-color: white;
                     min-width: $largeur-menu;
-                    max-width: 440px;
+                    // max-width: 440px;
                     width: 100%;
                     height: 60px;
                     border-radius: 1rem;
@@ -185,7 +185,7 @@
                         overflow: hidden;              
                         @include nowrap-ellipsis;
                         justify-content: space-between;
-                        width: 80%;
+                        width: calc(100% - 54px);
                         padding: 0.5rem 0 0.5rem 1rem;
                         &:hover {
                             cursor: pointer;
@@ -194,7 +194,7 @@
                     }
                     .prix {
                         @include flex-center;
-                        width: 4rem;
+                        width: 30px;
                         font-weight: bold;
                         align-items: flex-end;
                         padding: 0 0.5rem 0.5rem 0;
@@ -211,7 +211,7 @@
                         font-size: 1.3rem;
                         align-items: center;
                         border-radius: 0 1rem 1rem 0;
-                        width: 4rem;
+                        width: 50px;
                         margin-right: -4rem;
                     }
                 }
@@ -243,13 +243,12 @@
         background-color: $--ultralightgray;
         label {
             @include flex-center;
-            width: 200px;
-            padding: 0.8rem;
             color: white;
             border-radius: 2rem;
             font-size: 1.3rem;
             background: linear-gradient($--secondary, $--primary);
-            margin-bottom: 4rem;
+            padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+            margin-bottom: 3rem;
             box-shadow: 0 3px 10px $--darkgray;
             transition: 100ms;
             &:hover {

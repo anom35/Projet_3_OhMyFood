@@ -53,25 +53,26 @@ body {
     main {
 
         .menu {
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
             h2 {
                 display: flex;
                 justify-content: center;
-                margin: 2rem 0 0 2rem;
+                margin: 1rem 0 0 1rem;
             }
             ol {
                 list-style: none;
                 display: flex;
                 flex-wrap: wrap;
-                gap: 1rem;
-                justify-content: space-evenly;
+                gap: 3rem;
+                justify-content: center;
                 li {
-                    width: 255px;
+                    width: 280px;
                     background-color: $--graywhite;
                     border-radius: 1rem;
                     padding: 1.5rem 0;
                     box-shadow: 0 3px 5px $--darkgray;
                     transition: transform 1s;
+                    font-size: 1.1rem;
                     i {
                         margin-right: 0.5rem;
                     }
@@ -220,6 +221,11 @@ body {
                 #choix-menu {
                     padding: 0;
                     padding-left: 20px;
+                }
+                ol {
+                    li {
+                        white-space: nowrap;
+                    }
                 }
             }
             .restaurants {
