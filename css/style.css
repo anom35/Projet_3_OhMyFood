@@ -253,6 +253,7 @@ body main .menu ol li:hover {
   background-color: #F5EDFF;
   box-shadow: 0 3px 5px #ff79da;
   transition: 0.5s;
+  transform: scale(1.02);
 }
 body main .restaurants {
   padding-bottom: 4rem;
@@ -282,7 +283,8 @@ body main .restaurants .card img {
 }
 body main .restaurants .card .description {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-right: 15px;
 }
 body main .restaurants .card .description .layout {
   width: 85%;
@@ -290,6 +292,9 @@ body main .restaurants .card .description .layout {
 body main .restaurants .card .description .layout h3, body main .restaurants .card .description .layout p {
   margin: 0;
   padding: 0.3rem 0 0 1rem;
+}
+body main .restaurants .card .description .layout .layout-star {
+  width: 30px;
 }
 body main .restaurants .card .description .layout-star {
   display: flex;
@@ -321,8 +326,8 @@ body main .restaurants .card a {
   color: inherit;
 }
 body main .restaurants .card:hover {
-  box-shadow: 0 0 15px #9356dc;
-  transform: scale(1.02);
+  box-shadow: 0 0 10px #9356dc;
+  transform: scale(1.01);
   transition: 0.5s;
 }
 body main .restaurants span {

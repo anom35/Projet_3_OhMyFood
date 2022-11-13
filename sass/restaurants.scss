@@ -153,7 +153,7 @@ body {
 
                         .article-menu {
                             max-width: 296px!important;
-                            margin: 10px;
+                            margin: 5px!important;
                             .description p {
                                 font-size: 13px;
                             }
@@ -163,7 +163,9 @@ body {
             }
 
             @include footer-mobile;
- 
+            .footer {
+                padding-left: 0!important;
+            }
         }
     }
 }

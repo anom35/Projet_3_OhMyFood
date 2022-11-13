@@ -94,6 +94,7 @@ body {
                         background-color: $--lightpurple;
                         box-shadow: 0 3px 5px $--secondary;
                         transition: 0.5s;
+                        transform: scale(1.02);
                     }
                 }
             }
@@ -125,12 +126,16 @@ body {
                 }
                 .description {
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
+                    padding-right: 15px;
                     .layout {
                         width: 85%;
                         h3, p {
                             margin: 0;
                             padding: 0.3rem 0 0 1rem;
+                        }
+                        .layout-star {
+                            width: 30px;
                         }
                     }
                     @include color-heart; // Mixin pour le coeur
@@ -140,8 +145,8 @@ body {
                     color: inherit;
                 }
                 &:hover {
-                    box-shadow: 0 0 15px $--primary;
-                    transform: scale(1.02);
+                    box-shadow: 0 0 10px $--primary;
+                    transform: scale(1.01);
                     transition: 0.5s;
                 }
             }

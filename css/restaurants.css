@@ -401,7 +401,7 @@ body footer .footer {
   }
   body main .menus .articles .entrees .article-menu, body main .menus .articles .plats .article-menu, body main .menus .articles .desserts .article-menu {
     max-width: 296px !important;
-    margin: 10px;
+    margin: 5px !important;
   }
   body main .menus .articles .entrees .article-menu .description p, body main .menus .articles .plats .article-menu .description p, body main .menus .articles .desserts .article-menu .description p {
     font-size: 13px;
@@ -414,6 +414,9 @@ body footer .footer {
   }
   body main footer .footer .fa-solid.fa-utensils {
     margin-right: 6px;
+  }
+  body main .footer {
+    padding-left: 0 !important;
   }
 }
 @media (max-width: 667px) {
