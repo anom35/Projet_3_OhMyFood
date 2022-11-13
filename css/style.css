@@ -477,18 +477,20 @@ body footer .footer {
   body main .restaurants .card {
     display: flex;
     flex-basis: 100%;
-    min-width: 310px;
+    min-width: 300px;
     margin: 1rem 1rem 0 1rem;
   }
   body main footer {
     padding-left: 1rem;
-    padding: 1rem 0 1rem 2rem;
   }
   body main footer h1, body main footer .footer {
     display: block;
   }
   body main footer .footer .fa-solid.fa-utensils {
     margin-right: 6px;
+  }
+  body main footer {
+    padding-left: 2rem !important;
   }
 }
 
