@@ -212,6 +212,8 @@ body main .menus .articles .entrees .article-menu, body main .menus .articles .p
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   box-shadow: 0 2px 5px darkgray;
 }
 body main .menus .articles .entrees .article-menu:hover .select-choix, body main .menus .articles .plats .article-menu:hover .select-choix, body main .menus .articles .desserts .article-menu:hover .select-choix {
@@ -329,7 +331,7 @@ body footer .footer {
     max-width: 440px;
   }
 }
-@media (max-width: 667px) {
+@media (max-width: 667px) and (hover: none) {
   body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
     width: 100%;
     white-space: nowrap;
@@ -341,27 +343,141 @@ body footer .footer {
     margin-left: 10px;
   }
   body main .menus .articles .entrees .article-menu, body main .menus .articles .plats .article-menu, body main .menus .articles .desserts .article-menu {
-    margin-left: 4px;
-    margin-right: 4px;
-    width: 95%;
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0 2px 5px darkgray;
+  }
+  body main .menus .articles .entrees .article-menu:hover .select-choix, body main .menus .articles .plats .article-menu:hover .select-choix, body main .menus .articles .desserts .article-menu:hover .select-choix {
+    margin: 0;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  body main .menus .articles .entrees .article-menu:hover .select-choix i, body main .menus .articles .plats .article-menu:hover .select-choix i, body main .menus .articles .desserts .article-menu:hover .select-choix i {
+    animation: spin 1s;
   }
   body main .menus .articles .entrees .article-menu .description, body main .menus .articles .plats .article-menu .description, body main .menus .articles .desserts .article-menu .description {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    justify-content: space-between;
     width: calc(100% - 54px);
+    padding: 0.5rem 0 0.5rem 1rem;
   }
-  body main .menus .articles .entrees .article-menu .description h4, body main .menus .articles .plats .article-menu .description h4, body main .menus .articles .desserts .article-menu .description h4 {
-    font-size: 0.8rem;
+  body main .menus .articles .entrees .article-menu .description:hover, body main .menus .articles .plats .article-menu .description:hover, body main .menus .articles .desserts .article-menu .description:hover {
+    cursor: pointer;
+  }
+  body main .menus .articles .entrees .article-menu .prix, body main .menus .articles .plats .article-menu .prix, body main .menus .articles .desserts .article-menu .prix {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    font-weight: bold;
+    align-items: flex-end;
+    padding: 0 0.5rem 0.5rem 0;
+    border-radius: 0 1rem 1rem 0;
+  }
+  body main .menus .articles .entrees .article-menu .prix:hover, body main .menus .articles .plats .article-menu .prix:hover, body main .menus .articles .desserts .article-menu .prix:hover {
+    cursor: pointer;
+  }
+  body main .menus .articles .entrees .article-menu .select-choix, body main .menus .articles .plats .article-menu .select-choix, body main .menus .articles .desserts .article-menu .select-choix {
+    display: flex;
+    justify-content: center;
+    background-color: #99E2D0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    align-items: center;
+    border-radius: 0 1rem 1rem 0;
+    width: 50px;
+    margin-right: -4rem;
+  }
+  body main .menus .articles .entrees .article-menu, body main .menus .articles .plats .article-menu, body main .menus .articles .desserts .article-menu {
+    max-width: 296px !important;
+    margin: 10px;
   }
   body main .menus .articles .entrees .article-menu .description p, body main .menus .articles .plats .article-menu .description p, body main .menus .articles .desserts .article-menu .description p {
     font-size: 13px;
   }
+  body main footer {
+    padding-left: 1rem;
+  }
+  body main footer h1, body main footer .footer {
+    display: block;
+  }
+  body main footer .footer .fa-solid.fa-utensils {
+    margin-right: 6px;
+  }
+}
+@media (max-width: 667px) {
+  body main .menus .articles .entrees, body main .menus .articles .plats, body main .menus .articles .desserts {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  body main .menus .articles .entrees .article-menu, body main .menus .articles .plats .article-menu, body main .menus .articles .desserts .article-menu {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    box-shadow: 0 2px 5px darkgray;
+  }
+  body main .menus .articles .entrees .article-menu:hover .select-choix, body main .menus .articles .plats .article-menu:hover .select-choix, body main .menus .articles .desserts .article-menu:hover .select-choix {
+    margin: 0;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  body main .menus .articles .entrees .article-menu:hover .select-choix i, body main .menus .articles .plats .article-menu:hover .select-choix i, body main .menus .articles .desserts .article-menu:hover .select-choix i {
+    animation: spin 1s;
+  }
+  body main .menus .articles .entrees .article-menu .description, body main .menus .articles .plats .article-menu .description, body main .menus .articles .desserts .article-menu .description {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    justify-content: space-between;
+    width: calc(100% - 54px);
+    padding: 0.5rem 0 0.5rem 1rem;
+  }
+  body main .menus .articles .entrees .article-menu .description:hover, body main .menus .articles .plats .article-menu .description:hover, body main .menus .articles .desserts .article-menu .description:hover {
+    cursor: pointer;
+  }
   body main .menus .articles .entrees .article-menu .prix, body main .menus .articles .plats .article-menu .prix, body main .menus .articles .desserts .article-menu .prix {
-    width: 30px !important;
-    padding: 0 8 0 0;
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    font-weight: bold;
+    align-items: flex-end;
+    padding: 0 0.5rem 0.5rem 0;
+    border-radius: 0 1rem 1rem 0;
+  }
+  body main .menus .articles .entrees .article-menu .prix:hover, body main .menus .articles .plats .article-menu .prix:hover, body main .menus .articles .desserts .article-menu .prix:hover {
+    cursor: pointer;
   }
   body main .menus .articles .entrees .article-menu .select-choix, body main .menus .articles .plats .article-menu .select-choix, body main .menus .articles .desserts .article-menu .select-choix {
-    width: 35px;
+    display: flex;
+    justify-content: center;
+    background-color: #99E2D0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    align-items: center;
+    border-radius: 0 1rem 1rem 0;
+    width: 50px;
+    margin-right: -4rem;
   }
   body main footer {
     padding-left: 1rem;

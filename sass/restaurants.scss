@@ -134,10 +134,9 @@ body {
     }
 }
 
-
-@media (max-width: $smartphone) {
+// hors desktop (hover: none)
+@media (max-width: $smartphone) and (hover: none) {
     body {
-        // min-width: 320px!important;
         main {
             .menus {
                 .articles {
@@ -149,43 +148,41 @@ body {
                             justify-content: flex-start;
                             margin-left: 10px;
                         }
+
+                        @include article-menu;
+
                         .article-menu {
-                            margin-left: 4px;
-                            margin-right: 4px;
-                            width: 95%;
-                            .description {
-                                @include nowrap-ellipsis;                        
-                                width: calc(100% - 54px);
-                            }
-                            .description h4 {
-                                font-size: 0.8rem;
-                            }
+                            max-width: 296px!important;
+                            margin: 10px;
                             .description p {
                                 font-size: 13px;
-                            }
-                            .prix {
-                                width: 30px!important;
-                                padding: 0 8 0 0;
-                            }
-                            .select-choix {
-                                width: 35px;
                             }
                         }
                     }
                 }
             }
 
-            footer {
-                padding-left: 1rem;
-                h1, .footer {
-                    display: block;
-                }
-                .footer .fa-solid.fa-utensils {
-                    margin-right: 6px;
-                }
-            }
+            @include footer-mobile;
  
         }
     }
 }
 
+// uniquement desktop
+@media (max-width: $smartphone) {
+    body {
+        main {
+            .menus {
+                .articles {
+                    .entrees, .plats, .desserts {
+                        width: 100%;
+                        @include nowrap-ellipsis;                        
+                        @include article-menu;
+                    }
+                }
+            }
+
+        @include footer-mobile;
+        }
+    }
+}
