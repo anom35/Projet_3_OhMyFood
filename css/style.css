@@ -54,11 +54,11 @@
 @keyframes apparition {
   0% {
     opacity: 0;
-    transform: rotateX(-90deg);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: rotateX(0deg);
+    transform: translateY(0);
   }
 }
 body {

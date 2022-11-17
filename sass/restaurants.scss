@@ -6,6 +6,8 @@ body {
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     max-width: $max-width;
+    fieldset { border: 0; }
+
 
     header {
 
@@ -74,7 +76,6 @@ body {
                 padding-right: 3rem;
             }
             @include color-heart();
-
         }
 
         @include choix-menu;

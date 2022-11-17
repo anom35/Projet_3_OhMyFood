@@ -121,11 +121,67 @@
     @include nowrap-ellipsis;
 }
 
+
+@mixin choix-menu {                                 // création d'un choix de menu
+    .menus {
+        border: 0;
+        padding: 0;
+        @include flex-center;
+        flex-wrap: wrap;
+
+        .articles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5px;
+            
+            .entrees, .plats, .desserts {
+                @include flex-center;
+                padding-bottom: 3rem;
+                flex-wrap: wrap;
+                width: 32%;
+                align-content: flex-start;
+                // min-width: 320px;
+                h4, p {
+                    margin: 0;
+                    overflow: hidden;             
+                    @include nowrap-ellipsis;
+                }
+                p {
+                    font-size: 0.9rem;
+                }
+
+                h3 {
+                    @include flex-center;
+                    flex-basis: 100%;
+                    // mise en majuscule des titres de menus
+                    text-transform: uppercase;  
+                    color: $--grayblack;
+                    font-weight: normal;
+                    margin: 0;
+                    padding-bottom: 1rem;
+                    position: relative;
+                    // trait de soulignement vert
+                    &::after {          
+                        position: absolute;
+                        top: 25px;
+                        content: "";
+                        height: 3px;
+                        width: 50px;
+                        background-color: $--tertiary;
+                    }
+                }
+                @include article-menu;
+            }
+        }
+    }
+}
+
+
 @mixin article-menu {
     .article-menu {
         display: flex;
         background-color: white;
-        // max-width: 440px;
         width: 100%;
         height: 60px;
         border-radius: 1rem;
@@ -181,58 +237,6 @@
         }
     }
 }
-@mixin choix-menu {                                 // création d'un choix de menu
-    .menus {
-        border: 0;
-        padding: 0;
-        @include flex-center;
-        flex-wrap: wrap;
-
-        .articles {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 5px;
-            
-            .entrees, .plats, .desserts {
-                @include flex-center;
-                padding-bottom: 3rem;
-                flex-wrap: wrap;
-                width: 32%;
-                align-content: flex-start;
-                // min-width: 320px;
-                h4, p {
-                    margin: 0;
-                    overflow: hidden;             
-                    @include nowrap-ellipsis;
-                }
-                p {
-                    font-size: 0.9rem;
-                }
-
-                h3 {
-                    @include flex-center;
-                    flex-basis: 100%;
-                    text-transform: uppercase;
-                    color: $--grayblack;
-                    font-weight: normal;
-                    margin: 0;
-                    padding-bottom: 1rem;
-                    position: relative;
-                    &::after {
-                        position: absolute;
-                        top: 25px;
-                        content: "";
-                        height: 3px;
-                        width: 50px;
-                        background-color: $--tertiary;
-                    }
-                }
-                @include article-menu;
-            }
-        }
-    }
-}
                 // Durée apparition animation
 #article_1, #article_4, #article_7 {                 // 1ère lignes      
     animation: apparition 600ms ease-in;
@@ -248,8 +252,8 @@
 }
 
 
-
-@mixin btn-style() {                // Style pour les boutons
+// Style pour les boutons
+@mixin btn-style() {                
     .btn-explore {
         @include flex-center;
         flex-wrap: wrap;
@@ -287,7 +291,8 @@
     justify-content: center;
 }
 
-@keyframes spin {                       // la coche qui pivote sur 360°
+// la coche qui pivote sur 360°
+@keyframes spin {                       
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
@@ -297,13 +302,14 @@
     100% { opacity: 1; }
 }
 
+// animation des menus
 @keyframes apparition {
     0% {
         opacity: 0;
-        transform: rotateX(-90deg);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: rotateX(0deg);
+        transform: translateY(0);
     }
 }
