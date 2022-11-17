@@ -403,7 +403,7 @@ body footer .footer {
     margin-right: -4rem;
   }
   body main .menus .articles .entrees .article-menu, body main .menus .articles .plats .article-menu, body main .menus .articles .desserts .article-menu {
-    max-width: 296px !important;
+    max-width: 282px !important;
     margin: 5px !important;
   }
   body main .menus .articles .entrees .article-menu .description p, body main .menus .articles .plats .article-menu .description p, body main .menus .articles .desserts .article-menu .description p {
