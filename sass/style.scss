@@ -95,6 +95,9 @@ body {
                         box-shadow: 0 3px 5px $--secondary;
                         transition: 0.5s;
                         transform: scale(1.02);
+                        i {
+                            color: $--primary;
+                        }
                     }
                 }
             }

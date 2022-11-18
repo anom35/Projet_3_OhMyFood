@@ -255,6 +255,9 @@ body main .menu ol li:hover {
   transition: 0.5s;
   transform: scale(1.02);
 }
+body main .menu ol li:hover i {
+  color: #9356dc;
+}
 body main .restaurants {
   padding-bottom: 4rem;
   background-color: #F6F6F6;

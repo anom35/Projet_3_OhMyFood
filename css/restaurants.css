@@ -485,6 +485,11 @@ body footer .footer {
     width: 50px;
     margin-right: -4rem;
   }
+  body main .menus .articles .entrees h3, body main .menus .articles .plats h3, body main .menus .articles .desserts h3 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+  }
   body main footer {
     padding-left: 1rem;
   }

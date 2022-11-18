@@ -181,6 +181,11 @@ body {
                         width: 100%;
                         @include nowrap-ellipsis;                        
                         @include article-menu;
+                        h3 {
+                            display: flex;
+                            justify-content: flex-start;
+                            margin-left: 10px;
+                        }
                     }
                 }
             }
