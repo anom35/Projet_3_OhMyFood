@@ -1,6 +1,6 @@
 
 // Mixin du loader, $vamFontSize permet d'avoir le résultat avec 
-// une taille différente, pour la compatibilité Smartphone.
+// une taille différente, pour la compatibilité mobile.
 
 @mixin loader($valFontSize) {
     .loader {
