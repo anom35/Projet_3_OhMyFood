@@ -381,6 +381,9 @@ body footer .footer {
 }
 @media (max-width: 630px) {
   body header .loader {
+    font-size: 3rem !important;
+  }
+  body header .loader {
     display: flex;
     justify-content: center;
     opacity: 0.9;
@@ -391,7 +394,7 @@ body footer .footer {
     background: #353535;
     overflow: hidden;
     font: 5vw/100vh "Shrikhand";
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
     color: #9356dc;
     backface-visibility: hidden;

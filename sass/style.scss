@@ -9,7 +9,7 @@ body {
 
 
     header {
-        @include loader(4rem);   //*  Mixin du loader 
+        @include my-loader;   //*  Mixin du loader 
 
         box-shadow: 0 5px 10px lightgrey;
         h1 {
@@ -211,7 +211,10 @@ body {
     body {
   
         header {
-            @include loader(3rem);
+            .loader {
+                font-size: 3rem!important;
+            }
+            @include my-loader;
         }
     
         main {

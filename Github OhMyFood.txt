@@ -1,0 +1,12 @@
+https://github.com/anom35/Projet_3_OhMyFood
+
+
+
+
+
+git init 
+git add LISEZMOI.md 
+git commit -m "Première sauvegarde !" 
+git branch -M master 
+git remote add origin https://github.com/anom35/Projet_3_OhMyFood.git
+git push
