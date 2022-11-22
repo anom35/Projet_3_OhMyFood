@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+.accessibility-label {
+  position: absolute;
+  left: -999px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.gray {
+  color: dimgray;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  max-width: 1224px;
+}
+
+header {
+  box-shadow: 0 5px 10px lightgrey;
+}
+header h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.3rem;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 1rem 0 3rem 2rem;
+}
+footer h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.main {
+  border-radius: 2rem 2rem 0 0;
+}
+.main img {
+  height: 400px;
+  object-fit: cover;
+  object-position: 50% 70%;
+  width: 100%;
+}
+.main h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: "Shrikhand", cursive;
+}
+
+/*# sourceMappingURL=a_la_francaise.css.map */
